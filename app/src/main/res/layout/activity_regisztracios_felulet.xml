@@ -233,7 +233,7 @@
             android:text="Regisztráció"
             android:layout_below="@+id/checkBoxNyilatkozat"
             android:layout_centerHorizontal="true"
-            android:id="@+id/buttonRegisztracio"/>
+            android:id="@+id/buttonRegisztraciosFeluletRegisztracio"/>
 
     </RelativeLayout>
 

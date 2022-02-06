@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Android">
         <activity
+            android:name=".HirdetesekKeresese"
+            android:exported="false" />
+        <activity
             android:name=".RegisztraciosFelulet"
             android:exported="false" />
         <activity

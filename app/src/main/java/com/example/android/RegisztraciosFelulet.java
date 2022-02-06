@@ -12,7 +12,7 @@ import android.widget.Spinner;
 public class RegisztraciosFelulet extends AppCompatActivity {
 
     private Spinner SpinnerTelepules;
-    private Button buttonRegisztracio;
+    private Button buttonRegisztraciosFeluletRegisztracio;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +26,7 @@ public class RegisztraciosFelulet extends AppCompatActivity {
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items);
         SpinnerTelepules.setAdapter(adapter);
 
-        buttonRegisztracio.setOnClickListener(new View.OnClickListener() {
+        buttonRegisztraciosFeluletRegisztracio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent_regisztracio = new Intent(RegisztraciosFelulet.this, MainActivity.class);
@@ -37,6 +37,6 @@ public class RegisztraciosFelulet extends AppCompatActivity {
 
     public void init(){
         SpinnerTelepules = findViewById(R.id.SpinnerTelepules);
-        buttonRegisztracio = findViewById(R.id.buttonRegisztracio);
+        buttonRegisztraciosFeluletRegisztracio = findViewById(R.id.buttonRegisztraciosFeluletRegisztracio);
     }
 }
