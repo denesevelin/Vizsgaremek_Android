@@ -1,9 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".HirdetesekListazasa">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal"
+        android:id="@+id/relativeLayout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hirdetések"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:id="@+id/textViewHirdetesekListazasa"/>
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/logo2"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/textViewHirdetesekListazasa"
+            android:id="@+id/ImageViewProfilkepPélda"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/ImageViewProfilkepPélda"
+            android:layout_below="@+id/textViewHirdetesekListazasa"
+            android:layout_marginTop="20dp"
+            android:justificationMode="inter_word"
+            android:text="Itt lesz majd a hirdetés szövege."
+            android:id="@+id/textViewHirdetesSzovegPelda"/>
+
+        <Button
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:text="Tovább"
+            android:layout_below="@+id/textViewHirdetesekListazasa"
+            android:layout_marginTop="20dp"
+            android:layout_toEndOf="@+id/textViewHirdetesSzovegPelda"
+            android:id="@+id/buttonTovabbPelda"/>
+    </RelativeLayout>
+
+</ScrollView>
