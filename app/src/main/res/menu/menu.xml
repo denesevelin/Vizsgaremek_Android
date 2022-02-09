@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:title="Főoldal"
+        android:id="@+id/menuFooldal"
+        app:showAsAction="never"/>
+    <item
+        android:title="Bejelentkezés"
+        android:id="@+id/menuBejelentkezes"
+        app:showAsAction="never"/>
+    <item
+        android:title="Regisztráció"
+        android:id="@+id/menuRegisztracio"
+        app:showAsAction="never"/>
+    <item
+        android:title="Hirdetések keresése"
+        android:id="@+id/menuHirdetesekKeres"
+        app:showAsAction="never"/>
+    <item
+        android:title="Hirdetés feladása"
+        android:id="@+id/menuHirdetesFelad"
+        app:showAsAction="never"/>
+    <item
+        android:title="Profil"
+        android:id="@+id/menuProfil"
+        app:showAsAction="never"/>
+    <item
+        android:title="Ranglista"
+        android:id="@+id/menuRanglista"
+        app:showAsAction="never"/>
+    <item
+        android:title="Kijelentkezés"
+        android:id="@+id/menuKijelentkezes"
+        app:showAsAction="never"/>
+</menu>
