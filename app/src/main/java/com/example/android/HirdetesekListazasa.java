@@ -25,7 +25,7 @@ public class HirdetesekListazasa extends AppCompatActivity {
         buttonTovabbPelda.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent_szures = new Intent(HirdetesekListazasa.this, HirdetesFeladasa.class);
+                Intent intent_szures = new Intent(HirdetesekListazasa.this, KonkretHirdetes.class);
                 startActivity(intent_szures);
             }
         });

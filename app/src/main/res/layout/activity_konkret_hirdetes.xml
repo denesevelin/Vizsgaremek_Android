@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".KonkretHirdetes">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/relativeLayout">
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/tesztprofilkep"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="70dp"
+            android:id="@+id/imageViewTesztProfilkep"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/imageViewTesztProfilkep"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="100dp"
+            android:text="Teszt Ella"
+            android:id="@+id/textViewNev"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/imageViewTesztProfilkep"
+            android:layout_below="@+id/textViewNev"
+            android:layout_marginLeft="30dp"
+            android:text="Településnév"
+            android:id="@+id/textViewTelepules"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/imageViewTesztProfilkep"
+            android:layout_below="@+id/textViewTelepules"
+            android:layout_marginLeft="30dp"
+            android:text="Budapest 1141 Példa utca 23/2."
+            android:id="@+id/textViewCim"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/imageViewTesztProfilkep"
+            android:layout_below="@+id/textViewCim"
+            android:layout_marginLeft="30dp"
+            android:text="+36301234567"
+            android:id="@+id/textViewTelefonszam"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/imageViewTesztProfilkep"
+            android:layout_below="@+id/textViewTelefonszam"
+            android:layout_marginLeft="30dp"
+            android:text="+36301234567 (nem kötelező)"
+            android:id="@+id/textViewTelefonszam2"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageViewTesztProfilkep"
+            android:layout_marginLeft="30dp"
+            android:text="Kategória neve"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/textViewKategoria"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewKategoria"
+            android:layout_marginLeft="30dp"
+            android:text="Időpont kezdete: "
+            android:id="@+id/textViewIdopontKezdete"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewKategoria"
+            android:layout_toEndOf="@+id/textViewIdopontKezdete"
+            android:layout_marginLeft="30dp"
+            android:text="2022.06.15. 16:30"
+            android:id="@+id/textViewKonkretKezdoIdopont"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewIdopontKezdete"
+            android:layout_marginLeft="30dp"
+            android:text="Időpont vége: "
+            android:id="@+id/textViewIdopontVege"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewKonkretKezdoIdopont"
+            android:layout_toEndOf="@+id/textViewIdopontKezdete"
+            android:layout_marginLeft="30dp"
+            android:text="2022.06.15. 18:30"
+            android:id="@+id/textViewKonkretVegIdopont"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewIdopontVege"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="20dp"
+            android:justificationMode="inter_word"
+            android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+            android:id="@+id/textViewLeiras"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewLeiras"
+            android:layout_marginTop="30dp"
+            android:layout_centerInParent="true"
+            android:text="Jelentkezem"
+            android:id="@+id/buttonJelentkezes"/>
+
+    </RelativeLayout>
+
+</ScrollView>
