@@ -70,13 +70,13 @@ public class HirdetesekListazasa extends AppCompatActivity {
             finish();
             return true;
         }
-        /*if(id == R.id.menuProfil){
+        if(id == R.id.menuProfil){
             Intent i = new Intent(HirdetesekListazasa.this, Profil.class);
             startActivity(i);
             finish();
             return true;
         }
-        if(id == R.id.menuRanglista){
+        /*if(id == R.id.menuRanglista){
             Intent i = new Intent(HirdetesekListazasa.this, Ranglista.class);
             startActivity(i);
             finish();

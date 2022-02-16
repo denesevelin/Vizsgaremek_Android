@@ -81,13 +81,13 @@ public class RegisztraciosFelulet extends AppCompatActivity {
             finish();
             return true;
         }
-        /*if(id == R.id.menuProfil){
+        if(id == R.id.menuProfil){
             Intent i = new Intent(RegisztraciosFelulet.this, Profil.class);
             startActivity(i);
             finish();
             return true;
         }
-        if(id == R.id.menuRanglista){
+        /*if(id == R.id.menuRanglista){
             Intent i = new Intent(RegisztraciosFelulet.this, Ranglista.class);
             startActivity(i);
             finish();

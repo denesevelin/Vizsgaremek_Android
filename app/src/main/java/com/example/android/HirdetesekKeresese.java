@@ -92,13 +92,13 @@ public class HirdetesekKeresese extends AppCompatActivity {
             finish();
             return true;
         }
-        /*if(id == R.id.menuProfil){
+        if(id == R.id.menuProfil){
             Intent i = new Intent(HirdetesekKeresese.this, Profil.class);
             startActivity(i);
             finish();
             return true;
         }
-        if(id == R.id.menuRanglista){
+        /*if(id == R.id.menuRanglista){
             Intent i = new Intent(HirdetesekKeresese.this, Ranglista.class);
             startActivity(i);
             finish();
