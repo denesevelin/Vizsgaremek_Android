@@ -25,15 +25,15 @@
         <ImageView
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:src="@drawable/logo2"
+            android:src="@drawable/tesztkategoriakep"
             android:layout_marginTop="20dp"
             android:layout_below="@+id/textViewHirdetesekListazasa"
-            android:id="@+id/ImageViewProfilkepPélda"/>
+            android:id="@+id/ImageViewKategoriakep"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toEndOf="@+id/ImageViewProfilkepPélda"
+            android:layout_toEndOf="@+id/ImageViewKategoriakep"
             android:layout_below="@+id/textViewHirdetesekListazasa"
             android:layout_marginTop="20dp"
             android:justificationMode="inter_word"

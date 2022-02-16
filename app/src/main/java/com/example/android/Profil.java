@@ -5,16 +5,40 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageButton;
+import android.widget.TextView;
 
 public class Profil extends AppCompatActivity {
+
+    private ImageButton imageButtonJelentkeztem1;
+    private TextView textViewJelentkeztem;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profil);
+
+        init();
+
+        imageButtonJelentkeztem1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Profil.this, KonkretHirdetes.class);
+                startActivity(intent);
+            }
+        });
     }
+
+    public void init(){
+        imageButtonJelentkeztem1 = findViewById(R.id.imageButtonJelentkeztem1);
+
+    }
+
+
 
 
     @Override

@@ -1,9 +1,201 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Profil">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/relativeLayout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Profil"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:id="@+id/textViewHirdetesekKeresese"/>
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/tesztprofilkep"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="70dp"
+            android:id="@+id/imageViewTesztProfilkep"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/imageViewTesztProfilkep"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="120dp"
+            android:text="Teszt Ella"
+            android:id="@+id/textViewNev"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/imageViewTesztProfilkep"
+            android:layout_below="@+id/textViewNev"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="20dp"
+            android:text="teszt.ella1983"
+            android:id="@+id/textViewFelhasznalonev"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageViewTesztProfilkep"
+            android:layout_marginLeft="30dp"
+            android:text="+36301234567"
+            android:id="@+id/textViewTelefonszam"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewTelefonszam"
+            android:layout_marginLeft="30dp"
+            android:text="teszt.ella@gmail.com"
+            android:id="@+id/textViewEmail"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewEmail"
+            android:layout_marginLeft="30dp"
+            android:text="Budapest"
+            android:id="@+id/textViewTelepules"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewTelepules"
+            android:layout_marginLeft="30dp"
+            android:text="1033 Teszt utca 124. 5/36."
+            android:layout_marginBottom="10dp"
+            android:id="@+id/textViewCim"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewCim"
+            android:layout_marginLeft="30dp"
+            android:text="Pontszám: "
+            android:textStyle="bold"
+            android:id="@+id/textViewPontszam"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewCim"
+            android:layout_toEndOf="@+id/textViewPontszam"
+            android:layout_marginLeft="30dp"
+            android:text="5"
+            android:textStyle="bold"
+            android:id="@+id/textViewKonkretPontszam"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewPontszam"
+            android:layout_marginLeft="30dp"
+            android:text="Díjaim: "
+            android:textStyle="bold"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/textViewDij"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewDij"
+            android:layout_marginLeft="30dp"
+            android:text="Hirdetések amikre jelentkeztem: "
+            android:layout_marginBottom="10dp"
+            android:id="@+id/textViewJelentkeztem"/>
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/kutyasetaltatas"
+            android:layout_below="@+id/textViewJelentkeztem"
+            android:id="@+id/imageButtonJelentkeztem1"/>
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/korhaz"
+            android:layout_below="@+id/textViewJelentkeztem"
+            android:layout_toEndOf="@+id/imageButtonJelentkeztem1"
+            android:id="@+id/imageButtonJelentkeztem2"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageButtonJelentkeztem1"
+            android:layout_marginLeft="30dp"
+            android:text="Saját hirdetéseim: "
+            android:layout_marginBottom="10dp"
+            android:id="@+id/textViewHirdeteseim"/>
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/kutyasetaltatas"
+            android:layout_below="@+id/textViewHirdeteseim"
+            android:id="@+id/imageButtonHirdetes1"/>
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/korhaz"
+            android:layout_below="@+id/textViewHirdeteseim"
+            android:layout_toEndOf="@+id/imageButtonHirdetes1"
+            android:id="@+id/imageButtonHirdetes2"/>
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:text="Törlés"
+            android:textSize="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_below="@+id/imageButtonHirdetes1"
+            android:id="@+id/buttonHirdetesTorlese1"/>
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:text="Törlés"
+            android:textSize="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_toEndOf="@+id/buttonHirdetesTorlese1"
+            android:layout_below="@+id/imageButtonHirdetes2"
+            android:id="@+id/buttonHirdetesTorlese2"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/buttonHirdetesTorlese1"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:text="Profil módosítása"
+            android:id="@+id/buttonProfilModositas"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/buttonHirdetesTorlese1"
+            android:layout_toEndOf="@+id/buttonProfilModositas"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:text="Profil törlése"
+            android:id="@+id/buttonProfilTorless"/>
+
+
+    </RelativeLayout>
+
+</ScrollView>
