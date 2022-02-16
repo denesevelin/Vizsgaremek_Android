@@ -3,18 +3,26 @@ package com.example.android;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.DatePickerDialog;
+import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.DatePicker;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TimePicker;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+
 public class HirdetesFeladasa extends AppCompatActivity {
 
-    private TimePicker TimePickerKezdoIdopt;
-    private Spinner SpinnerKategoriaFelad, SpinnerTelepulesFelad;
+    EditText editTextKezdoIdopt, editTextZaroIdopt;
+    private Spinner spinnerKategoriaFelad, spinnerTelepulesFelad;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,27 +30,95 @@ public class HirdetesFeladasa extends AppCompatActivity {
         setContentView(R.layout.activity_hirdetes_feladasa);
 
         init();
-        TimePickerKezdoIdopt.setIs24HourView(true);
         kategoriakBetoltese();
         telepulesekBetoltese();
+
+        editTextKezdoIdopt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                kezdoidopont(editTextKezdoIdopt);
+            }
+        });
+
+        editTextZaroIdopt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                zaroidopont(editTextZaroIdopt);
+            }
+        });
     }
 
+
+
     public void init(){
-        TimePickerKezdoIdopt = findViewById(R.id.TimePickerKezdoIdopt);
-        SpinnerKategoriaFelad = findViewById(R.id.SpinnerKategoriaFelad);
-        SpinnerTelepulesFelad = findViewById(R.id.SpinnerTelepulesFelad);
+        editTextKezdoIdopt = findViewById(R.id.editTextKezdoIdopt);
+        editTextZaroIdopt = findViewById(R.id.editTextZaroIdopt);
+        spinnerKategoriaFelad = findViewById(R.id.spinnerKategoriaFelad);
+        spinnerTelepulesFelad = findViewById(R.id.spinnerTelepulesFelad);
+    }
+
+    private void kezdoidopont(EditText editTextKezdoIdopt) {
+        Calendar calendar = Calendar.getInstance();
+        DatePickerDialog.OnDateSetListener dateSetListener = new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+                calendar.set(Calendar.YEAR,year);
+                calendar.set(Calendar.MONTH,month);
+                calendar.set(Calendar.DAY_OF_MONTH,dayOfMonth);
+
+                TimePickerDialog.OnTimeSetListener timeSetListener = new TimePickerDialog.OnTimeSetListener(){
+                    @Override
+                    public void onTimeSet(TimePicker view, int hourOfDay, int minute){
+                        calendar.set(Calendar.HOUR_OF_DAY,hourOfDay);
+                        calendar.set(Calendar.MINUTE,minute);
+
+                        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yy-MM-dd HH:mm");
+
+                        editTextKezdoIdopt.setText(simpleDateFormat.format(calendar.getTime()));
+                    }
+                };
+                new TimePickerDialog(HirdetesFeladasa.this,timeSetListener,calendar.get(Calendar.HOUR_OF_DAY),calendar.get(Calendar.MINUTE),false).show();
+            }
+        };
+        new DatePickerDialog(HirdetesFeladasa.this,dateSetListener,calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), calendar.get(Calendar.DAY_OF_MONTH)).show();
+    }
+
+    private void zaroidopont(EditText editTextZaroIdopt) {
+        Calendar calendar = Calendar.getInstance();
+        DatePickerDialog.OnDateSetListener dateSetListener = new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+                calendar.set(Calendar.YEAR,year);
+                calendar.set(Calendar.MONTH,month);
+                calendar.set(Calendar.DAY_OF_MONTH,dayOfMonth);
+
+                TimePickerDialog.OnTimeSetListener timeSetListener = new TimePickerDialog.OnTimeSetListener(){
+                    @Override
+                    public void onTimeSet(TimePicker view, int hourOfDay, int minute){
+                        calendar.set(Calendar.HOUR_OF_DAY,hourOfDay);
+                        calendar.set(Calendar.MINUTE,minute);
+
+                        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yy-MM-dd HH:mm");
+
+                        editTextZaroIdopt.setText(simpleDateFormat.format(calendar.getTime()));
+                    }
+                };
+                new TimePickerDialog(HirdetesFeladasa.this,timeSetListener,calendar.get(Calendar.HOUR_OF_DAY),calendar.get(Calendar.MINUTE),false).show();
+            }
+        };
+        new DatePickerDialog(HirdetesFeladasa.this,dateSetListener,calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), calendar.get(Calendar.DAY_OF_MONTH)).show();
     }
 
     public void kategoriakBetoltese(){
         String[] items = new String[]{"Kutyasétáltatás", "Vásárlás", "Takarítás", "Személyszállítás", "Idősgondozás", "Gyermekfelügyelet", "Szerelés", "Társalgás", "Korrepetálás", "Főzés", "Kertészkedés", "Egyéb"};
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items);
-        SpinnerKategoriaFelad.setAdapter(adapter);
+        spinnerKategoriaFelad.setAdapter(adapter);
     }
 
     public void telepulesekBetoltese(){
         String[] items = new String[]{"Első", "Második", "..."};
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items);
-        SpinnerTelepulesFelad.setAdapter(adapter);
+        spinnerTelepulesFelad.setAdapter(adapter);
     }
 
     @Override

@@ -22,46 +22,31 @@
             android:layout_marginTop="50dp"
             android:id="@+id/textViewHirdetesFeladasa"/>
 
-        <TextView
+        <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Kezdő időpont"
             android:layout_below="@id/textViewHirdetesFeladasa"
-            android:textStyle="bold"
             android:layout_marginTop="20dp"
             android:layout_marginLeft="30dp"
-            android:id="@+id/textViewKezdoIdopt"/>
-        <TimePicker
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:timePickerMode="spinner"
-            android:layout_below="@+id/textViewKezdoIdopt"
-            android:id="@+id/TimePickerKezdoIdopt"/>
+            android:id="@+id/editTextKezdoIdopt"/>
 
-        <TextView
+        <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Záró időpont"
             android:layout_below="@id/textViewHirdetesFeladasa"
-            android:textStyle="bold"
-            android:layout_toEndOf="@+id/textViewKezdoIdopt"
-            android:layout_marginLeft="150dp"
+            android:layout_toEndOf="@+id/editTextKezdoIdopt"
+            android:layout_marginLeft="100dp"
             android:layout_marginTop="20dp"
-            android:id="@+id/textViewZaroIdopt"/>
-        <TimePicker
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:timePickerMode="spinner"
-            android:layout_below="@+id/textViewKezdoIdopt"
-            android:layout_toEndOf="@+id/TimePickerKezdoIdopt"
-            android:layout_marginLeft="80dp"
-            android:id="@+id/TimePickerZaroIdopt"/>
+            android:id="@+id/editTextZaroIdopt"/>
+
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Kategória"
-            android:layout_below="@id/TimePickerKezdoIdopt"
+            android:layout_below="@id/editTextKezdoIdopt"
             android:textStyle="bold"
             android:layout_marginTop="20dp"
             android:id="@+id/textViewKategoriaFelad"/>
@@ -71,13 +56,13 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/textViewKategoriaFelad"
             android:spinnerMode="dropdown"
-            android:id="@+id/SpinnerKategoriaFelad"/>
+            android:id="@+id/spinnerKategoriaFelad"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Település"
-            android:layout_below="@id/SpinnerKategoriaFelad"
+            android:layout_below="@id/spinnerKategoriaFelad"
             android:textStyle="bold"
             android:layout_marginTop="20dp"
             android:id="@+id/textViewTelepulesFelad"/>
@@ -87,13 +72,13 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/textViewTelepulesFelad"
             android:spinnerMode="dropdown"
-            android:id="@+id/SpinnerTelepulesFelad"/>
+            android:id="@+id/spinnerTelepulesFelad"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Cím"
-            android:layout_below="@id/SpinnerTelepulesFelad"
+            android:layout_below="@id/spinnerTelepulesFelad"
             android:textStyle="bold"
             android:layout_marginTop="20dp"
             android:id="@+id/textViewCimFelad"/>
