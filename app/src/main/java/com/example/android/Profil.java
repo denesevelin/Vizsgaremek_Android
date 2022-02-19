@@ -9,13 +9,14 @@ import android.text.method.ScrollingMovementMethod;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
 public class Profil extends AppCompatActivity {
 
     private ImageButton imageButtonJelentkeztem1;
-    private TextView textViewJelentkeztem;
+    private Button buttonProfilModositas;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,10 +32,19 @@ public class Profil extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        buttonProfilModositas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Profil.this, ProfilModositas.class);
+                startActivity(intent);
+            }
+        });
     }
 
     public void init(){
         imageButtonJelentkeztem1 = findViewById(R.id.imageButtonJelentkeztem1);
+        buttonProfilModositas = findViewById(R.id.buttonProfilModositas);
 
     }
 
