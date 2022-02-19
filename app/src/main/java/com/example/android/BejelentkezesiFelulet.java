@@ -12,7 +12,7 @@ import android.widget.Button;
 
 public class BejelentkezesiFelulet extends AppCompatActivity {
 
-    private Button buttonBejelentkezesiFeluletBejelentkezes;
+    private Button buttonBejelentkezesBejelentkezes;
 
 
     @Override
@@ -22,22 +22,21 @@ public class BejelentkezesiFelulet extends AppCompatActivity {
 
         init();
 
-        buttonBejelentkezesiFeluletBejelentkezes.setOnClickListener(new View.OnClickListener() {
+        //Hirdetések keresése oldal megnyitása
+        buttonBejelentkezesBejelentkezes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openHirdetesekKereseseFelulet();
+                Intent intent = new Intent(BejelentkezesiFelulet.this, HirdetesekKeresese.class);
+                startActivity(intent);
             }
         });
     }
 
     public void init(){
-        buttonBejelentkezesiFeluletBejelentkezes = findViewById(R.id.buttonBejelentkezesiFeluletBejelentkezes);
-    }
-    public void openHirdetesekKereseseFelulet(){
-        Intent intent_hirdetesekKereseseFeluletre = new Intent(BejelentkezesiFelulet.this, HirdetesekKeresese.class);
-        startActivity(intent_hirdetesekKereseseFeluletre);
+        buttonBejelentkezesBejelentkezes = findViewById(R.id.buttonBejelentkezesBejelentkezes);
     }
 
+    //Menürendszer
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu,menu);

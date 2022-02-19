@@ -12,108 +12,108 @@
         android:layout_height="fill_parent"
         android:gravity="center"
         android:orientation="horizontal"
-        android:id="@+id/relativeLayout">
+        android:id="@+id/relativeLayoutFooldal">
 
         <ImageView
             android:layout_width="500dp"
             android:layout_height="200dp"
             android:src="@drawable/logo2"
-            android:id="@+id/imageViewLogo"/>
+            android:id="@+id/imageViewLogoFooldal"/>
 
         <Button
             android:layout_width="170dp"
             android:layout_height="wrap_content"
             android:text="Bejelentkezés"
-            android:layout_below="@+id/imageViewLogo"
+            android:layout_below="@+id/imageViewLogoFooldal"
             android:layout_marginLeft="30dp"
-            android:id="@+id/buttonBejelentkezés"/>
+            android:id="@+id/buttonBejelentkezésFooldal"/>
 
         <Button
             android:layout_width="170dp"
             android:layout_height="wrap_content"
             android:text="Regisztráció"
-            android:layout_below="@+id/imageViewLogo"
+            android:layout_below="@+id/imageViewLogoFooldal"
             android:layout_marginLeft="210dp"
             android:layout_marginRight="20dp"
-            android:id="@+id/buttonRegisztracio"/>
+            android:id="@+id/buttonRegisztracioFooldal"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Bemutatkozas"
-            android:layout_below="@id/buttonBejelentkezés"
+            android:layout_below="@id/buttonBejelentkezésFooldal"
             android:textStyle="bold"
             android:layout_marginTop="20dp"
-            android:id="@+id/textViewBemutatkozasCim"/>
+            android:id="@+id/textViewBemutatkozasCimFooldal"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/textViewBemutatkozasCim"
+            android:layout_below="@id/textViewBemutatkozasCimFooldal"
             android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
             android:justificationMode="inter_word"
             android:layout_marginRight="10dp"
             android:layout_marginLeft="10dp"
-            android:id="@+id/textViewBemutatkozas"/>
+            android:id="@+id/textViewBemutatkozasFooldal"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Szabályzat"
-            android:layout_below="@id/textViewBemutatkozas"
+            android:layout_below="@id/textViewBemutatkozasFooldal"
             android:textStyle="bold"
             android:layout_marginTop="20dp"
-            android:id="@+id/textViewSzabalyzatCim"/>
+            android:id="@+id/textViewSzabalyzatCimFooldal"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/textViewSzabalyzatCim"
+            android:layout_below="@id/textViewSzabalyzatCimFooldal"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:justificationMode="inter_word"
             android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-            android:id="@+id/textViewSzabalyzat"/>
+            android:id="@+id/textViewSzabalyzatFooldal"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Elérhetőségek"
-            android:layout_below="@id/textViewSzabalyzat"
+            android:layout_below="@id/textViewSzabalyzatFooldal"
             android:textStyle="bold"
             android:layout_marginTop="20dp"
-            android:id="@+id/textViewElerhetosegekCim"/>
+            android:id="@+id/textViewElerhetosegekCimFooldal"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Önkéntes Portál Nonprofit Kft.\n"
             android:layout_marginLeft="10dp"
-            android:layout_below="@+id/textViewElerhetosegekCim"
-            android:id="@+id/textViewElerhetosegekSzoveg"/>
+            android:layout_below="@+id/textViewElerhetosegekCimFooldal"
+            android:id="@+id/textViewElerhetosegekSzovegFooldal"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=" example@example.com"
             android:layout_marginLeft="10dp"
-            android:layout_below="@+id/textViewElerhetosegekSzoveg"
+            android:layout_below="@+id/textViewElerhetosegekSzovegFooldal"
             android:drawableStart="@drawable/ic_email"
-            android:id="@+id/textViewElerhetosegekEmail"/>
+            android:id="@+id/textViewElerhetosegekEmailFooldal"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=" +36301234567"
             android:layout_marginLeft="10dp"
-            android:layout_below="@+id/textViewElerhetosegekEmail"
+            android:layout_below="@+id/textViewElerhetosegekEmailFooldal"
             android:drawableStart="@drawable/ic_phone"
-            android:id="@+id/textViewElerhetosegekTelefon"/>
+            android:id="@+id/textViewElerhetosegekTelefonFooldal"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=" 1111 Budapest Példa utca 1."
             android:layout_marginLeft="10dp"
-            android:layout_below="@+id/textViewElerhetosegekTelefon"
+            android:layout_below="@+id/textViewElerhetosegekTelefonFooldal"
             android:drawableStart="@drawable/ic_location"
-            android:id="@+id/textViewElerhetosegekHely"/>
+            android:id="@+id/textViewElerhetosegekHelyFooldal"/>
     </RelativeLayout>
 </ScrollView>

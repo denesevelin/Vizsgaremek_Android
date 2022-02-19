@@ -20,17 +20,14 @@ public class ProfilModositas extends AppCompatActivity {
         setContentView(R.layout.activity_profil_modositas);
 
         init();
+        telepulesekBetoltese();
 
-        //Spinner tesztelése
-        String[] items = new String[]{"1", "2", "three"};
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items);
-        spinnerTelepulesProfilModositas.setAdapter(adapter);
-
+        //Vissza a profilra
         buttonVisszaProfilModositas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent_regisztracio = new Intent(ProfilModositas.this, Profil.class);
-                startActivity(intent_regisztracio);
+                Intent intent = new Intent(ProfilModositas.this, Profil.class);
+                startActivity(intent);
             }
         });
     }
@@ -38,5 +35,12 @@ public class ProfilModositas extends AppCompatActivity {
     public void init(){
         spinnerTelepulesProfilModositas = findViewById(R.id.spinnerTelepulesProfilModositas);
         buttonVisszaProfilModositas = findViewById(R.id.buttonVisszaProfilModositas);
+    }
+
+    //Spinner tesztelése
+    public void telepulesekBetoltese(){
+        String[] items = new String[]{"Első település", "Második település", "Harmadik település"};
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items);
+        spinnerTelepulesProfilModositas.setAdapter(adapter);
     }
 }

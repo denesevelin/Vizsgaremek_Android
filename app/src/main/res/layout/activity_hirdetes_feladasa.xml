@@ -10,7 +10,7 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:orientation="horizontal"
-        android:id="@+id/relativeLayout">
+        android:id="@+id/relativeLayoutHirdetesFeladasa">
 
         <TextView
             android:layout_width="wrap_content"
@@ -20,114 +20,115 @@
             android:textStyle="bold"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="50dp"
-            android:id="@+id/textViewHirdetesFeladasa"/>
+            android:id="@+id/textViewHirdetesFeladasaHirdetesFeladasa"/>
 
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Kezdő időpont"
-            android:layout_below="@id/textViewHirdetesFeladasa"
+            android:layout_below="@id/textViewHirdetesFeladasaHirdetesFeladasa"
             android:layout_marginTop="20dp"
             android:layout_marginLeft="30dp"
-            android:id="@+id/editTextKezdoIdopt"/>
+            android:id="@+id/editTextKezdoIdoptHirdetesFeladasa"/>
 
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Záró időpont"
-            android:layout_below="@id/textViewHirdetesFeladasa"
-            android:layout_toEndOf="@+id/editTextKezdoIdopt"
+            android:layout_below="@id/textViewHirdetesFeladasaHirdetesFeladasa"
+            android:layout_toEndOf="@+id/editTextKezdoIdoptHirdetesFeladasa"
             android:layout_marginLeft="100dp"
             android:layout_marginTop="20dp"
-            android:id="@+id/editTextZaroIdopt"/>
+            android:id="@+id/editTextZaroIdoptHirdetesFeladasa"/>
 
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Kategória"
-            android:layout_below="@id/editTextKezdoIdopt"
+            android:layout_below="@id/editTextKezdoIdoptHirdetesFeladasa"
             android:textStyle="bold"
             android:layout_marginTop="20dp"
-            android:id="@+id/textViewKategoriaFelad"/>
+            android:id="@+id/textViewKategoriaHirdetesFeladasa"/>
 
         <Spinner
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/textViewKategoriaFelad"
+            android:layout_below="@+id/textViewKategoriaHirdetesFeladasa"
             android:spinnerMode="dropdown"
-            android:id="@+id/spinnerKategoriaFelad"/>
+            android:id="@+id/spinnerKategoriaHirdetesFeladasa"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Település"
-            android:layout_below="@id/spinnerKategoriaFelad"
+            android:layout_below="@id/spinnerKategoriaHirdetesFeladasa"
             android:textStyle="bold"
             android:layout_marginTop="20dp"
-            android:id="@+id/textViewTelepulesFelad"/>
+            android:id="@+id/textViewTelepulesHirdetesFeladasa"/>
 
         <Spinner
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/textViewTelepulesFelad"
+            android:layout_below="@+id/textViewTelepulesHirdetesFeladasa"
             android:spinnerMode="dropdown"
-            android:id="@+id/spinnerTelepulesFelad"/>
+            android:id="@+id/spinnerTelepulesHirdetesFeladasa"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Cím"
-            android:layout_below="@id/spinnerTelepulesFelad"
+            android:layout_below="@id/spinnerTelepulesHirdetesFeladasa"
             android:textStyle="bold"
             android:layout_marginTop="20dp"
-            android:id="@+id/textViewCimFelad"/>
+            android:id="@+id/textViewCimHirdetesFeladasa"/>
 
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/textViewCimFelad"
-            android:id="@+id/editTextCimFelad"/>
+            android:text="Az alapértelmezett betölteve."
+            android:layout_below="@+id/textViewCimHirdetesFeladasa"
+            android:id="@+id/editTextCimHirdetesFeladasa"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Telefonszám"
-            android:layout_below="@id/editTextCimFelad"
+            android:layout_below="@id/editTextCimHirdetesFeladasa"
             android:textStyle="bold"
             android:layout_marginTop="20dp"
-            android:id="@+id/textViewTelFelad"/>
+            android:id="@+id/textViewTelszamHirdetesFeladasa"/>
 
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/textViewTelFelad"
-            android:id="@+id/editTextTelFelad"/>
+            android:text="Az alapértelmezett betölteve."
+            android:layout_below="@+id/textViewTelszamHirdetesFeladasa"
+            android:id="@+id/editTextTelszamHirdetesFeladasa"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Másodlagos telefonszám"
-            android:layout_below="@id/editTextTelFelad"
+            android:layout_below="@id/editTextTelszamHirdetesFeladasa"
             android:textStyle="bold"
             android:layout_marginTop="20dp"
-            android:id="@+id/textViewTel2Felad"/>
+            android:id="@+id/textViewTelszam2HirdetesFeladasa"/>
 
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/textViewTel2Felad"
-            android:id="@+id/editTextTel2Felad"/>
+            android:layout_below="@+id/textViewTelszam2HirdetesFeladasa"
+            android:id="@+id/editTextTelszam2HirdetesFeladasa"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Leírás"
-            android:layout_below="@+id/editTextTel2Felad"
+            android:layout_below="@+id/editTextTelszam2HirdetesFeladasa"
             android:textStyle="bold"
             android:layout_marginTop="20dp"
-            android:id="@+id/textViewLeiras"/>
-
+            android:id="@+id/textViewLeirasHirdetesFeladasa"/>
 
         <EditText
             android:layout_width="wrap_content"
@@ -135,21 +136,19 @@
             android:lines="10"
             android:minLines="5"
             android:gravity="top|left"
-            android:layout_below="@+id/textViewLeiras"
+            android:layout_below="@+id/textViewLeirasHirdetesFeladasa"
             android:inputType="textMultiLine"
             android:maxLines="15"
-            android:id="@+id/editTextLeiras"/>
+            android:id="@+id/editTextLeirasHirdetesFeladasa"/>
 
         <Button
             android:layout_width="170dp"
             android:layout_height="wrap_content"
             android:text="Mentés"
-            android:layout_below="@+id/editTextLeiras"
+            android:layout_below="@+id/editTextLeirasHirdetesFeladasa"
             android:layout_marginTop="20dp"
             android:layout_centerHorizontal="true"
-            android:id="@+id/buttonMentes"/>
-
-
+            android:id="@+id/buttonMentesHirdetesFeladasa"/>
 
     </RelativeLayout>
 

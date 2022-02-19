@@ -10,22 +10,22 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:orientation="vertical"
-        android:id="@+id/relativeLayout">
+        android:id="@+id/relativeLayoutRegisztracio">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Regisztráció"
-            android:id="@+id/textViewRegisztraciosFeluletRegisztracio"
             android:textSize="30sp"
             android:textStyle="bold"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="50dp"/>
+            android:layout_marginTop="50dp"
+            android:id="@+id/textViewRegisztracioRegisztracio"/>
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/textViewRegisztraciosFeluletRegisztracio"
+            android:layout_below="@+id/textViewRegisztracioRegisztracio"
             android:layout_marginTop="40dp"
             android:id="@+id/textInputNevRegisztracio">
 
@@ -97,19 +97,19 @@
             android:text="Település"
             android:textStyle="bold"
             android:layout_below="@id/textInputEmailRegisztracio"
-            android:id="@+id/textViewTelepules"/>
+            android:id="@+id/textViewTelepulesRegisztracio"/>
 
         <Spinner
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/textViewTelepules"
+            android:layout_below="@+id/textViewTelepulesRegisztracio"
             android:spinnerMode="dropdown"
-            android:id="@+id/SpinnerTelepules"/>
+            android:id="@+id/SpinnerTelepulesRegisztracio"/>
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/SpinnerTelepules"
+            android:layout_below="@+id/SpinnerTelepulesRegisztracio"
             android:id="@+id/textInputCimRegisztracio">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -210,7 +210,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/textInputJelszoRegisztracio"
             app:passwordToggleEnabled="true"
-            android:id="@+id/textInputJelszoMegerositRegisztracio">
+            android:id="@+id/textInputJelszoIsmetRegisztracio">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
@@ -224,17 +224,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Elfogadom a szerződési feltételeket és az Adatvédelmi irányelveket."
-            android:layout_below="@id/textInputJelszoMegerositRegisztracio"
-            android:id="@+id/checkBoxNyilatkozat"/>
+            android:layout_below="@id/textInputJelszoIsmetRegisztracio"
+            android:id="@+id/checkBoxNyilatkozatRegisztracio"/>
 
-        <com.google.android.material.button.MaterialButton
+        <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Regisztráció"
-            android:layout_below="@+id/checkBoxNyilatkozat"
+            android:layout_below="@+id/checkBoxNyilatkozatRegisztracio"
             android:layout_centerHorizontal="true"
             android:id="@+id/buttonRegisztraciosFeluletRegisztracio"/>
-
     </RelativeLayout>
 
 </ScrollView>

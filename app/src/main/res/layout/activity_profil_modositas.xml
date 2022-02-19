@@ -9,7 +9,7 @@
     <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:id="@+id/relativeLayout">
+        android:id="@+id/relativeLayoutProfilModositas">
 
         <TextView
             android:layout_width="wrap_content"
@@ -89,6 +89,7 @@
             android:text="Az alábbi információk mentéséhez admin jogosultság szükséges"
             android:layout_below="@+id/editTextCimProfilModositas"
             android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
             android:textStyle="bold"
             android:textSize="13dp"
             android:id="@+id/textViewFigyelmeztetesProfilModositas"/>

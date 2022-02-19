@@ -3,14 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".HirdetesekListazasa">
+    android:layout_height="match_parent">
 
     <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:orientation="horizontal"
-        android:id="@+id/relativeLayout">
+        android:id="@+id/relativeLayoutHirdetesekListazasa">
 
         <TextView
             android:layout_width="wrap_content"
@@ -20,34 +19,67 @@
             android:textStyle="bold"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="50dp"
-            android:id="@+id/textViewHirdetesekListazasa"/>
+            android:id="@+id/textViewHirdetesekHirdetesekListazasa"/>
 
         <ImageView
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:src="@drawable/tesztkategoriakep"
             android:layout_marginTop="20dp"
-            android:layout_below="@+id/textViewHirdetesekListazasa"
-            android:id="@+id/ImageViewKategoriakep"/>
+            android:layout_below="@+id/textViewHirdetesekHirdetesekListazasa"
+            android:id="@+id/ImageViewKategoriakepHirdetesekListazasa"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toEndOf="@+id/ImageViewKategoriakep"
-            android:layout_below="@+id/textViewHirdetesekListazasa"
-            android:layout_marginTop="20dp"
+            android:layout_toEndOf="@+id/ImageViewKategoriakepHirdetesekListazasa"
+            android:layout_below="@+id/textViewHirdetesekHirdetesekListazasa"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:maxWidth="190dp"
             android:justificationMode="inter_word"
-            android:text="Itt lesz majd a hirdetés szövege."
-            android:id="@+id/textViewHirdetesSzovegPelda"/>
+            android:text="Ide betöltve a hirdetés szövege."
+            android:id="@+id/textViewHirdetesSzovegHirdetesekListazasa"/>
 
         <Button
             android:layout_width="170dp"
             android:layout_height="wrap_content"
             android:text="Tovább"
-            android:layout_below="@+id/textViewHirdetesekListazasa"
+            android:layout_below="@+id/textViewHirdetesekHirdetesekListazasa"
+            android:layout_marginTop="50dp"
+            android:layout_toEndOf="@+id/textViewHirdetesSzovegHirdetesekListazasa"
+            android:id="@+id/buttonTovabbHirdetesekListazasa"/>
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/tesztkategoriakep"
             android:layout_marginTop="20dp"
-            android:layout_toEndOf="@+id/textViewHirdetesSzovegPelda"
-            android:id="@+id/buttonTovabbPelda"/>
+            android:layout_below="@+id/buttonTovabbHirdetesekListazasa"
+            android:id="@+id/ImageView2KategoriakepHirdetesekListazasa"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/ImageViewKategoriakepHirdetesekListazasa"
+            android:layout_below="@+id/buttonTovabbHirdetesekListazasa"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:maxWidth="190dp"
+            android:justificationMode="inter_word"
+            android:text="Ide betöltve a hirdetés szövege."
+            android:id="@+id/textView2HirdetesSzovegHirdetesekListazasa"/>
+
+        <Button
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:text="Tovább"
+            android:layout_below="@+id/buttonTovabbHirdetesekListazasa"
+            android:layout_marginTop="50dp"
+            android:layout_toEndOf="@+id/textViewHirdetesSzovegHirdetesekListazasa"
+            android:id="@+id/button2TovabbHirdetesekListazasa"/>
     </RelativeLayout>
 
 </ScrollView>

@@ -17,7 +17,7 @@ public class KonkretHirdetes extends AppCompatActivity {
     }
 
 
-
+    //Menürendszer
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu,menu);

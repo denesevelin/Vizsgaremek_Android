@@ -14,7 +14,7 @@ import android.widget.Spinner;
 
 public class RegisztraciosFelulet extends AppCompatActivity {
 
-    private Spinner SpinnerTelepules;
+    private Spinner SpinnerTelepulesRegisztracio;
     private Button buttonRegisztraciosFeluletRegisztracio;
 
     @Override
@@ -23,26 +23,32 @@ public class RegisztraciosFelulet extends AppCompatActivity {
         setContentView(R.layout.activity_regisztracios_felulet);
 
         init();
+        telepulesekBetoltese();
 
-        //Spinner tesztelése
-        String[] items = new String[]{"1", "2", "three"};
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items);
-        SpinnerTelepules.setAdapter(adapter);
 
+        //Vissza a főoldalra
         buttonRegisztraciosFeluletRegisztracio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent_regisztracio = new Intent(RegisztraciosFelulet.this, MainActivity.class);
-                startActivity(intent_regisztracio);
+                Intent intent = new Intent(RegisztraciosFelulet.this, MainActivity.class);
+                startActivity(intent);
             }
         });
     }
 
     public void init(){
-        SpinnerTelepules = findViewById(R.id.SpinnerTelepules);
+        SpinnerTelepulesRegisztracio = findViewById(R.id.SpinnerTelepulesRegisztracio);
         buttonRegisztraciosFeluletRegisztracio = findViewById(R.id.buttonRegisztraciosFeluletRegisztracio);
     }
 
+    //Spinner tesztelése
+    public void telepulesekBetoltese(){
+        String[] items = new String[]{"Első település", "Második település", "Harmadik település"};
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items);
+        SpinnerTelepulesRegisztracio.setAdapter(adapter);
+    }
+
+    //Menürendszer
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu,menu);

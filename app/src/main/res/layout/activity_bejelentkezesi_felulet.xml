@@ -9,7 +9,7 @@
     <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:id="@+id/relativeLayout">
+        android:id="@+id/relativeLayoutBejelentkezes">
 
         <TextView
             android:layout_width="wrap_content"
@@ -19,12 +19,12 @@
             android:textStyle="bold"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="50dp"
-            android:id="@+id/textViewBejelentkezesiFeluletBejelentkezes"/>
+            android:id="@+id/textViewBejelentkezesBejelentkezes"/>
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/textViewBejelentkezesiFeluletBejelentkezes"
+            android:layout_below="@+id/textViewBejelentkezesBejelentkezes"
             android:layout_marginTop="40dp"
             android:id="@+id/textInputFelhasznalonevBejelentkezes">
 
@@ -58,7 +58,7 @@
             android:layout_below="@+id/textInputJelszoBejelentkezes"
             android:layout_marginTop="40dp"
             android:layout_centerHorizontal="true"
-            android:id="@+id/buttonBejelentkezesiFeluletBejelentkezes"/>
+            android:id="@+id/buttonBejelentkezesBejelentkezes"/>
     </RelativeLayout>
 
 </ScrollView>

@@ -12,7 +12,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button buttonBejelentkezes, buttonRegisztracio;
+    private Button buttonBejelentkezésFooldal, buttonRegisztracioFooldal;
 
 
     @Override
@@ -22,17 +22,21 @@ public class MainActivity extends AppCompatActivity {
 
         init();
 
-        buttonBejelentkezes.setOnClickListener(new View.OnClickListener() {
+        //Bejelentkezési felület megnyitása
+        buttonBejelentkezésFooldal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openBejelentkezesiFelulet();
+                Intent intent = new Intent(MainActivity.this, BejelentkezesiFelulet.class);
+                startActivity(intent);
             }
         });
 
-        buttonRegisztracio.setOnClickListener(new View.OnClickListener() {
+        //Regisztrációs felület megnyitása
+        buttonRegisztracioFooldal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openRegisztraciosFelulet();
+                Intent intent = new Intent(MainActivity.this,RegisztraciosFelulet.class);
+                startActivity(intent);
             }
         });
 
@@ -41,20 +45,12 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void init(){
-        buttonBejelentkezes = findViewById(R.id.buttonBejelentkezés);
-        buttonRegisztracio = findViewById(R.id.buttonRegisztracio);
+        buttonBejelentkezésFooldal = findViewById(R.id.buttonBejelentkezésFooldal);
+        buttonRegisztracioFooldal = findViewById(R.id.buttonRegisztracioFooldal);
     }
 
-    public void openBejelentkezesiFelulet(){
-        Intent intent_bejelentkezes = new Intent(MainActivity.this, BejelentkezesiFelulet.class);
-        startActivity(intent_bejelentkezes);
-    }
 
-    public void openRegisztraciosFelulet(){
-        Intent intent_regisztracio = new Intent(MainActivity.this,RegisztraciosFelulet.class);
-        startActivity(intent_regisztracio);
-    }
-
+    //Menürendszer
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu,menu);

@@ -9,7 +9,7 @@
     <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:id="@+id/relativeLayout">
+        android:id="@+id/relativeLayoutKonkretHirdetes">
 
         <ImageView
             android:layout_width="150dp"
@@ -17,115 +17,115 @@
             android:src="@drawable/tesztprofilkep"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="70dp"
-            android:id="@+id/imageViewTesztProfilkep"/>
+            android:id="@+id/imageViewProfilkepKonkretHirdetes"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toEndOf="@+id/imageViewTesztProfilkep"
+            android:layout_toEndOf="@+id/imageViewProfilkepKonkretHirdetes"
             android:layout_marginLeft="30dp"
             android:layout_marginTop="100dp"
             android:text="Teszt Ella"
-            android:id="@+id/textViewNev"/>
+            android:id="@+id/textViewNevKonkretHirdetes"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toEndOf="@+id/imageViewTesztProfilkep"
-            android:layout_below="@+id/textViewNev"
+            android:layout_toEndOf="@+id/imageViewProfilkepKonkretHirdetes"
+            android:layout_below="@+id/textViewNevKonkretHirdetes"
             android:layout_marginLeft="30dp"
             android:text="Településnév"
-            android:id="@+id/textViewTelepules"/>
+            android:id="@+id/textViewTelepulesKonkretHirdetes"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toEndOf="@+id/imageViewTesztProfilkep"
-            android:layout_below="@+id/textViewTelepules"
+            android:layout_toEndOf="@+id/imageViewProfilkepKonkretHirdetes"
+            android:layout_below="@+id/textViewTelepulesKonkretHirdetes"
             android:layout_marginLeft="30dp"
             android:text="Budapest 1141 Példa utca 23/2."
-            android:id="@+id/textViewCim"/>
+            android:id="@+id/textViewCimKonkretHirdetes"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toEndOf="@+id/imageViewTesztProfilkep"
-            android:layout_below="@+id/textViewCim"
+            android:layout_toEndOf="@+id/imageViewProfilkepKonkretHirdetes"
+            android:layout_below="@+id/textViewCimKonkretHirdetes"
             android:layout_marginLeft="30dp"
             android:text="+36301234567"
-            android:id="@+id/textViewTelefonszam"/>
+            android:id="@+id/textViewTelefonszamKonkretHirdetes"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toEndOf="@+id/imageViewTesztProfilkep"
-            android:layout_below="@+id/textViewTelefonszam"
+            android:layout_toEndOf="@+id/imageViewProfilkepKonkretHirdetes"
+            android:layout_below="@+id/textViewTelefonszamKonkretHirdetes"
             android:layout_marginLeft="30dp"
             android:text="+36301234567 (nem kötelező)"
-            android:id="@+id/textViewTelefonszam2"/>
+            android:id="@+id/textViewTelefonszam2KonkretHirdetes"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/imageViewTesztProfilkep"
+            android:layout_below="@+id/imageViewProfilkepKonkretHirdetes"
             android:layout_marginLeft="30dp"
             android:text="Kategória neve"
             android:layout_marginBottom="10dp"
-            android:id="@+id/textViewKategoria"/>
+            android:id="@+id/textViewKategoriaKonkretHirdetes"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/textViewKategoria"
+            android:layout_below="@+id/textViewKategoriaKonkretHirdetes"
             android:layout_marginLeft="30dp"
             android:text="Időpont kezdete: "
-            android:id="@+id/textViewIdopontKezdete"/>
+            android:id="@+id/textViewIdopontKezdeteKonkretHirdetes"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/textViewKategoria"
-            android:layout_toEndOf="@+id/textViewIdopontKezdete"
+            android:layout_below="@+id/textViewKategoriaKonkretHirdetes"
+            android:layout_toEndOf="@+id/textViewIdopontKezdeteKonkretHirdetes"
             android:layout_marginLeft="30dp"
             android:text="2022.06.15. 16:30"
-            android:id="@+id/textViewKonkretKezdoIdopont"/>
+            android:id="@+id/textViewKonkretKezdoIdopontKonkretHirdetes"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/textViewIdopontKezdete"
+            android:layout_below="@+id/textViewIdopontKezdeteKonkretHirdetes"
             android:layout_marginLeft="30dp"
             android:text="Időpont vége: "
-            android:id="@+id/textViewIdopontVege"/>
+            android:id="@+id/textViewIdopontVegeKonkretHirdetes"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/textViewKonkretKezdoIdopont"
-            android:layout_toEndOf="@+id/textViewIdopontKezdete"
-            android:layout_marginLeft="30dp"
+            android:layout_below="@+id/textViewKonkretKezdoIdopontKonkretHirdetes"
+            android:layout_toEndOf="@+id/textViewIdopontVegeKonkretHirdetes"
+            android:layout_marginLeft="49dp"
             android:text="2022.06.15. 18:30"
-            android:id="@+id/textViewKonkretVegIdopont"/>
+            android:id="@+id/textViewKonkretVegIdopontKonkretHirdetes"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/textViewIdopontVege"
+            android:layout_below="@+id/textViewKonkretVegIdopontKonkretHirdetes"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
             android:layout_marginTop="20dp"
             android:justificationMode="inter_word"
             android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-            android:id="@+id/textViewLeiras"/>
+            android:id="@+id/textViewLeirasKonkretHirdetes"/>
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/textViewLeiras"
+            android:layout_below="@+id/textViewLeirasKonkretHirdetes"
             android:layout_marginTop="30dp"
             android:layout_centerInParent="true"
             android:text="Jelentkezem"
-            android:id="@+id/buttonJelentkezes"/>
+            android:id="@+id/buttonJelentkezesKonkretHirdetes"/>
 
     </RelativeLayout>
 

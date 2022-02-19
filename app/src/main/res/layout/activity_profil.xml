@@ -9,7 +9,7 @@
     <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:id="@+id/relativeLayout">
+        android:id="@+id/relativeLayoutProfil">
 
         <TextView
             android:layout_width="wrap_content"
@@ -27,174 +27,173 @@
             android:src="@drawable/tesztprofilkep"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="70dp"
-            android:id="@+id/imageViewTesztProfilkep"/>
+            android:id="@+id/imageViewProfilkepProfil"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toEndOf="@+id/imageViewTesztProfilkep"
+            android:layout_toEndOf="@+id/imageViewProfilkepProfil"
             android:layout_marginLeft="70dp"
             android:layout_marginTop="120dp"
             android:text="Teszt Ella"
-            android:id="@+id/textViewNev"/>
+            android:id="@+id/textViewNevProfil"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toEndOf="@+id/imageViewTesztProfilkep"
-            android:layout_below="@+id/textViewNev"
+            android:layout_toEndOf="@+id/imageViewProfilkepProfil"
+            android:layout_below="@+id/textViewNevProfil"
             android:layout_marginLeft="70dp"
             android:layout_marginTop="20dp"
             android:text="teszt.ella1983"
-            android:id="@+id/textViewFelhasznalonev"/>
+            android:id="@+id/textViewFelhasznalonevProfil"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/imageViewTesztProfilkep"
+            android:layout_below="@+id/imageViewProfilkepProfil"
             android:layout_marginLeft="30dp"
             android:text="+36301234567"
-            android:id="@+id/textViewTelefonszam"/>
+            android:id="@+id/textViewTelefonszamProfil"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/textViewTelefonszam"
+            android:layout_below="@+id/textViewTelefonszamProfil"
             android:layout_marginLeft="30dp"
             android:text="teszt.ella@gmail.com"
-            android:id="@+id/textViewEmail"/>
+            android:id="@+id/textViewEmailProfil"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/textViewEmail"
+            android:layout_below="@+id/textViewEmailProfil"
             android:layout_marginLeft="30dp"
             android:text="Budapest"
-            android:id="@+id/textViewTelepules"/>
+            android:id="@+id/textViewTelepulesProfil"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/textViewTelepules"
+            android:layout_below="@+id/textViewTelepulesProfil"
             android:layout_marginLeft="30dp"
             android:text="1033 Teszt utca 124. 5/36."
             android:layout_marginBottom="10dp"
-            android:id="@+id/textViewCim"/>
+            android:id="@+id/textViewCimProfil"/>
 
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/textViewCim"
+            android:layout_below="@+id/textViewCimProfil"
             android:layout_marginLeft="30dp"
             android:text="Pontszám: "
             android:textStyle="bold"
-            android:id="@+id/textViewPontszam"/>
+            android:id="@+id/textViewPontszamProfil"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/textViewCim"
-            android:layout_toEndOf="@+id/textViewPontszam"
+            android:layout_below="@+id/textViewCimProfil"
+            android:layout_toEndOf="@+id/textViewPontszamProfil"
             android:layout_marginLeft="30dp"
             android:text="5"
             android:textStyle="bold"
-            android:id="@+id/textViewKonkretPontszam"/>
+            android:id="@+id/textViewKonkretPontszamProfil"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/textViewPontszam"
+            android:layout_below="@+id/textViewPontszamProfil"
             android:layout_marginLeft="30dp"
             android:text="Díjaim: "
             android:textStyle="bold"
             android:layout_marginBottom="10dp"
-            android:id="@+id/textViewDij"/>
+            android:id="@+id/textViewDijProfil"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/textViewDij"
+            android:layout_below="@+id/textViewDijProfil"
             android:layout_marginLeft="30dp"
             android:text="Hirdetések amikre jelentkeztem: "
             android:layout_marginBottom="10dp"
-            android:id="@+id/textViewJelentkeztem"/>
+            android:id="@+id/textViewJelentkeztemProfil"/>
 
         <ImageButton
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:src="@drawable/kutyasetaltatas"
-            android:layout_below="@+id/textViewJelentkeztem"
-            android:id="@+id/imageButtonJelentkeztem1"/>
+            android:layout_below="@+id/textViewJelentkeztemProfil"
+            android:id="@+id/imageButtonJelentkeztemProfil"/>
 
         <ImageButton
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:src="@drawable/korhaz"
-            android:layout_below="@+id/textViewJelentkeztem"
-            android:layout_toEndOf="@+id/imageButtonJelentkeztem1"
-            android:id="@+id/imageButtonJelentkeztem2"/>
+            android:layout_below="@+id/textViewJelentkeztemProfil"
+            android:layout_toEndOf="@+id/imageButtonJelentkeztemProfil"
+            android:id="@+id/imageButton2JelentkeztemProfil"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/imageButtonJelentkeztem1"
+            android:layout_below="@+id/imageButtonJelentkeztemProfil"
             android:layout_marginLeft="30dp"
             android:text="Saját hirdetéseim: "
             android:layout_marginBottom="10dp"
-            android:id="@+id/textViewHirdeteseim"/>
+            android:id="@+id/textViewHirdeteseimProfil"/>
 
         <ImageButton
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:src="@drawable/kutyasetaltatas"
-            android:layout_below="@+id/textViewHirdeteseim"
-            android:id="@+id/imageButtonHirdetes1"/>
+            android:layout_below="@+id/textViewHirdeteseimProfil"
+            android:id="@+id/imageButtonHirdetesemProfil"/>
 
         <ImageButton
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:src="@drawable/korhaz"
-            android:layout_below="@+id/textViewHirdeteseim"
-            android:layout_toEndOf="@+id/imageButtonHirdetes1"
-            android:id="@+id/imageButtonHirdetes2"/>
+            android:layout_below="@+id/textViewHirdeteseimProfil"
+            android:layout_toEndOf="@+id/imageButtonHirdetesemProfil"
+            android:id="@+id/imageButton2HirdetesemProfil"/>
         <Button
             android:layout_width="80dp"
             android:layout_height="match_parent"
             android:text="Törlés"
             android:textSize="10dp"
             android:layout_marginLeft="10dp"
-            android:layout_below="@+id/imageButtonHirdetes1"
-            android:id="@+id/buttonHirdetesTorlese1"/>
+            android:layout_below="@+id/imageButtonHirdetesemProfil"
+            android:id="@+id/buttonHirdetesTorleseProfil"/>
         <Button
             android:layout_width="80dp"
             android:layout_height="match_parent"
             android:text="Törlés"
             android:textSize="10dp"
             android:layout_marginLeft="20dp"
-            android:layout_toEndOf="@+id/buttonHirdetesTorlese1"
-            android:layout_below="@+id/imageButtonHirdetes2"
-            android:id="@+id/buttonHirdetesTorlese2"/>
+            android:layout_toEndOf="@+id/buttonHirdetesTorleseProfil"
+            android:layout_below="@+id/imageButton2HirdetesemProfil"
+            android:id="@+id/button2HirdetesTorleseProfil"/>
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/buttonHirdetesTorlese1"
+            android:layout_below="@+id/buttonHirdetesTorleseProfil"
             android:layout_marginTop="20dp"
             android:layout_marginLeft="20dp"
             android:text="Profil módosítása"
-            android:id="@+id/buttonProfilModositas"/>
+            android:id="@+id/buttonProfilModositasProfil"/>
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/buttonHirdetesTorlese1"
-            android:layout_toEndOf="@+id/buttonProfilModositas"
+            android:layout_below="@+id/buttonHirdetesTorleseProfil"
+            android:layout_toEndOf="@+id/buttonProfilModositasProfil"
             android:layout_marginTop="20dp"
             android:layout_marginLeft="20dp"
             android:text="Profil törlése"
-            android:id="@+id/buttonProfilTorless"/>
-
+            android:id="@+id/buttonProfilTorlesProfil"/>
 
     </RelativeLayout>
 

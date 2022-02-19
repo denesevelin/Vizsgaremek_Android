@@ -21,8 +21,8 @@ import java.util.Calendar;
 
 public class HirdetesFeladasa extends AppCompatActivity {
 
-    EditText editTextKezdoIdopt, editTextZaroIdopt;
-    private Spinner spinnerKategoriaFelad, spinnerTelepulesFelad;
+    EditText editTextKezdoIdoptHirdetesFeladasa, editTextZaroIdoptHirdetesFeladasa;
+    private Spinner spinnerKategoriaHirdetesFeladasa, spinnerTelepulesHirdetesFeladasa;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,17 +33,17 @@ public class HirdetesFeladasa extends AppCompatActivity {
         kategoriakBetoltese();
         telepulesekBetoltese();
 
-        editTextKezdoIdopt.setOnClickListener(new View.OnClickListener() {
+        editTextKezdoIdoptHirdetesFeladasa.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                kezdoidopont(editTextKezdoIdopt);
+                kezdoidopont(editTextKezdoIdoptHirdetesFeladasa);
             }
         });
 
-        editTextZaroIdopt.setOnClickListener(new View.OnClickListener() {
+        editTextZaroIdoptHirdetesFeladasa.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                zaroidopont(editTextZaroIdopt);
+                zaroidopont(editTextZaroIdoptHirdetesFeladasa);
             }
         });
     }
@@ -51,12 +51,13 @@ public class HirdetesFeladasa extends AppCompatActivity {
 
 
     public void init(){
-        editTextKezdoIdopt = findViewById(R.id.editTextKezdoIdopt);
-        editTextZaroIdopt = findViewById(R.id.editTextZaroIdopt);
-        spinnerKategoriaFelad = findViewById(R.id.spinnerKategoriaFelad);
-        spinnerTelepulesFelad = findViewById(R.id.spinnerTelepulesFelad);
+        editTextKezdoIdoptHirdetesFeladasa = findViewById(R.id.editTextKezdoIdoptHirdetesFeladasa);
+        editTextZaroIdoptHirdetesFeladasa = findViewById(R.id.editTextZaroIdoptHirdetesFeladasa);
+        spinnerKategoriaHirdetesFeladasa = findViewById(R.id.spinnerKategoriaHirdetesFeladasa);
+        spinnerTelepulesHirdetesFeladasa = findViewById(R.id.spinnerTelepulesHirdetesFeladasa);
     }
 
+    //Kezdő dátum + időpont kiválasztása
     private void kezdoidopont(EditText editTextKezdoIdopt) {
         Calendar calendar = Calendar.getInstance();
         DatePickerDialog.OnDateSetListener dateSetListener = new DatePickerDialog.OnDateSetListener() {
@@ -83,6 +84,7 @@ public class HirdetesFeladasa extends AppCompatActivity {
         new DatePickerDialog(HirdetesFeladasa.this,dateSetListener,calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), calendar.get(Calendar.DAY_OF_MONTH)).show();
     }
 
+    //Záró dátum + időpont kiválasztása
     private void zaroidopont(EditText editTextZaroIdopt) {
         Calendar calendar = Calendar.getInstance();
         DatePickerDialog.OnDateSetListener dateSetListener = new DatePickerDialog.OnDateSetListener() {
@@ -109,18 +111,21 @@ public class HirdetesFeladasa extends AppCompatActivity {
         new DatePickerDialog(HirdetesFeladasa.this,dateSetListener,calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), calendar.get(Calendar.DAY_OF_MONTH)).show();
     }
 
+    //Kategória kiválasztása
     public void kategoriakBetoltese(){
         String[] items = new String[]{"Kutyasétáltatás", "Vásárlás", "Takarítás", "Személyszállítás", "Idősgondozás", "Gyermekfelügyelet", "Szerelés", "Társalgás", "Korrepetálás", "Főzés", "Kertészkedés", "Egyéb"};
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items);
-        spinnerKategoriaFelad.setAdapter(adapter);
+        spinnerKategoriaHirdetesFeladasa.setAdapter(adapter);
     }
 
+    //Település kiválasztása
     public void telepulesekBetoltese(){
-        String[] items = new String[]{"Első", "Második", "..."};
+        String[] items = new String[]{"Első település", "Második település", "Harmadik település"};
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items);
-        spinnerTelepulesFelad.setAdapter(adapter);
+        spinnerTelepulesHirdetesFeladasa.setAdapter(adapter);
     }
 
+    //Menürendszer
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu,menu);

@@ -15,8 +15,8 @@ import android.widget.TextView;
 
 public class Profil extends AppCompatActivity {
 
-    private ImageButton imageButtonJelentkeztem1;
-    private Button buttonProfilModositas;
+    private ImageButton imageButtonJelentkeztemProfil;
+    private Button buttonProfilModositasProfil;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +25,8 @@ public class Profil extends AppCompatActivity {
 
         init();
 
-        imageButtonJelentkeztem1.setOnClickListener(new View.OnClickListener() {
+        //Konkrét hirdetés megtekintése
+        imageButtonJelentkeztemProfil.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Profil.this, KonkretHirdetes.class);
@@ -33,7 +34,8 @@ public class Profil extends AppCompatActivity {
             }
         });
 
-        buttonProfilModositas.setOnClickListener(new View.OnClickListener() {
+        //Profil módosítás megnyitása
+        buttonProfilModositasProfil.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Profil.this, ProfilModositas.class);
@@ -43,14 +45,14 @@ public class Profil extends AppCompatActivity {
     }
 
     public void init(){
-        imageButtonJelentkeztem1 = findViewById(R.id.imageButtonJelentkeztem1);
-        buttonProfilModositas = findViewById(R.id.buttonProfilModositas);
+        imageButtonJelentkeztemProfil = findViewById(R.id.imageButtonJelentkeztemProfil);
+        buttonProfilModositasProfil = findViewById(R.id.buttonProfilModositasProfil);
 
     }
 
 
 
-
+    //Menürendszer
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu,menu);

@@ -12,25 +12,31 @@ import android.widget.Button;
 
 public class HirdetesekListazasa extends AppCompatActivity {
 
-    //teszt a hirdetések feladása miatt
-    private Button buttonTovabbPelda;
+    private Button buttonTovabbHirdetesekListazasa;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hirdetesek_listazasa);
 
-        //teszt
-        buttonTovabbPelda = findViewById(R.id.buttonTovabbPelda);
-        buttonTovabbPelda.setOnClickListener(new View.OnClickListener() {
+        init();
+
+        //Konkrét hirdetésre
+        buttonTovabbHirdetesekListazasa.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent_szures = new Intent(HirdetesekListazasa.this, KonkretHirdetes.class);
-                startActivity(intent_szures);
+                Intent intent = new Intent(HirdetesekListazasa.this, KonkretHirdetes.class);
+                startActivity(intent);
             }
         });
+
     }
 
+    public void init(){
+        buttonTovabbHirdetesekListazasa = findViewById(R.id.buttonTovabbHirdetesekListazasa);
+    }
+
+    //Menürendszer
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu,menu);

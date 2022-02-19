@@ -14,8 +14,8 @@ import android.widget.Spinner;
 
 public class HirdetesekKeresese extends AppCompatActivity {
 
-    private Spinner SpinnerKategoriaKeres, SpinnerTelepulesKeres;
-    private Button buttonSzures;
+    private Spinner SpinnerKategoriaKeresHirdetesekKeresese, SpinnerTelepulesKeresHirdetesekKeresese;
+    private Button buttonSzuresHirdetesekKeresese;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +26,8 @@ public class HirdetesekKeresese extends AppCompatActivity {
         kategoriakBetoltese();
         telepulesekBetoltese();
 
-        buttonSzures.setOnClickListener(new View.OnClickListener() {
+        //Hirdetések kilistázása
+        buttonSzuresHirdetesekKeresese.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent_szures = new Intent(HirdetesekKeresese.this, HirdetesekListazasa.class);
@@ -36,21 +37,21 @@ public class HirdetesekKeresese extends AppCompatActivity {
     }
 
     public void init(){
-        SpinnerKategoriaKeres = findViewById(R.id.SpinnerKategoriaKeres);
-        SpinnerTelepulesKeres = findViewById(R.id.SpinnerTelepulesKeres);
-        buttonSzures = findViewById(R.id.buttonSzures);
+        SpinnerKategoriaKeresHirdetesekKeresese = findViewById(R.id.SpinnerKategoriaKeresHirdetesekKeresese);
+        SpinnerTelepulesKeresHirdetesekKeresese = findViewById(R.id.SpinnerTelepulesKeresHirdetesekKeresese);
+        buttonSzuresHirdetesekKeresese = findViewById(R.id.buttonSzuresHirdetesekKeresese);
     }
 
     public void kategoriakBetoltese(){
         String[] items = new String[]{"Kutyasétáltatás", "Vásárlás", "Takarítás", "Személyszállítás", "Idősgondozás", "Gyermekfelügyelet", "Szerelés", "Társalgás", "Korrepetálás", "Főzés", "Kertészkedés", "Egyéb"};
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items);
-        SpinnerKategoriaKeres.setAdapter(adapter);
+        SpinnerKategoriaKeresHirdetesekKeresese.setAdapter(adapter);
     }
 
     public void telepulesekBetoltese(){
-        String[] items = new String[]{"Első", "Második", "..."};
+        String[] items = new String[]{"Első település", "Második település", "Harmadik település"};
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items);
-        SpinnerTelepulesKeres.setAdapter(adapter);
+        SpinnerTelepulesKeresHirdetesekKeresese.setAdapter(adapter);
     }
 
     @Override
