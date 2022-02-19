@@ -1,9 +1,204 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ProfilModositas">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/relativeLayout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Profil módosítása"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:id="@+id/textViewProfilModositas"/>
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/tesztprofilkep"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="70dp"
+            android:id="@+id/imageViewProfilkepProfilModositas"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/textViewProfilModositas"
+            android:layout_toEndOf="@+id/imageViewProfilkepProfilModositas"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="30dp"
+            android:text="Tallózás..."
+            android:id="@+id/buttonProfilkepProfilModositas"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Betöltött profilkép fileneve"
+            android:layout_below="@id/buttonProfilkepProfilModositas"
+            android:layout_toEndOf="@id/imageViewProfilkepProfilModositas"
+            android:layout_marginLeft="35dp"
+            android:id="@+id/textViewProfilkepFileNeveProfilModositas"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Betöltött telefonszám"
+            android:layout_below="@+id/imageViewProfilkepProfilModositas"
+            android:id="@+id/editTextTelszamProfilModositas"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Betöltött e-mail cím"
+            android:layout_below="@+id/editTextTelszamProfilModositas"
+            android:id="@+id/editTextEmailProfilModositas"/>
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editTextEmailProfilModositas"
+            android:spinnerMode="dropdown"
+            android:id="@+id/spinnerTelepulesProfilModositas"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Betöltött cím"
+            android:layout_below="@+id/spinnerTelepulesProfilModositas"
+            android:id="@+id/editTextCimProfilModositas"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mentés"
+            android:layout_below="@+id/spinnerTelepulesProfilModositas"
+            android:layout_toEndOf="@+id/editTextCimProfilModositas"
+            android:layout_marginLeft="200dp"
+            android:id="@+id/buttonModositas1MentesProfilModositas"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Az alábbi információk mentéséhez admin jogosultság szükséges"
+            android:layout_below="@+id/editTextCimProfilModositas"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:textSize="13dp"
+            android:id="@+id/textViewFigyelmeztetesProfilModositas"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Régi jelszó"
+            android:layout_below="@+id/textViewFigyelmeztetesProfilModositas"
+            android:layout_marginTop="10dp"
+            android:id="@+id/textViewRegiJelszoProfilModositas"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewRegiJelszoProfilModositas"
+            android:id="@+id/editTextRegiJelszoProfilModositas"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Új jelszó"
+            android:layout_below="@+id/editTextRegiJelszoProfilModositas"
+            android:layout_marginTop="10dp"
+            android:id="@+id/textViewUjJelszoProfilModositas"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewUjJelszoProfilModositas"
+            android:id="@+id/editTextUjJelszoProfilModositas"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Új jelszó ismét"
+            android:layout_below="@+id/editTextUjJelszoProfilModositas"
+            android:layout_marginTop="10dp"
+            android:id="@+id/textViewUjJelszoIsmetProfilModositas"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewUjJelszoIsmetProfilModositas"
+            android:id="@+id/editTextUjJelszoIsmetProfilModositas"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mentés"
+            android:layout_below="@+id/textViewUjJelszoIsmetProfilModositas"
+            android:layout_toEndOf="@+id/editTextCimProfilModositas"
+            android:layout_marginLeft="200dp"
+            android:id="@+id/buttonModositas2MentesProfilModositas"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Betöltött Teljes név"
+            android:layout_below="@+id/editTextUjJelszoIsmetProfilModositas"
+            android:id="@+id/editTextNevProfilModositas"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Betöltött Okmányszám"
+            android:layout_below="@+id/editTextNevProfilModositas"
+            android:id="@+id/editTextOkmanyszamProfilModositas"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Okmánykép"
+            android:layout_below="@+id/editTextOkmanyszamProfilModositas"
+            android:id="@+id/textViewOkmanykepProfilModositas"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/textViewOkmanykepProfilModositas"
+            android:text="Tallózás..."
+            android:id="@+id/buttonOkmanykepProfilModositas"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Betöltött okmánykép fileneve"
+            android:layout_below="@id/textViewOkmanykepProfilModositas"
+            android:layout_toEndOf="@id/buttonOkmanykepProfilModositas"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/textViewOkmanykepFileNeveProfilModositas"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mentés"
+            android:layout_below="@+id/buttonOkmanykepProfilModositas"
+            android:layout_toEndOf="@+id/editTextCimProfilModositas"
+            android:layout_marginLeft="200dp"
+            android:id="@+id/buttonModositas3MentesProfilModositas"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vissza a profilra"
+            android:layout_below="@+id/buttonModositas3MentesProfilModositas"
+            android:layout_centerInParent="true"
+            android:id="@+id/buttonVisszaProfilModositas"/>
+
+
+    </RelativeLayout>
+
+</ScrollView>

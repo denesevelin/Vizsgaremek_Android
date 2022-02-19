@@ -19,7 +19,7 @@
             android:textStyle="bold"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="20dp"
-            android:id="@+id/textViewHirdetesekKeresese"/>
+            android:id="@+id/textViewProfil"/>
 
         <ImageView
             android:layout_width="150dp"
