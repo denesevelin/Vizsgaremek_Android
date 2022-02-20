@@ -120,60 +120,66 @@
             android:layout_marginBottom="10dp"
             android:id="@+id/textViewJelentkeztemProfil"/>
 
-        <ImageButton
+        <ImageView
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:src="@drawable/kutyasetaltatas"
+            android:scaleType="fitCenter"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/idosgondozas"
             android:layout_below="@+id/textViewJelentkeztemProfil"
-            android:id="@+id/imageButtonJelentkeztemProfil"/>
+            android:id="@+id/imageViewJelentkeztemProfil"/>
 
-        <ImageButton
+        <ImageView
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:src="@drawable/korhaz"
+            android:src="@drawable/fozes"
+            android:scaleType="fitCenter"
             android:layout_below="@+id/textViewJelentkeztemProfil"
-            android:layout_toEndOf="@+id/imageButtonJelentkeztemProfil"
-            android:id="@+id/imageButton2JelentkeztemProfil"/>
+            android:layout_toEndOf="@+id/imageViewJelentkeztemProfil"
+            android:id="@+id/imageView2JelentkeztemProfil"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/imageButtonJelentkeztemProfil"
+            android:layout_below="@+id/imageViewJelentkeztemProfil"
             android:layout_marginLeft="30dp"
             android:text="Saját hirdetéseim: "
             android:layout_marginBottom="10dp"
             android:id="@+id/textViewHirdeteseimProfil"/>
 
-        <ImageButton
+        <ImageView
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:src="@drawable/kutyasetaltatas"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/gyermekfelugyelet"
             android:layout_below="@+id/textViewHirdeteseimProfil"
-            android:id="@+id/imageButtonHirdetesemProfil"/>
+            android:id="@+id/imageViewHirdetesemProfil"/>
 
-        <ImageButton
+        <ImageView
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:src="@drawable/korhaz"
+            android:src="@drawable/idosgondozas"
             android:layout_below="@+id/textViewHirdeteseimProfil"
-            android:layout_toEndOf="@+id/imageButtonHirdetesemProfil"
-            android:id="@+id/imageButton2HirdetesemProfil"/>
+            android:layout_toEndOf="@+id/imageViewHirdetesemProfil"
+            android:id="@+id/imageView2HirdetesemProfil"/>
         <Button
             android:layout_width="80dp"
             android:layout_height="match_parent"
             android:text="Törlés"
             android:textSize="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_below="@+id/imageButtonHirdetesemProfil"
+            android:layout_marginLeft="30dp"
+            android:layout_below="@+id/imageViewHirdetesemProfil"
             android:id="@+id/buttonHirdetesTorleseProfil"/>
         <Button
             android:layout_width="80dp"
             android:layout_height="match_parent"
             android:text="Törlés"
             android:textSize="10dp"
-            android:layout_marginLeft="20dp"
+            android:layout_marginLeft="30dp"
             android:layout_toEndOf="@+id/buttonHirdetesTorleseProfil"
-            android:layout_below="@+id/imageButton2HirdetesemProfil"
+            android:layout_below="@+id/imageView2HirdetesemProfil"
             android:id="@+id/button2HirdetesTorleseProfil"/>
 
         <Button
@@ -181,7 +187,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/buttonHirdetesTorleseProfil"
             android:layout_marginTop="20dp"
-            android:layout_marginLeft="20dp"
+            android:layout_marginLeft="10dp"
             android:text="Profil módosítása"
             android:id="@+id/buttonProfilModositasProfil"/>
 

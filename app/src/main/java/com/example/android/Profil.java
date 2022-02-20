@@ -11,11 +11,12 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class Profil extends AppCompatActivity {
 
-    private ImageButton imageButtonJelentkeztemProfil;
+    private ImageView imageViewJelentkeztemProfil;
     private Button buttonProfilModositasProfil;
 
     @Override
@@ -26,7 +27,7 @@ public class Profil extends AppCompatActivity {
         init();
 
         //Konkrét hirdetés megtekintése
-        imageButtonJelentkeztemProfil.setOnClickListener(new View.OnClickListener() {
+        imageViewJelentkeztemProfil.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Profil.this, KonkretHirdetes.class);
@@ -45,7 +46,7 @@ public class Profil extends AppCompatActivity {
     }
 
     public void init(){
-        imageButtonJelentkeztemProfil = findViewById(R.id.imageButtonJelentkeztemProfil);
+        imageViewJelentkeztemProfil = findViewById(R.id.imageViewJelentkeztemProfil);
         buttonProfilModositasProfil = findViewById(R.id.buttonProfilModositasProfil);
 
     }

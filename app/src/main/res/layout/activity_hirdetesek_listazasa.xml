@@ -24,7 +24,7 @@
         <ImageView
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:src="@drawable/tesztkategoriakep"
+            android:src="@drawable/kutyasetaltatas"
             android:layout_marginTop="20dp"
             android:layout_below="@+id/textViewHirdetesekHirdetesekListazasa"
             android:id="@+id/ImageViewKategoriakepHirdetesekListazasa"/>
@@ -54,7 +54,7 @@
         <ImageView
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:src="@drawable/tesztkategoriakep"
+            android:src="@drawable/bevasarlas"
             android:layout_marginTop="20dp"
             android:layout_below="@+id/buttonTovabbHirdetesekListazasa"
             android:id="@+id/ImageView2KategoriakepHirdetesekListazasa"/>
