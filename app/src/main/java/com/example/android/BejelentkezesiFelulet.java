@@ -81,13 +81,13 @@ public class BejelentkezesiFelulet extends AppCompatActivity {
             finish();
             return true;
         }
-        /*if(id == R.id.menuRanglista){
+        if(id == R.id.menuRanglista){
             Intent i = new Intent(BejelentkezesiFelulet.this, Ranglista.class);
             startActivity(i);
             finish();
             return true;
         }
-        if(id == R.id.menuKijelentkezes){
+        /*if(id == R.id.menuKijelentkezes){
             Intent i = new Intent(BejelentkezesiFelulet.this, Kijelentkezes.class);
             startActivity(i);
             finish();

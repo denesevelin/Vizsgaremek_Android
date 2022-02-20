@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Android">
         <activity
+            android:name=".Ranglista"
+            android:exported="false" />
+        <activity
             android:name=".ProfilModositas"
             android:exported="false" />
         <activity

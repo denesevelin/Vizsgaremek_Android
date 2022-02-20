@@ -98,13 +98,13 @@ public class Profil extends AppCompatActivity {
             finish();
             return true;
         }
-        /*if(id == R.id.menuRanglista){
+        if(id == R.id.menuRanglista){
             Intent i = new Intent(Profil.this, Ranglista.class);
             startActivity(i);
             finish();
             return true;
         }
-        if(id == R.id.menuKijelentkezes){
+        /*if(id == R.id.menuKijelentkezes){
             Intent i = new Intent(Profil.this, Kijelentkezes.class);
             startActivity(i);
             finish();
