@@ -64,7 +64,7 @@ public class KonkretHirdetes extends AppCompatActivity {
             return true;
         }
         if(id == R.id.menuRanglista){
-            Intent i = new Intent(KonkretHirdetes.this, Ranglista.class);
+            Intent i = new Intent(KonkretHirdetes .this, Ranglista.class);
             startActivity(i);
             finish();
             return true;

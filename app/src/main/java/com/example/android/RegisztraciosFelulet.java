@@ -12,6 +12,8 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 
+import com.google.android.material.textfield.TextInputLayout;
+
 public class RegisztraciosFelulet extends AppCompatActivity {
 
     private Spinner SpinnerTelepulesRegisztracio;

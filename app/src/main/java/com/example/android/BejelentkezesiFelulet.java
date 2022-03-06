@@ -5,14 +5,20 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
+
+import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
 
 public class BejelentkezesiFelulet extends AppCompatActivity {
 
     private Button buttonBejelentkezesBejelentkezes;
+    private TextInputLayout textInputFelhasznalonevBejelentkezes, textInputJelszoBejelentkezes;
 
 
     @Override
@@ -23,9 +29,11 @@ public class BejelentkezesiFelulet extends AppCompatActivity {
         init();
 
         //Hirdetések keresése oldal megnyitása
-        buttonBejelentkezesBejelentkezes.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        buttonBejelentkezesBejelentkezes.setOnClickListener(v -> {
+            //Üres mezők kiszűrése
+            if(textInputFelhasznalonevBejelentkezes.getEditText().getText().toString().isEmpty() || textInputJelszoBejelentkezes.getEditText().getText().toString().isEmpty()){
+                Toast.makeText(this, "Nem lehet üres mező", Toast.LENGTH_SHORT).show();
+            }else {
                 Intent intent = new Intent(BejelentkezesiFelulet.this, HirdetesekKeresese.class);
                 startActivity(intent);
             }
@@ -34,6 +42,8 @@ public class BejelentkezesiFelulet extends AppCompatActivity {
 
     public void init(){
         buttonBejelentkezesBejelentkezes = findViewById(R.id.buttonBejelentkezesBejelentkezes);
+        textInputFelhasznalonevBejelentkezes = findViewById(R.id.textInputFelhasznalonevBejelentkezes);
+        textInputJelszoBejelentkezes = findViewById(R.id.textInputJelszoBejelentkezes);
     }
 
     //Menürendszer
