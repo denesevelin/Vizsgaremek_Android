@@ -31,7 +31,7 @@
                 android:textSize="25sp"
                 android:textStyle="bold"
                 android:fontFamily="casual"
-                android:textColor="@color/black"/>
+                android:textColor="@color/white"/>
         </androidx.appcompat.widget.Toolbar>
 
         <FrameLayout
