@@ -1,11 +1,524 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Ranglista"/>
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/relativeLayoutRanglista">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ranglista"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:id="@+id/textViewRanglista"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Top 5 önkéntes"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/textViewRanglista"
+            android:id="@+id/textViewTop5Ranglista"/>
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/elso"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/textViewTop5Ranglista"
+            android:id="@+id/imageVieweElsoDijRanglista"/>
+
+        <ImageView
+            android:id="@+id/imageView1ProfilkepRanglista"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_below="@+id/textViewTop5Ranglista"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@+id/imageVieweElsoDijRanglista"
+            android:src="@drawable/tesztprofilkep" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/imageView1ProfilkepRanglista"
+            android:layout_below="@+id/textViewTop5Ranglista"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="50dp"
+            android:text="Teszt Ella"
+            android:id="@+id/textView1NevRanglista"/>
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/masodik"
+            android:layout_marginTop="30dp"
+            android:layout_below="@+id/imageVieweElsoDijRanglista"
+            android:id="@+id/imageVieweMasodikDijRanglista"/>
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/tesztprofilkep"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_below="@+id/imageVieweElsoDijRanglista"
+            android:layout_toEndOf="@+id/imageVieweMasodikDijRanglista"
+            android:id="@+id/imageView2ProfilkepRanglista"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/imageView2ProfilkepRanglista"
+            android:layout_below="@+id/imageVieweElsoDijRanglista"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="50dp"
+            android:text="Teszt Ella"
+            android:id="@+id/textView2NevRanglista"/>
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/harmadik"
+            android:layout_marginTop="30dp"
+            android:layout_below="@+id/imageVieweMasodikDijRanglista"
+            android:id="@+id/imageVieweHarmadikDijRanglista"/>
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/tesztprofilkep"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_below="@+id/imageVieweMasodikDijRanglista"
+            android:layout_toEndOf="@+id/imageVieweMasodikDijRanglista"
+            android:id="@+id/imageView3ProfilkepRanglista"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/imageView2ProfilkepRanglista"
+            android:layout_below="@+id/imageVieweMasodikDijRanglista"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="50dp"
+            android:text="Teszt Ella"
+            android:id="@+id/textView3NevRanglista"/>
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/negyedik"
+            android:layout_marginTop="30dp"
+            android:layout_below="@+id/imageVieweHarmadikDijRanglista"
+            android:id="@+id/imageVieweNegyedikDijRanglista"/>
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/tesztprofilkep"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_below="@+id/imageVieweHarmadikDijRanglista"
+            android:layout_toEndOf="@+id/imageVieweMasodikDijRanglista"
+            android:id="@+id/imageView4ProfilkepRanglista"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/imageView2ProfilkepRanglista"
+            android:layout_below="@+id/imageVieweHarmadikDijRanglista"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="50dp"
+            android:text="Teszt Ella"
+            android:id="@+id/textView4NevRanglista"/>
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/otodik"
+            android:layout_marginTop="30dp"
+            android:layout_below="@+id/imageVieweNegyedikDijRanglista"
+            android:id="@+id/imageVieweOtodikDijRanglista"/>
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/tesztprofilkep"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_below="@+id/imageVieweNegyedikDijRanglista"
+            android:layout_toEndOf="@+id/imageVieweMasodikDijRanglista"
+            android:id="@+id/imageView5ProfilkepRanglista"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/imageView2ProfilkepRanglista"
+            android:layout_below="@+id/imageVieweNegyedikDijRanglista"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="50dp"
+            android:text="Teszt Ella"
+            android:id="@+id/textView5NevRanglista"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Statisztika"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:layout_below="@+id/imageVieweOtodikDijRanglista"
+            android:id="@+id/textViewStatisztikaRanglista"/>
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/kutyasetaltatas"
+            android:layout_below="@+id/textViewStatisztikaRanglista"
+            android:id="@+id/imageViewKutyasetaltatasRanglista"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/imageViewKutyasetaltatasRanglista"
+            android:layout_below="@+id/textViewStatisztikaRanglista"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="50dp"
+            android:text="Kutyasétáltatás"
+            android:id="@+id/textViewKutyasetaltatasRanglista"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/textViewKutyasetaltatasRanglista"
+            android:layout_below="@+id/textViewStatisztikaRanglista"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="50dp"
+            android:text="56 %"
+            android:id="@+id/textViewKutyasetaltatasSzazalekRanglista"/>
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/vasarlas"
+            android:layout_below="@+id/imageViewKutyasetaltatasRanglista"
+            android:id="@+id/imageViewVasarlasRanglista"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/imageViewKutyasetaltatasRanglista"
+            android:layout_below="@+id/imageViewKutyasetaltatasRanglista"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="50dp"
+            android:text="Bevásárlás"
+            android:id="@+id/textViewVasarlasRanglista"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/textViewKutyasetaltatasRanglista"
+            android:layout_below="@+id/imageViewKutyasetaltatasRanglista"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="50dp"
+            android:text="56 %"
+            android:id="@+id/textViewVasarlasSzazalekRanglista"/>
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/takaritas"
+            android:layout_below="@+id/imageViewVasarlasRanglista"
+            android:id="@+id/imageViewTakaritasRanglista"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/imageViewKutyasetaltatasRanglista"
+            android:layout_below="@+id/imageViewVasarlasRanglista"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="50dp"
+            android:text="Takarítás"
+            android:id="@+id/textViewTakaritasRanglista"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/textViewKutyasetaltatasRanglista"
+            android:layout_below="@+id/imageViewVasarlasRanglista"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="50dp"
+            android:text="56 %"
+            android:id="@+id/textViewTakaritasSzazalekRanglista"/>
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/szemelyszallitas"
+            android:layout_below="@+id/imageViewTakaritasRanglista"
+            android:id="@+id/imageViewSzemelyszallitasRanglista"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/imageViewKutyasetaltatasRanglista"
+            android:layout_below="@+id/imageViewTakaritasRanglista"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="50dp"
+            android:text="Személyszállítás"
+            android:id="@+id/textViewSzemelyszallitasRanglista"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/textViewKutyasetaltatasRanglista"
+            android:layout_below="@+id/imageViewTakaritasRanglista"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="50dp"
+            android:text="56 %"
+            android:id="@+id/textViewSzemelyszallitasSzazalekRanglista"/>
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/idosgondozas"
+            android:layout_below="@+id/imageViewSzemelyszallitasRanglista"
+            android:id="@+id/imageViewIdosgondozasRanglista"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/imageViewKutyasetaltatasRanglista"
+            android:layout_below="@+id/imageViewSzemelyszallitasRanglista"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="50dp"
+            android:text="Idősgondozás"
+            android:id="@+id/textViewIdosgondozasRanglista"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/textViewKutyasetaltatasRanglista"
+            android:layout_below="@+id/imageViewSzemelyszallitasRanglista"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="50dp"
+            android:text="56 %"
+            android:id="@+id/textViewIdosgondozasSzazalekRanglista"/>
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/gyermekfelugyelet"
+            android:layout_below="@+id/imageViewIdosgondozasRanglista"
+            android:id="@+id/imageViewGyermekfelugyeletRanglista"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/imageViewKutyasetaltatasRanglista"
+            android:layout_below="@+id/imageViewIdosgondozasRanglista"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="50dp"
+            android:text="Gyermekfelügyelet"
+            android:id="@+id/textViewGyermekfelugyeletRanglista"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/textViewKutyasetaltatasRanglista"
+            android:layout_below="@+id/imageViewIdosgondozasRanglista"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="50dp"
+            android:text="56 %"
+            android:id="@+id/textViewGyermekfelugyeletSzazalekRanglista"/>
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/szereles"
+            android:layout_below="@+id/imageViewGyermekfelugyeletRanglista"
+            android:id="@+id/imageViewSzerelesRanglista"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/imageViewKutyasetaltatasRanglista"
+            android:layout_below="@+id/imageViewGyermekfelugyeletRanglista"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="50dp"
+            android:text="Szerelés"
+            android:id="@+id/textViewSzerelesRanglista"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/textViewKutyasetaltatasRanglista"
+            android:layout_below="@+id/imageViewGyermekfelugyeletRanglista"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="50dp"
+            android:text="56 %"
+            android:id="@+id/textViewSzerelesSzazalekRanglista"/>
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/tarsalgas"
+            android:layout_below="@+id/imageViewSzerelesRanglista"
+            android:id="@+id/imageViewTarsalgasRanglista"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/imageViewKutyasetaltatasRanglista"
+            android:layout_below="@+id/imageViewSzerelesRanglista"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="50dp"
+            android:text="Társalgás"
+            android:id="@+id/textViewTarsalgasRanglista"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/textViewKutyasetaltatasRanglista"
+            android:layout_below="@+id/imageViewSzerelesRanglista"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="50dp"
+            android:text="56 %"
+            android:id="@+id/textViewTarsalgasSzazalekRanglista"/>
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/korrepetalas"
+            android:layout_below="@+id/imageViewTarsalgasRanglista"
+            android:id="@+id/imageViewKorrepRanglista"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/imageViewKutyasetaltatasRanglista"
+            android:layout_below="@+id/imageViewTarsalgasRanglista"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="50dp"
+            android:text="Korrepetálás"
+            android:id="@+id/textViewKorrepRanglista"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/textViewKutyasetaltatasRanglista"
+            android:layout_below="@+id/imageViewTarsalgasRanglista"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="50dp"
+            android:text="56 %"
+            android:id="@+id/textViewKorrepSzazalekRanglista"/>
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/fozes"
+            android:layout_below="@+id/imageViewKorrepRanglista"
+            android:id="@+id/imageViewFozesRanglista"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/imageViewKutyasetaltatasRanglista"
+            android:layout_below="@+id/imageViewKorrepRanglista"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="50dp"
+            android:text="Főzés"
+            android:id="@+id/textViewFozesRanglista"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/textViewKutyasetaltatasRanglista"
+            android:layout_below="@+id/imageViewKorrepRanglista"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="50dp"
+            android:text="56 %"
+            android:id="@+id/textViewFozesSzazalekRanglista"/>
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/kerteszkedes"
+            android:layout_below="@+id/imageViewFozesRanglista"
+            android:id="@+id/imageViewKerteszkedesRanglista"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/imageViewKutyasetaltatasRanglista"
+            android:layout_below="@+id/imageViewFozesRanglista"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="50dp"
+            android:text="Kertészkedés"
+            android:id="@+id/textViewKerteszkedesRanglista"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/textViewKutyasetaltatasRanglista"
+            android:layout_below="@+id/imageViewFozesRanglista"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="50dp"
+            android:text="56 %"
+            android:id="@+id/textViewKerteszkedesSzazalekRanglista"/>
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/egyeb"
+            android:layout_below="@+id/imageViewKerteszkedesRanglista"
+            android:id="@+id/imageViewEgyebRanglista"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/imageViewKutyasetaltatasRanglista"
+            android:layout_below="@+id/imageViewKerteszkedesRanglista"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="50dp"
+            android:text="Egyéb"
+            android:id="@+id/textViewEgyebRanglista"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/textViewKutyasetaltatasRanglista"
+            android:layout_below="@+id/imageViewKerteszkedesRanglista"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="50dp"
+            android:text="56 %"
+            android:id="@+id/textViewEgyebSzazalekRanglista"/>
+
+    </RelativeLayout>
+
+</ScrollView>
