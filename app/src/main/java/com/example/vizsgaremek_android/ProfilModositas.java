@@ -13,7 +13,7 @@ public class ProfilModositas extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.kijelentkezes, container, false);
+        View view = inflater.inflate(R.layout.profil_modositasa, container, false);
         return view;
     }
 }

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfilModositas">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/relativeLayoutProfilModositas">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Profil módosítása"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:id="@+id/textViewProfilModositas"/>
+
+        <TextView
+            android:id="@+id/textViewTelepulesProfilModositas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_below="@id/textViewProfilModositas"
+            android:text="Település"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/SpinnerTelepulesProfilModositas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewTelepulesProfilModositas"
+            android:spinnerMode="dropdown" />
+
+        <TextView
+            android:id="@+id/textViewCimProfilModositas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/SpinnerTelepulesProfilModositas"
+            android:text="Cím"
+            android:textStyle="bold" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Betöltött cím"
+            android:layout_below="@+id/textViewCimProfilModositas"
+            android:id="@+id/editTextCimProfilModositas"/>
+
+        <TextView
+            android:id="@+id/textViewEmailProfilModositas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editTextCimProfilModositas"
+            android:text="E-mail cím"
+            android:textStyle="bold" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Betöltött e-mail cím"
+            android:layout_below="@+id/textViewEmailProfilModositas"
+            android:id="@+id/editTextEmailProfilModositas"/>
+
+        <TextView
+            android:id="@+id/textViewTelefonszamProfilModositas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editTextEmailProfilModositas"
+            android:text="Telefonszám"
+            android:textStyle="bold" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Betöltött e-mail cím"
+            android:layout_below="@+id/textViewTelefonszamProfilModositas"
+            android:id="@+id/editTextTelefonszamProfilModositas"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Profil módosítás"
+            android:layout_below="@+id/editTextTelefonszamProfilModositas"
+            android:id="@+id/buttonProfilModositasProfilModositas"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jelszó módosítása"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/buttonProfilModositasProfilModositas"
+            android:id="@+id/textViewJelszoModositas"/>
+
+        <TextView
+            android:id="@+id/textViewJelenlegiJelszoProfilModositas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_below="@id/textViewJelszoModositas"
+            android:text="Jelenlegi jelszó"
+            android:textStyle="bold" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewJelenlegiJelszoProfilModositas"
+            android:id="@+id/editTextJelenlegiJelszoProfilModositas"/>
+
+        <TextView
+            android:id="@+id/textViewUjJelszoProfilModositas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editTextJelenlegiJelszoProfilModositas"
+            android:text="Új jelszó"
+            android:textStyle="bold" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewUjJelszoProfilModositas"
+            android:id="@+id/editTextUjJelszoProfilModositas"/>
+
+        <TextView
+            android:id="@+id/textViewUjJelszoUjraProfilModositas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editTextUjJelszoProfilModositas"
+            android:text="Új jelszó újra"
+            android:textStyle="bold" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewUjJelszoUjraProfilModositas"
+            android:id="@+id/editTextUjJelszoUjraProfilModositas"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jelszó módosítás"
+            android:layout_below="@+id/editTextUjJelszoUjraProfilModositas"
+            android:id="@+id/buttonJelszoModositasProfilModositas"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vissza a profilra"
+            android:layout_below="@+id/buttonJelszoModositasProfilModositas"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="20dp"
+            android:id="@+id/buttonVisszaProfilModositas"/>
+
+    </RelativeLayout>
+
+</ScrollView>
