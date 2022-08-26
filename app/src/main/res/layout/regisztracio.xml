@@ -98,17 +98,30 @@
             android:text="Település"
             android:textStyle="bold" />
 
-        <Spinner
+        <!--<Spinner
             android:id="@+id/SpinnerTelepulesRegisztracio"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/textViewTelepulesRegisztracio"
-            android:spinnerMode="dropdown" />
+            android:spinnerMode="dropdown" />-->
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/SpinnerTelepulesRegisztracio"
+            android:layout_below="@+id/textViewTelepulesRegisztracio"
+            android:id="@+id/textInputTelepulesRegisztracio">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:hint="Település id"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textInputTelepulesRegisztracio"
             android:id="@+id/textInputCimRegisztracio">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -131,68 +144,92 @@
                 android:hint="Okmányszám (A feltöltött okmány száma)"/>
         </com.google.android.material.textfield.TextInputLayout>
 
-        <ImageView
+        <!--<ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/textInputOkmanyszamRegisztracio"
-            android:id="@+id/imegeViewOkmanykepRegisztracio"/>
+            android:id="@+id/imegeViewOkmanykepRegisztracio"/>-->
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/imegeViewOkmanykepRegisztracio"
+            android:layout_below="@id/textInputOkmanyszamRegisztracio"
             android:text="Okmánykép feltöltése"
             android:id="@+id/textViewOkmanykepRegisztracio"/>
-
-        <com.google.android.material.button.MaterialButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/textViewOkmanykepRegisztracio"
-            android:text="Tallózás..."
-            android:id="@+id/buttonOkmanykepRegisztracio"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Nincs kiválasztott file."
-            android:layout_below="@id/textViewOkmanykepRegisztracio"
-            android:layout_toEndOf="@id/buttonOkmanykepRegisztracio"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="15dp"
-            android:id="@+id/textViewOkmanykepFileNeveRegisztracio"/>
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/buttonOkmanykepRegisztracio"
-            android:id="@+id/imegeViewProfilkepRegisztracio"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/imegeViewProfilkepRegisztracio"
-            android:text="Profilkép feltöltése"
-            android:id="@+id/textViewProfilkepRegisztracio"/>
-
-        <com.google.android.material.button.MaterialButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/textViewProfilkepRegisztracio"
-            android:text="Tallózás..."
-            android:id="@+id/buttonProfilkepRegisztracio"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Nincs kiválasztott file."
-            android:layout_below="@id/textViewProfilkepRegisztracio"
-            android:layout_toEndOf="@id/buttonProfilkepRegisztracio"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="15dp"
-            android:id="@+id/textViewProfilkepFileNeveRegisztracio"/>
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/buttonProfilkepRegisztracio"
+            android:layout_below="@+id/textViewOkmanykepRegisztracio"
+            android:id="@+id/textInputOkmanyKepRegisztracio">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:hint="Okmánykép neve"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--<com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewOkmanykepRegisztracio"
+            android:text="Tallózás..."
+            android:id="@+id/buttonOkmanykepRegisztracio"/>-->
+        <!--<TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nincs kiválasztott file."
+            android:layout_below="@id/textViewOkmanykepRegisztracio"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:id="@+id/textViewOkmanykepFileNeveRegisztracio"/>-->
+
+        <!--<ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/buttonOkmanykepRegisztracio"
+            android:id="@+id/imegeViewProfilkepRegisztracio"/>-->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textInputOkmanyKepRegisztracio"
+            android:text="Profilkép feltöltése"
+            android:id="@+id/textViewProfilkepRegisztracio"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewProfilkepRegisztracio"
+            android:id="@+id/textInputProfilKepRegisztracio">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:hint="Profilkép neve"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--<com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewProfilkepRegisztracio"
+            android:text="Tallózás..."
+            android:id="@+id/buttonProfilkepRegisztracio"/>-->
+        <!--<TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nincs kiválasztott file."
+            android:layout_below="@id/textViewProfilkepRegisztracio"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:id="@+id/textViewProfilkepFileNeveRegisztracio"/>-->
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textInputProfilKepRegisztracio"
             app:passwordToggleEnabled="true"
             android:id="@+id/textInputJelszoRegisztracio">
 

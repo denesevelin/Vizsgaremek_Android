@@ -46,10 +46,10 @@ public class Regisztracio extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.regisztracio, container, false);
 
-        SpinnerTelepulesRegisztracio = view.findViewById(R.id.SpinnerTelepulesRegisztracio);
+        //SpinnerTelepulesRegisztracio = view.findViewById(R.id.SpinnerTelepulesRegisztracio);
         buttonRegisztraciosFeluletRegisztracio = view.findViewById(R.id.buttonRegisztraciosFeluletRegisztracio);
 
-        telepulesekBetoltese();
+        //telepulesekBetoltese();
 
         //Vissza a főoldalra
         buttonRegisztraciosFeluletRegisztracio.setOnClickListener(v -> {
@@ -62,9 +62,9 @@ public class Regisztracio extends Fragment {
     }
 
         //Spinner tesztelése
-        public void telepulesekBetoltese(){
+        /*public void telepulesekBetoltese(){
         String[] items = new String[]{"Első település", "Második település", "Harmadik település"};
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(getContext(), android.R.layout.simple_spinner_dropdown_item, items);
         SpinnerTelepulesRegisztracio.setAdapter(adapter);
-        }
+        }*/
 }
