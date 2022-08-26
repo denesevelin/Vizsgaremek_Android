@@ -20,6 +20,18 @@
         <item name="colorControlHighlight">@color/myColor</item>
     </style>
 
+    <style name="ThemeOverlay.AppCompat.buttonTorles">
+        <item name="colorPrimary">@color/torles</item>
+    </style>
+
+    <style name="ThemeOverlay.AppCompat.buttonElfogadas">
+        <item name="colorPrimary">@color/elfogadas</item>
+    </style>
+
+    <style name="ThemeOverlay.AppCompat.buttonElutasitas">
+        <item name="colorPrimary">@color/elutasitas</item>
+    </style>
+
     <style name="Theme.Vizsgaremek_Android.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>

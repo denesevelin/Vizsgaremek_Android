@@ -1,11 +1,266 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Profil"/>
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/relativeLayoutProfil">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Profil"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:id="@+id/textViewProfil"/>
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/tesztprofilkep2"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="70dp"
+            android:id="@+id/imageViewProfilkepProfil"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/imageViewProfilkepProfil"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="120dp"
+            android:text="Teszt Ella"
+            android:id="@+id/textViewNevProfil"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/imageViewProfilkepProfil"
+            android:layout_below="@+id/textViewNevProfil"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="20dp"
+            android:text="teszt.ella1983"
+            android:id="@+id/textViewFelhasznalonevProfil"/>
+
+        <TextView
+            android:id="@+id/textViewTelefonszamProfil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageViewProfilkepProfil"
+            android:layout_marginLeft="30dp"
+            android:text="+36301234567" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewTelefonszamProfil"
+            android:layout_marginLeft="30dp"
+            android:text="teszt.ella@gmail.com"
+            android:id="@+id/textViewEmailProfil"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewEmailProfil"
+            android:layout_marginLeft="30dp"
+            android:text="Budapest"
+            android:id="@+id/textViewTelepulesProfil"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewTelepulesProfil"
+            android:layout_marginLeft="30dp"
+            android:text="1033 Teszt utca 124. 5/36."
+            android:layout_marginBottom="10dp"
+            android:id="@+id/textViewCimProfil"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewCimProfil"
+            android:layout_marginLeft="30dp"
+            android:text="Pontszám: "
+            android:textStyle="bold"
+            android:id="@+id/textViewPontszamProfil"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewCimProfil"
+            android:layout_toEndOf="@+id/textViewPontszamProfil"
+            android:layout_marginLeft="30dp"
+            android:text="5"
+            android:textStyle="bold"
+            android:id="@+id/textViewKonkretPontszamProfil"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewPontszamProfil"
+            android:layout_marginLeft="30dp"
+            android:text="Díjaim: "
+            android:textStyle="bold"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/textViewDijProfil"/>
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/kutyasetaltatas"
+            android:layout_marginLeft="30dp"
+            android:id="@+id/imageViewDij"
+            android:layout_below="@+id/textViewDijProfil"/>
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/takaritas"
+            android:layout_marginLeft="20dp"
+            android:id="@+id/imageViewDij2"
+            android:layout_marginRight="5dp"
+            android:layout_toEndOf="@+id/imageViewDij"
+            android:layout_below="@+id/textViewDijProfil"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageViewDij"
+            android:layout_marginLeft="30dp"
+            android:text="Hirdetések amikre jelentkeztem: "
+            android:layout_marginBottom="10dp"
+            android:id="@+id/textViewJelentkeztemProfil"/>
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="fitCenter"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/idosgondozas"
+            android:layout_below="@+id/textViewJelentkeztemProfil"
+            android:id="@+id/imageViewJelentkeztemProfil"/>
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/fozes"
+            android:scaleType="fitCenter"
+            android:layout_below="@+id/textViewJelentkeztemProfil"
+            android:layout_toEndOf="@+id/imageViewJelentkeztemProfil"
+            android:id="@+id/imageView2JelentkeztemProfil"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageViewJelentkeztemProfil"
+            android:layout_marginLeft="30dp"
+            android:text="Saját hirdetéseim: "
+            android:layout_marginBottom="10dp"
+            android:id="@+id/textViewHirdeteseimProfil"/>
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/gyermekfelugyelet"
+            android:layout_below="@+id/textViewHirdeteseimProfil"
+            android:id="@+id/imageViewHirdetesemProfil"/>
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/idosgondozas"
+            android:layout_below="@+id/textViewHirdeteseimProfil"
+            android:layout_toEndOf="@+id/imageViewHirdetesemProfil"
+            android:id="@+id/imageView2HirdetesemProfil"/>
+
+
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:text="Törlés"
+            android:textSize="10dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginBottom="20dp"
+            android:layout_below="@+id/imageViewHirdetesemProfil"
+            android:theme="@style/ThemeOverlay.AppCompat.buttonTorles"
+            android:id="@+id/buttonHirdetesTorleseProfil"/>
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:text="Törlés"
+            android:textSize="10dp"
+            android:layout_marginLeft="30dp"
+            android:theme="@style/ThemeOverlay.AppCompat.buttonTorles"
+            android:layout_toEndOf="@+id/buttonHirdetesTorleseProfil"
+            android:layout_below="@+id/imageViewHirdetesemProfil"
+            android:id="@+id/button2HirdetesTorleseProfil"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/buttonHirdetesTorleseProfil"
+            android:layout_marginLeft="30dp"
+            android:text="Jóváhagyásra váró hirdetéseim: "
+            android:layout_marginBottom="10dp"
+            android:id="@+id/textViewJovahagyasraVaroHirdeteseimProfil"/>
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/gyermekfelugyelet"
+            android:layout_below="@+id/textViewJovahagyasraVaroHirdeteseimProfil"
+            android:id="@+id/imageViewJovahagyasraVaroHirdeteseimProfil"/>
+
+        <Button
+            android:layout_width="80dp"
+            android:textSize="7dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageViewJovahagyasraVaroHirdeteseimProfil"
+            android:text="Elfogadás"
+            android:layout_marginLeft="30dp"
+            android:theme="@style/ThemeOverlay.AppCompat.buttonElfogadas"
+            android:id="@+id/buttonElfogadasProfil"/>
+
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:textSize="7dp"
+            android:layout_marginLeft="30dp"
+            android:layout_below="@+id/buttonElfogadasProfil"
+            android:text="Elutasítás"
+            android:theme="@style/ThemeOverlay.AppCompat.buttonElutasitas"
+            android:id="@+id/buttonElutasitasProfil"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/buttonElutasitasProfil"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:text="Profil módosítása"
+            android:id="@+id/buttonProfilModositasProfil"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/buttonElutasitasProfil"
+            android:layout_toEndOf="@+id/buttonProfilModositasProfil"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:text="Profil törlése"
+            android:id="@+id/buttonProfilTorlesProfil"/>
+
+    </RelativeLayout>
+
+</ScrollView>
