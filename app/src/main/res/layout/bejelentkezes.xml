@@ -20,41 +20,26 @@
             android:layout_marginTop="50dp"
             android:id="@+id/textViewBejelentkezesBejelentkezes"/>
 
-        <com.google.android.material.textfield.TextInputLayout
+        <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:hint="Felhasználónév"
+            android:layout_marginTop="30dp"
             android:layout_below="@+id/textViewBejelentkezesBejelentkezes"
-            android:layout_marginTop="40dp"
-            android:id="@+id/textInputFelhasznalonevBejelentkezes">
+            android:id="@+id/editFelhasznalonevBejelentkezes"/>
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="15dp"
-                android:hint="Felhasználónév"/>
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
+        <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/textInputFelhasznalonevBejelentkezes"
-            android:layout_marginTop="20dp"
-            app:passwordToggleEnabled="true"
-            android:id="@+id/textInputJelszoBejelentkezes">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="15dp"
-                android:hint="Jelszó"
-                android:inputType="textPassword"/>
-        </com.google.android.material.textfield.TextInputLayout>
+            android:hint="Jelszó"
+            android:layout_below="@+id/editFelhasznalonevBejelentkezes"
+            android:id="@+id/editJelszoBejelentkezes"/>
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Bejelentkezés"
-            android:layout_below="@+id/textInputJelszoBejelentkezes"
+            android:layout_below="@+id/editJelszoBejelentkezes"
             android:layout_marginTop="40dp"
             android:layout_centerHorizontal="true"
             android:id="@+id/buttonBejelentkezesBejelentkezes"/>
