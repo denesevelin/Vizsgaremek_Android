@@ -20,20 +20,12 @@
             android:layout_marginTop="50dp"
             android:id="@+id/textViewRegisztracioRegisztracio"/>
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="ID"
-            android:inputType="number"
-            android:visibility="gone"
-            android:layout_below="@+id/textViewRegisztracioRegisztracio"
-            android:id="@+id/editID"/>
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Teljes név"
-            android:layout_below="@+id/editID"
+            android:layout_below="@+id/textViewRegisztracioRegisztracio"
             android:id="@+id/editNevRegisztracio"/>
 
         <EditText
