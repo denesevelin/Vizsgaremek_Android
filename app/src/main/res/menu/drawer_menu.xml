@@ -17,7 +17,5 @@
             android:title="Ranglista"/>
         <item android:id="@+id/nav_kijelentkezes"
             android:title="Kijelentkezés"/>
-        <item android:id="@+id/text"
-            android:title="Teszt"/>
     </group>
 </menu>
