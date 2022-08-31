@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -19,9 +19,17 @@
             android:textStyle="bold"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="50dp"
+            android:layout_marginBottom="20dp"
             android:id="@+id/textViewHirdetesekHirdetesekListazasa"/>
 
-        <ImageView
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/hirdetes_list_item"
+            android:layout_below="@+id/textViewHirdetesekHirdetesekListazasa"
+            android:id="@+id/hirdetesAdatok"/>
+
+        <!--<ImageView
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:src="@drawable/kutyasetaltatas"
@@ -49,9 +57,9 @@
             android:layout_below="@+id/textViewHirdetesekHirdetesekListazasa"
             android:layout_marginTop="50dp"
             android:layout_toEndOf="@+id/textViewHirdetesSzovegHirdetesekListazasa"
-            android:id="@+id/buttonTovabbHirdetesekListazasa"/>
+            android:id="@+id/buttonTovabbHirdetesekListazasa"/>-->
 
-        <ImageView
+        <!--<ImageView
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:src="@drawable/vasarlas"
@@ -79,7 +87,7 @@
             android:layout_below="@+id/buttonTovabbHirdetesekListazasa"
             android:layout_marginTop="50dp"
             android:layout_toEndOf="@+id/textViewHirdetesSzovegHirdetesekListazasa"
-            android:id="@+id/button2TovabbHirdetesekListazasa"/>
+            android:id="@+id/button2TovabbHirdetesekListazasa"/>-->
     </RelativeLayout>
 
-</ScrollView>
+</LinearLayout>
