@@ -4,7 +4,6 @@ public class Hirdetes {
     private int hirdetes_id;
     private int kategoria_id;
     private int hirdeto_id;
-    private String feladas_idopont;
     private String kezdo_idopont;
     private String zaro_idopont;
     private String leiras;
@@ -12,11 +11,10 @@ public class Hirdetes {
     private  String hirdetes_cim;
     private int telepules_id;
 
-    public Hirdetes(int hirdetes_id, int kategoria_id, int hirdeto_id, String feladas_idopont, String kezdo_idopont, String zaro_idopont, String leiras, String hirdetes_telszam, String hirdetes_cim, int telepules_id) {
+    public Hirdetes(int hirdetes_id, int kategoria_id, int hirdeto_id, String kezdo_idopont, String zaro_idopont, String leiras, String hirdetes_telszam, String hirdetes_cim, int telepules_id) {
         this.hirdetes_id = hirdetes_id;
         this.kategoria_id = kategoria_id;
         this.hirdeto_id = hirdeto_id;
-        this.feladas_idopont = feladas_idopont;
         this.kezdo_idopont = kezdo_idopont;
         this.zaro_idopont = zaro_idopont;
         this.leiras = leiras;
@@ -47,14 +45,6 @@ public class Hirdetes {
 
     public void setHirdeto_id(int hirdeto_id) {
         this.hirdeto_id = hirdeto_id;
-    }
-
-    public String getFeladas_idopont() {
-        return feladas_idopont;
-    }
-
-    public void setFeladas_idopont(String feladas_idopont) {
-        this.feladas_idopont = feladas_idopont;
     }
 
     public String getKezdo_idopont() {
