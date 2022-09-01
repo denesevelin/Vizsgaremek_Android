@@ -144,14 +144,14 @@ public class Regisztracio extends Fragment {
         }
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.N)
+    /*@RequiresApi(api = Build.VERSION_CODES.N)
     private void refreshUserList(List<User> adatok, String requestType, String parameterek) {
         switch (requestType){
             case "POST":
                 userLista.add(0, (User) adatok);
                 break;
         }
-    }
+    }*/
 
     private class RequestTask extends AsyncTask<Void, Void, Response> {
 
@@ -180,7 +180,7 @@ public class Regisztracio extends Fragment {
             return response;
         }
 
-        @Override
+        /*@Override
         protected void onPreExecute() {
             super.onPreExecute();
             hibaText.setText("");
@@ -191,7 +191,7 @@ public class Regisztracio extends Fragment {
         @Override
         protected void onPostExecute(Response response) {
             super.onPostExecute(response);
-            if(response != null){
+            *//*if(response != null){
                 Gson jsonConvert = new Gson();
                 UserApiValasz valasz = jsonConvert.fromJson(response.getContent(), UserApiValasz.class);
                 if(valasz.isError()){
@@ -199,8 +199,8 @@ public class Regisztracio extends Fragment {
                 }else {
                     refreshUserList(valasz.getAdatok(), requestType, parameterek);
                 }
-            }
-        }
+            }*//*
+        }*/
     }
 
     private class HibaRunnable implements Runnable {
