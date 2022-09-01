@@ -66,18 +66,18 @@
             android:layout_marginTop="20dp"
             android:id="@+id/textViewTelepulesHirdetesFeladasa"/>
 
-        <Spinner
-            android:layout_width="wrap_content"
+        <EditText
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:hint="Település ID"
             android:layout_below="@+id/textViewTelepulesHirdetesFeladasa"
-            android:spinnerMode="dropdown"
-            android:id="@+id/spinnerTelepulesHirdetesFeladasa"/>
+            android:id="@+id/editTelepulesHirdetesFeladasa"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Cím"
-            android:layout_below="@id/spinnerTelepulesHirdetesFeladasa"
+            android:layout_below="@id/editTelepulesHirdetesFeladasa"
             android:textStyle="bold"
             android:layout_marginTop="20dp"
             android:id="@+id/textViewCimHirdetesFeladasa"/>
@@ -131,6 +131,13 @@
             android:layout_marginTop="20dp"
             android:layout_centerHorizontal="true"
             android:id="@+id/buttonMentesHirdetesFeladasa"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#FF0000"
+            android:layout_below="@+id/buttonMentesHirdetesFeladasa"
+            android:id="@+id/hibaText"/>
 
     </RelativeLayout>
 
