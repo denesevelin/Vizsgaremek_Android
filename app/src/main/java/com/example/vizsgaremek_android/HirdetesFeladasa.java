@@ -39,7 +39,6 @@ public class HirdetesFeladasa extends Fragment {
 
     private TextView hibaText;
     private final String HirdetesFeladasa_URL = "http://192.168.0.18/Vizsgaremek_Web/api/hirdetes";
-    private List<Hirdetes> hirdetesLista;
 
     @Nullable
     @Override
@@ -55,10 +54,8 @@ public class HirdetesFeladasa extends Fragment {
         editTextCimHirdetesFeladasa = view.findViewById(R.id.editTextCimHirdetesFeladasa);
         buttonMentesHirdetesFeladasa = view.findViewById(R.id.buttonMentesHirdetesFeladasa);
         hibaText = view.findViewById(R.id.hibaText);
-        hirdetesLista = new ArrayList<>();
 
         kategoriakBetoltese();
-
 
         editTextKezdoIdoptHirdetesFeladasa.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -73,13 +70,6 @@ public class HirdetesFeladasa extends Fragment {
                 zaroidopont(editTextZaroIdoptHirdetesFeladasa);
             }
         });
-
-        //Vissza a főoldalra
-        /*buttonMentesHirdetesFeladasa.setOnClickListener(v -> {
-            FragmentTransaction fr = getFragmentManager().beginTransaction();
-            fr.replace(R.id.fragment_container, new Fooldal());
-            fr.commit();
-        });*/
 
         felvesz();
 
@@ -107,7 +97,7 @@ public class HirdetesFeladasa extends Fragment {
     private Hirdetes validalEsHirdetestLetrehoz() throws Exception {
         String kategoria = spinnerKategoriaHirdetesFeladasa.getSelectedItem().toString();
         //kell lennie ilyen id-jú hirdetőnek már az adatbázisban
-        String hirdeto_id = "7";
+        String hirdeto_id = Adattarolo.userIdOlvasas(getContext());
         String kezdo_idopont = editTextKezdoIdoptHirdetesFeladasa.getText().toString();
         String zaro_idopont = editTextZaroIdoptHirdetesFeladasa.getText().toString();
         String leiras = editTextLeirasHirdetesFeladasa.getText().toString();
