@@ -13,6 +13,19 @@ public class User {
     private String okmanykep;
     private String okmanyszam;
     private String cim;
+    private int pontszam;
+
+    public User(int pontszam) {
+        this.pontszam = pontszam;
+    }
+
+    public int getPontszam() {
+        return pontszam;
+    }
+
+    public void setPontszam(int pontszam) {
+        this.pontszam = pontszam;
+    }
 
     public User(int user_id, String nev, String felhnev, String szuldatum, int telepules_id, String telszam, String email, String jelszo, String profilkep, String okmanykep, String okmanyszam, String cim) {
         this.user_id = user_id;
