@@ -20,91 +20,18 @@
             android:layout_marginTop="20dp"
             android:id="@+id/textViewProfil"/>
 
-        <ImageView
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:src="@drawable/tesztprofilkep2"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="70dp"
-            android:id="@+id/imageViewProfilkepProfil"/>
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/profil_user_list_item"
+            android:layout_below="@+id/textViewProfil"
+            android:id="@+id/userAdatok"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toEndOf="@+id/imageViewProfilkepProfil"
-            android:layout_marginLeft="70dp"
-            android:layout_marginTop="120dp"
-            android:text="Teszt Ella"
-            android:id="@+id/textViewNevProfil"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toEndOf="@+id/imageViewProfilkepProfil"
-            android:layout_below="@+id/textViewNevProfil"
-            android:layout_marginLeft="70dp"
-            android:layout_marginTop="20dp"
-            android:text="teszt.ella1983"
-            android:id="@+id/textViewFelhasznalonevProfil"/>
-
-        <TextView
-            android:id="@+id/textViewTelefonszamProfil"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/imageViewProfilkepProfil"
-            android:layout_marginLeft="30dp"
-            android:text="+36301234567" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/textViewTelefonszamProfil"
-            android:layout_marginLeft="30dp"
-            android:text="teszt.ella@gmail.com"
-            android:id="@+id/textViewEmailProfil"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/textViewEmailProfil"
-            android:layout_marginLeft="30dp"
-            android:text="Budapest"
-            android:id="@+id/textViewTelepulesProfil"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/textViewTelepulesProfil"
-            android:layout_marginLeft="30dp"
-            android:text="1033 Teszt utca 124. 5/36."
-            android:layout_marginBottom="10dp"
-            android:id="@+id/textViewCimProfil"/>
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/textViewCimProfil"
-            android:layout_marginLeft="30dp"
-            android:text="Pontszám: "
-            android:textStyle="bold"
-            android:id="@+id/textViewPontszamProfil"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/textViewCimProfil"
-            android:layout_toEndOf="@+id/textViewPontszamProfil"
-            android:layout_marginLeft="30dp"
-            android:text="5"
-            android:textStyle="bold"
-            android:id="@+id/textViewKonkretPontszamProfil"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/textViewPontszamProfil"
-            android:layout_marginLeft="30dp"
+            android:layout_below="@+id/userAdatok"
+            android:layout_marginLeft="10dp"
             android:text="Díjaim: "
             android:textStyle="bold"
             android:layout_marginBottom="10dp"
@@ -114,7 +41,7 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:src="@drawable/kutyasetaltatas"
-            android:layout_marginLeft="30dp"
+            android:layout_marginLeft="10dp"
             android:id="@+id/imageViewDij"
             android:layout_below="@+id/textViewDijProfil"/>
 
