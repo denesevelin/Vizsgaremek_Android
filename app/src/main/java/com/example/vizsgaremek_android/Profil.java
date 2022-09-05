@@ -17,6 +17,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
@@ -30,11 +31,11 @@ public class Profil extends Fragment {
 
     private ListView userAdatok;
     private ImageView imageViewJelentkeztemProfil;
-    private Button buttonProfilModositasProfil;
+    private Button buttonProfilModositasProfil, buttonProfilTorlesProfil;
     private TextView hibaText;
     private List<User> userLista;
     private String bejelentkezett_id ;
-    private final String EgyUser_URL = "http://192.168.0.18/Vizsgaremek_Web/api/user/";
+    private final String EgyUser_URL = "http://192.168.0.18/Vizsgaremek_Web/api/user";
 
     private TextView textViewNevProfil, textViewFelhasznalonevProfil, textViewTelefonszamProfil, textViewEmailProfil, textViewTelepulesProfil, textViewCimProfil, textViewKonkretPontszamProfil;
 
@@ -45,6 +46,7 @@ public class Profil extends Fragment {
 
         imageViewJelentkeztemProfil = view.findViewById(R.id.imageViewJelentkeztemProfil);
         buttonProfilModositasProfil = view.findViewById(R.id.buttonProfilModositasProfil);
+        buttonProfilTorlesProfil = view.findViewById(R.id.buttonProfilTorlesProfil);
 
         textViewNevProfil = view.findViewById(R.id.textViewNevProfil);
         textViewFelhasznalonevProfil = view.findViewById(R.id.textViewFelhasznalonevProfil);
@@ -83,7 +85,7 @@ public class Profil extends Fragment {
 
     private void userekListazasa() {
         bejelentkezett_id = Adattarolo.userIdOlvasas(getContext());
-        RequestTask task = new RequestTask(EgyUser_URL+bejelentkezett_id,"GET","");
+        RequestTask task = new RequestTask(EgyUser_URL+"/"+bejelentkezett_id,"GET","");
         task.execute();
     }
 
@@ -95,7 +97,16 @@ public class Profil extends Fragment {
                 this.userLista.clear();
                 userLista.addAll(adatok);
                 break;
+            case "DELETE":
+                int user_id = Integer.parseInt(parameterek);
+                userLista.removeIf(user -> user.getUser_id() == user_id);
+                break;
         }
+    }
+
+    private void userTorlese(int user_id) {
+        RequestTask task = new RequestTask(EgyUser_URL+"/"+user_id,"DELETE", String.valueOf(user_id));
+        task.execute();
     }
 
     private class RequestTask extends AsyncTask<Void, Void, Response> {
@@ -117,6 +128,9 @@ public class Profil extends Fragment {
                 switch (requestType){
                     case "GET":
                         response = RequestHandler.getRequest(url);
+                        break;
+                    case "DELETE":
+                        response = RequestHandler.deleteRequest(url);
                         break;
                 }
             } catch (IOException e) {
@@ -198,6 +212,16 @@ public class Profil extends Fragment {
             textViewTelepulesProfil.setText(String.format("%s ", user.getTelepules_id()));
             textViewCimProfil.setText(String.format("%s ", user.getCim()));
             textViewKonkretPontszamProfil.setText(String.format("%s ", user.getPontszam()));
+
+            buttonProfilTorlesProfil.setOnClickListener(view -> {
+                AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+                builder.setTitle("Megerősítés");
+                builder.setMessage(String.format("Biztos törli a következő usert: %s?",user.getNev()));
+                builder.setCancelable(false);
+                builder.setPositiveButton("Igen",(dialog, which) -> userTorlese(user.getUser_id()));
+                builder.setNegativeButton("Nem", (dialog, which) -> {});
+                builder.create().show();
+            });
 
             return listViewItem;
         }
