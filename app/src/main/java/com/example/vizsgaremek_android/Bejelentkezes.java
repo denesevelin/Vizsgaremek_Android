@@ -1,5 +1,7 @@
 package com.example.vizsgaremek_android;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -35,9 +37,14 @@ public class Bejelentkezes extends Fragment {
             new Adatletolto().bejelentkezes(getContext(),felhnev, jelszo, Successful -> {
                 if (Successful){
                     Toast.makeText(getActivity(), "Sikeres bejelentkezés!", Toast.LENGTH_SHORT).show();
-                    FragmentTransaction fr = getFragmentManager().beginTransaction();
-                    fr.replace(R.id.fragment_container, new HirdetesekKeresese());
-                    fr.commit();
+
+                    Intent intent = new Intent(getContext(), BejelentkezettActivity.class);
+                    Activity activity = getActivity();
+                    if (activity != null){
+                        activity.startActivity(intent);
+                        activity.finish();
+                    }
+
                 }
                 else {
                     Toast.makeText(getActivity(), "Sikertelen bejelentkezés!", Toast.LENGTH_SHORT).show();
