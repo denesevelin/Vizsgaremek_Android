@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -25,51 +23,49 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Kezdő időpont"
-            android:layout_below="@id/textViewHirdetesFeladasaHirdetesFeladasa"
             android:layout_marginTop="20dp"
             android:layout_marginLeft="30dp"
+            android:layout_below="@id/textViewHirdetesFeladasaHirdetesFeladasa"
             android:id="@+id/editTextKezdoIdoptHirdetesFeladasa"/>
 
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Záró időpont"
-            android:layout_below="@id/textViewHirdetesFeladasaHirdetesFeladasa"
-            android:layout_toEndOf="@+id/editTextKezdoIdoptHirdetesFeladasa"
             android:layout_marginLeft="100dp"
             android:layout_marginTop="20dp"
+            android:layout_below="@id/textViewHirdetesFeladasaHirdetesFeladasa"
+            android:layout_toEndOf="@+id/editTextKezdoIdoptHirdetesFeladasa"
             android:id="@+id/editTextZaroIdoptHirdetesFeladasa"/>
-
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Kategória"
-            android:layout_below="@id/editTextKezdoIdoptHirdetesFeladasa"
             android:textStyle="bold"
             android:layout_marginTop="20dp"
+            android:layout_below="@id/editTextKezdoIdoptHirdetesFeladasa"
             android:id="@+id/textViewKategoriaHirdetesFeladasa"/>
 
         <Spinner
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/textViewKategoriaHirdetesFeladasa"
             android:spinnerMode="dropdown"
+            android:layout_below="@+id/textViewKategoriaHirdetesFeladasa"
             android:id="@+id/spinnerKategoriaHirdetesFeladasa"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Település"
-            android:layout_below="@id/spinnerKategoriaHirdetesFeladasa"
             android:textStyle="bold"
             android:layout_marginTop="20dp"
+            android:layout_below="@id/spinnerKategoriaHirdetesFeladasa"
             android:id="@+id/textViewTelepulesHirdetesFeladasa"/>
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Település ID"
             android:layout_below="@+id/textViewTelepulesHirdetesFeladasa"
             android:id="@+id/editTelepulesHirdetesFeladasa"/>
 
@@ -77,13 +73,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Cím"
-            android:layout_below="@id/editTelepulesHirdetesFeladasa"
             android:textStyle="bold"
             android:layout_marginTop="20dp"
+            android:layout_below="@id/editTelepulesHirdetesFeladasa"
             android:id="@+id/textViewCimHirdetesFeladasa"/>
 
         <EditText
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/textViewCimHirdetesFeladasa"
             android:id="@+id/editTextCimHirdetesFeladasa"/>
@@ -92,13 +88,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Telefonszám"
-            android:layout_below="@id/editTextCimHirdetesFeladasa"
             android:textStyle="bold"
             android:layout_marginTop="20dp"
+            android:layout_below="@id/editTextCimHirdetesFeladasa"
             android:id="@+id/textViewTelszamHirdetesFeladasa"/>
 
         <EditText
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/textViewTelszamHirdetesFeladasa"
             android:id="@+id/editTextTelszamHirdetesFeladasa"/>
@@ -107,29 +103,29 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Leírás"
-            android:layout_below="@+id/editTextTelszamHirdetesFeladasa"
             android:textStyle="bold"
             android:layout_marginTop="20dp"
+            android:layout_below="@+id/editTextTelszamHirdetesFeladasa"
             android:id="@+id/textViewLeirasHirdetesFeladasa"/>
 
         <EditText
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:lines="10"
             android:minLines="5"
             android:gravity="top|left"
-            android:layout_below="@+id/textViewLeirasHirdetesFeladasa"
             android:inputType="textMultiLine"
             android:maxLines="15"
+            android:layout_below="@+id/textViewLeirasHirdetesFeladasa"
             android:id="@+id/editTextLeirasHirdetesFeladasa"/>
 
         <Button
             android:layout_width="170dp"
             android:layout_height="wrap_content"
             android:text="Mentés"
-            android:layout_below="@+id/editTextLeirasHirdetesFeladasa"
             android:layout_marginTop="20dp"
             android:layout_centerHorizontal="true"
+            android:layout_below="@+id/editTextLeirasHirdetesFeladasa"
             android:id="@+id/buttonMentesHirdetesFeladasa"/>
 
         <TextView
@@ -137,8 +133,7 @@
             android:layout_height="wrap_content"
             android:textColor="#FF0000"
             android:layout_below="@+id/buttonMentesHirdetesFeladasa"
+            android:textAlignment="center"
             android:id="@+id/hibaText"/>
-
     </RelativeLayout>
-
 </ScrollView>

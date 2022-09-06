@@ -3,7 +3,6 @@ package com.example.vizsgaremek_android;
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
 import android.os.AsyncTask;
-import android.os.Build;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,7 +18,6 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.annotation.RequiresApi;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
@@ -27,16 +25,13 @@ import com.google.gson.Gson;
 
 import java.io.IOException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.List;
 
 public class HirdetesFeladasa extends Fragment {
 
     private EditText editTextKezdoIdoptHirdetesFeladasa, editTextZaroIdoptHirdetesFeladasa, editTextCimHirdetesFeladasa, editTelepulesHirdetesFeladasa, editTextLeirasHirdetesFeladasa, editTextTelszamHirdetesFeladasa;
     private Spinner spinnerKategoriaHirdetesFeladasa;
     private Button buttonMentesHirdetesFeladasa;
-
     private TextView hibaText;
     private final String HirdetesFeladasa_URL = "http://192.168.0.18/Vizsgaremek_Web/api/hirdetes";
 
@@ -57,19 +52,9 @@ public class HirdetesFeladasa extends Fragment {
 
         kategoriakBetoltese();
 
-        editTextKezdoIdoptHirdetesFeladasa.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                kezdoidopont(editTextKezdoIdoptHirdetesFeladasa);
-            }
-        });
+        editTextKezdoIdoptHirdetesFeladasa.setOnClickListener(view1 -> kezdoidopont(editTextKezdoIdoptHirdetesFeladasa));
 
-        editTextZaroIdoptHirdetesFeladasa.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                zaroidopont(editTextZaroIdoptHirdetesFeladasa);
-            }
-        });
+        editTextZaroIdoptHirdetesFeladasa.setOnClickListener(view12 -> zaroidopont(editTextZaroIdoptHirdetesFeladasa));
 
         felvesz();
 
@@ -96,7 +81,6 @@ public class HirdetesFeladasa extends Fragment {
 
     private Hirdetes validalEsHirdetestLetrehoz() throws Exception {
         String kategoria = spinnerKategoriaHirdetesFeladasa.getSelectedItem().toString();
-        //kell lennie ilyen id-jú hirdetőnek már az adatbázisban
         String hirdeto_id = Adattarolo.userIdOlvasas(getContext());
         String kezdo_idopont = editTextKezdoIdoptHirdetesFeladasa.getText().toString();
         String zaro_idopont = editTextZaroIdoptHirdetesFeladasa.getText().toString();
@@ -145,7 +129,6 @@ public class HirdetesFeladasa extends Fragment {
                 break;
         }
 
-
         if (kategoria.isEmpty() || kezdo_idopont.isEmpty() || zaro_idopont.isEmpty() || leiras.isEmpty() || hirdetes_telszam.isEmpty() || hirdetes_cim.isEmpty()){
             throw  new Exception("Minden mező kitöltése kötelező.");
         }else if (hirdetes_telszam.length() < 7 || hirdetes_telszam.length() > 30) {
@@ -156,8 +139,6 @@ public class HirdetesFeladasa extends Fragment {
             return new Hirdetes(0, Integer.parseInt(kategoria_id), Integer.parseInt(hirdeto_id), kezdo_idopont, zaro_idopont, leiras, hirdetes_telszam, hirdetes_cim, Integer.parseInt(telepules_id));
         }
     }
-
-
 
     private class RequestTask extends AsyncTask<Void, Void, Response> {
 
@@ -175,18 +156,14 @@ public class HirdetesFeladasa extends Fragment {
         protected Response doInBackground(Void... voids) {
             Response response = null;
             try {
-                switch (requestType){
-                    case "POST":
-                        response = RequestHandler.postRequest(url, parameterek);
-                        break;
+                if (requestType.equals("POST")) {
+                    response = RequestHandler.postRequest(url, parameterek);
                 }
             } catch (IOException e) {
-                getActivity().runOnUiThread(new HibaRunnable(e));
+                new HibaRunnable(e);
             }
             return response;
         }
-
-
     }
 
     private class HibaRunnable implements Runnable {
@@ -209,31 +186,23 @@ public class HirdetesFeladasa extends Fragment {
         spinnerKategoriaHirdetesFeladasa.setAdapter(adapter);
     }
 
-
-
     //Kezdő dátum + időpont kiválasztása
     private void kezdoidopont(EditText editTextKezdoIdopt) {
         Calendar calendar = Calendar.getInstance();
-        DatePickerDialog.OnDateSetListener dateSetListener = new DatePickerDialog.OnDateSetListener() {
-            @Override
-            public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-                calendar.set(Calendar.YEAR,year);
-                calendar.set(Calendar.MONTH,month);
-                calendar.set(Calendar.DAY_OF_MONTH,dayOfMonth);
+        DatePickerDialog.OnDateSetListener dateSetListener = (view, year, month, dayOfMonth) -> {
+            calendar.set(Calendar.YEAR,year);
+            calendar.set(Calendar.MONTH,month);
+            calendar.set(Calendar.DAY_OF_MONTH,dayOfMonth);
 
-                TimePickerDialog.OnTimeSetListener timeSetListener = new TimePickerDialog.OnTimeSetListener(){
-                    @Override
-                    public void onTimeSet(TimePicker view, int hourOfDay, int minute){
-                        calendar.set(Calendar.HOUR_OF_DAY,hourOfDay);
-                        calendar.set(Calendar.MINUTE,minute);
+            TimePickerDialog.OnTimeSetListener timeSetListener = (view1, hourOfDay, minute) -> {
+                calendar.set(Calendar.HOUR_OF_DAY,hourOfDay);
+                calendar.set(Calendar.MINUTE,minute);
 
-                        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+                SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
 
-                        editTextKezdoIdopt.setText(simpleDateFormat.format(calendar.getTime()));
-                    }
-                };
-                new TimePickerDialog(getActivity(),timeSetListener,calendar.get(Calendar.HOUR_OF_DAY),calendar.get(Calendar.MINUTE),false).show();
-            }
+                editTextKezdoIdopt.setText(simpleDateFormat.format(calendar.getTime()));
+            };
+            new TimePickerDialog(getActivity(),timeSetListener,calendar.get(Calendar.HOUR_OF_DAY),calendar.get(Calendar.MINUTE),false).show();
         };
         new DatePickerDialog(getActivity(),dateSetListener,calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), calendar.get(Calendar.DAY_OF_MONTH)).show();
     }
@@ -241,26 +210,20 @@ public class HirdetesFeladasa extends Fragment {
     //Záró dátum + időpont kiválasztása
     private void zaroidopont(EditText editTextZaroIdopt) {
         Calendar calendar = Calendar.getInstance();
-        DatePickerDialog.OnDateSetListener dateSetListener = new DatePickerDialog.OnDateSetListener() {
-            @Override
-            public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-                calendar.set(Calendar.YEAR,year);
-                calendar.set(Calendar.MONTH,month);
-                calendar.set(Calendar.DAY_OF_MONTH,dayOfMonth);
+        DatePickerDialog.OnDateSetListener dateSetListener = (view, year, month, dayOfMonth) -> {
+            calendar.set(Calendar.YEAR,year);
+            calendar.set(Calendar.MONTH,month);
+            calendar.set(Calendar.DAY_OF_MONTH,dayOfMonth);
 
-                TimePickerDialog.OnTimeSetListener timeSetListener = new TimePickerDialog.OnTimeSetListener(){
-                    @Override
-                    public void onTimeSet(TimePicker view, int hourOfDay, int minute){
-                        calendar.set(Calendar.HOUR_OF_DAY,hourOfDay);
-                        calendar.set(Calendar.MINUTE,minute);
+            TimePickerDialog.OnTimeSetListener timeSetListener = (view1, hourOfDay, minute) -> {
+                calendar.set(Calendar.HOUR_OF_DAY,hourOfDay);
+                calendar.set(Calendar.MINUTE,minute);
 
-                        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+                SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
 
-                        editTextZaroIdopt.setText(simpleDateFormat.format(calendar.getTime()));
-                    }
-                };
-                new TimePickerDialog(getActivity(),timeSetListener,calendar.get(Calendar.HOUR_OF_DAY),calendar.get(Calendar.MINUTE),false).show();
-            }
+                editTextZaroIdopt.setText(simpleDateFormat.format(calendar.getTime()));
+            };
+            new TimePickerDialog(getActivity(),timeSetListener,calendar.get(Calendar.HOUR_OF_DAY),calendar.get(Calendar.MINUTE),false).show();
         };
         new DatePickerDialog(getActivity(),dateSetListener,calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), calendar.get(Calendar.DAY_OF_MONTH)).show();
     }

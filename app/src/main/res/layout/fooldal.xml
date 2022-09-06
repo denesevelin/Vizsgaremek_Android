@@ -21,64 +21,64 @@
             android:layout_width="170dp"
             android:layout_height="wrap_content"
             android:text="Bejelentkezés"
-            android:layout_below="@+id/imageViewLogoFooldal"
             android:layout_marginLeft="30dp"
+            android:layout_below="@+id/imageViewLogoFooldal"
             android:id="@+id/buttonBejelentkezésFooldal"/>
 
         <Button
             android:layout_width="170dp"
             android:layout_height="wrap_content"
             android:text="Regisztráció"
-            android:layout_below="@+id/imageViewLogoFooldal"
             android:layout_marginLeft="210dp"
             android:layout_marginRight="20dp"
+            android:layout_below="@+id/imageViewLogoFooldal"
             android:id="@+id/buttonRegisztracioFooldal"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Bemutatkozas"
-            android:layout_below="@id/buttonBejelentkezésFooldal"
             android:textStyle="bold"
             android:layout_marginTop="20dp"
+            android:layout_below="@id/buttonBejelentkezésFooldal"
             android:id="@+id/textViewBemutatkozasCimFooldal"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/textViewBemutatkozasCimFooldal"
             android:text="Üdvözöljük az Önkéntes Portál Nonprofit Kft. mobil applikációjában. Immáron 2 éve azon munkálkodunk, hogy népszerűsítsük az önkéntes munkát, ezen keresztül pedig erősítsük a társadalmi felelősségvállalást, a szociális érzékenységet és az önzetlen segítségnyújtást. Weboldalunkon és mobil applikációnkon keresztül könnyedén egymásra találhatnak a segítő szándékú és a segítségre szoruló emberek. Hiszünk abban, hogy kis változásokkal is nagy eredményeket lehet elérni, és egy jobb és élhetőbb világ felé haladhatunk. Szlogenünk, az ,,Önként Önért” magában foglalja alapelveinket, miszerint önkéntes segítségnyújtással, embertársainkra való odafigyeléssel sokat tehetünk egymásért, és jobb emberekké válhatunk. Örömünkre szolgál, ha csatlakozik csapatunkhoz és célkitűzésünket elősegítve minél több emberhez eljuttatja elérhetőségeinket.\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tKöszönettel az alapítótagok:\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tDénes Evelin és Gulácsi-Szabó Tímea"
             android:justificationMode="inter_word"
             android:layout_marginRight="10dp"
             android:layout_marginLeft="10dp"
+            android:layout_below="@id/textViewBemutatkozasCimFooldal"
             android:id="@+id/textViewBemutatkozasFooldal"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Szabályzat"
-            android:layout_below="@id/textViewBemutatkozasFooldal"
             android:textStyle="bold"
             android:layout_marginTop="20dp"
+            android:layout_below="@id/textViewBemutatkozasFooldal"
             android:id="@+id/textViewSzabalyzatCimFooldal"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/textViewSzabalyzatCimFooldal"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
             android:justificationMode="inter_word"
             android:text="Cégünk profiljából adódóan felhasználóink között nagyon fontos szerepet játszik az egymás iránti bizalom, így kizárólag valós személyes adatok megadásával történő regisztrációt követően láthatóak az önkéntes munkalehetőségek. Minden esetben szükséges a személyes adatok megadása mellett profilképet és személyes okmányt is feltölteni, valamint okmányszámot megadni. Regisztrációt követően a feltöltött adatok és képek hitelesítési folyamaton mennek keresztül. Az adatok jóváhagyását követően a regisztrált felhasználó belépési jogot szerez. Regisztráció esetén kötelező elfogadni a Felhasználói feltételeket és az Adatvédelmi irányelveket, melyek a felhasználók érdekeit, személyes adatainak védelmét szolgálják."
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_below="@id/textViewSzabalyzatCimFooldal"
             android:id="@+id/textViewSzabalyzatFooldal"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Elérhetőségek"
-            android:layout_below="@id/textViewSzabalyzatFooldal"
             android:textStyle="bold"
             android:layout_marginTop="20dp"
+            android:layout_below="@id/textViewSzabalyzatFooldal"
             android:id="@+id/textViewElerhetosegekCimFooldal"/>
 
         <TextView
@@ -93,24 +93,24 @@
             android:layout_height="wrap_content"
             android:text=" onkentesportal@portal.hu"
             android:layout_marginLeft="10dp"
-            android:layout_below="@+id/textViewElerhetosegekSzovegFooldal"
             android:drawableStart="@drawable/ic_email"
+            android:layout_below="@+id/textViewElerhetosegekSzovegFooldal"
             android:id="@+id/textViewElerhetosegekEmailFooldal"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=" +36 1 200 200"
             android:layout_marginLeft="10dp"
-            android:layout_below="@+id/textViewElerhetosegekEmailFooldal"
             android:drawableStart="@drawable/ic_phone"
+            android:layout_below="@+id/textViewElerhetosegekEmailFooldal"
             android:id="@+id/textViewElerhetosegekTelefonFooldal"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=" 1111 Budapest Budafoki út 59."
             android:layout_marginLeft="10dp"
-            android:layout_below="@+id/textViewElerhetosegekTelefonFooldal"
             android:drawableStart="@drawable/ic_location"
+            android:layout_below="@+id/textViewElerhetosegekTelefonFooldal"
             android:id="@+id/textViewElerhetosegekHelyFooldal"/>
     </RelativeLayout>
 </ScrollView>

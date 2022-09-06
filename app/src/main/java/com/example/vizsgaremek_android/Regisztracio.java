@@ -1,49 +1,24 @@
 package com.example.vizsgaremek_android;
 
-import android.app.AlertDialog;
-import android.content.Context;
-import android.graphics.Color;
 import android.os.AsyncTask;
-import android.os.Build;
 import android.os.Bundle;
-import android.text.Layout;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
-import android.widget.ListView;
-import android.widget.SimpleAdapter;
-import android.widget.Spinner;
-import android.widget.SpinnerAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.annotation.RequiresApi;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
-import com.android.volley.toolbox.JsonObjectRequest;
-import com.android.volley.toolbox.Volley;
-import com.google.android.material.textfield.TextInputLayout;
 import com.google.gson.Gson;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
 public class Regisztracio extends Fragment {
 
@@ -156,11 +131,11 @@ public class Regisztracio extends Fragment {
         protected Response doInBackground(Void... voids) {
             Response response = null;
             try {
-                if (requestType == "POST") {
+                if (requestType.equals("POST")) {
                     response = RequestHandler.postRequest(url, parameterek);
                 }
             } catch (IOException e) {
-                getActivity().runOnUiThread(new HibaRunnable(e));
+                new HibaRunnable(e);
             }
             return response;
         }
