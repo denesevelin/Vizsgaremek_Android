@@ -21,6 +21,7 @@ public class Adatletolto {
 
     private Handler MainHandler = new Handler(Looper.getMainLooper());
     private Gson jsonConvert = new Gson();
+
     class UserRequest {
         private String felhnev;
         private String jelszo;

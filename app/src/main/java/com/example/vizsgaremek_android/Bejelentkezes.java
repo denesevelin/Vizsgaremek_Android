@@ -44,7 +44,6 @@ public class Bejelentkezes extends Fragment {
                         activity.startActivity(intent);
                         activity.finish();
                     }
-
                 }
                 else {
                     Toast.makeText(getActivity(), "Sikertelen bejelentkezés!", Toast.LENGTH_SHORT).show();
