@@ -31,13 +31,10 @@ public class HirdetesekKeresese extends Fragment {
         telepulesekBetoltese();
 
         //Hirdetések kilistázása
-        buttonSzuresHirdetesekKeresese.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                FragmentTransaction fr = getFragmentManager().beginTransaction();
-                fr.replace(R.id.fragment_container, new HirdetesekListazasa());
-                fr.commit();
-            }
+        buttonSzuresHirdetesekKeresese.setOnClickListener(v -> {
+            FragmentTransaction fr = getFragmentManager().beginTransaction();
+            fr.replace(R.id.fragment_container, new HirdetesekListazasa());
+            fr.commit();
         });
 
         return view;
@@ -45,13 +42,13 @@ public class HirdetesekKeresese extends Fragment {
 
     public void kategoriakBetoltese(){
         String[] items = new String[]{"Kutyasétáltatás", "Vásárlás", "Takarítás", "Személyszállítás", "Idősgondozás", "Gyermekfelügyelet", "Szerelés", "Társalgás", "Korrepetálás", "Főzés", "Kertészkedés", "Egyéb"};
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getContext(), android.R.layout.simple_spinner_dropdown_item, items);
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(getContext(), android.R.layout.simple_spinner_dropdown_item, items);
         SpinnerKategoriaKeresHirdetesekKeresese.setAdapter(adapter);
     }
 
     public void telepulesekBetoltese(){
         String[] items = new String[]{"Első település", "Második település", "Harmadik település"};
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getContext(), android.R.layout.simple_spinner_dropdown_item, items);
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(getContext(), android.R.layout.simple_spinner_dropdown_item, items);
         SpinnerTelepulesKeresHirdetesekKeresese.setAdapter(adapter);
     }
 

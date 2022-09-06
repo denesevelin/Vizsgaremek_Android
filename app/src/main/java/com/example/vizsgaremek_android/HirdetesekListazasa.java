@@ -3,7 +3,6 @@ package com.example.vizsgaremek_android;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -27,8 +26,6 @@ import java.util.List;
 
 public class HirdetesekListazasa extends Fragment {
 
-
-
     private ListView hirdetesAdatok;
     private TextView hibaText;
     private List<Hirdetes> hirdetesLista;
@@ -39,16 +36,9 @@ public class HirdetesekListazasa extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.hirdetesek_listazasa, container, false);
 
-
-
         hirdetesAdatok = view.findViewById(R.id.hirdetesAdatok);
+        hibaText = view.findViewById(R.id.hibaText);
         hirdetesLista = new ArrayList<>();
-
-
-
-
-        //Konkrét hirdetésre
-
 
         hirdetesekListazasa();
 
@@ -56,18 +46,16 @@ public class HirdetesekListazasa extends Fragment {
     }
 
     private void hirdetesekListazasa() {
-        RequestTask task = new RequestTask(Hirdetes_URL,"GET","");
+        RequestTask task = new RequestTask(Hirdetes_URL,"GET");
         task.execute();
     }
 
     @RequiresApi(api = Build.VERSION_CODES.N)
 
-    private void refreshHirdetesList(List<Hirdetes> adatok, String requestType, String parameterek) {
-        switch (requestType){
-            case "GET":
-                this.hirdetesLista.clear();
-                hirdetesLista.addAll(adatok);
-                break;
+    private void refreshHirdetesList(List<Hirdetes> adatok, String requestType) {
+        if (requestType.equals("GET")) {
+            this.hirdetesLista.clear();
+            hirdetesLista.addAll(adatok);
         }
     }
 
@@ -75,22 +63,18 @@ public class HirdetesekListazasa extends Fragment {
 
         private String url;
         private String requestType;
-        private String parameterek;
 
-        public RequestTask(String url, String requestType, String parameterek) {
+        public RequestTask(String url, String requestType) {
             this.url = url;
             this.requestType = requestType;
-            this.parameterek = parameterek;
         }
 
         @Override
         protected Response doInBackground(Void... voids) {
             Response response = null;
             try {
-                switch (requestType){
-                    case "GET":
-                        response = RequestHandler.getRequest(url);
-                        break;
+                if (requestType.equals("GET")) {
+                    response = RequestHandler.getRequest(url);
                 }
             } catch (IOException e) {
                 new HibaRunnable(e);
@@ -98,14 +82,7 @@ public class HirdetesekListazasa extends Fragment {
             return response;
         }
 
-        @Override
-        protected void onPreExecute() {
-            super.onPreExecute();
-            //hibaText.setText("");
-        }
-
         @RequiresApi(api = Build.VERSION_CODES.N)
-
 
         @Override
         protected void onPostExecute(Response response) {
@@ -113,13 +90,10 @@ public class HirdetesekListazasa extends Fragment {
             if(response != null){
                 Gson jsonConvert = new Gson();
                 HirdetesApiValasz valasz = jsonConvert.fromJson(response.getContent(), HirdetesApiValasz.class);
-                Log.d("responseCode", String.valueOf(response.getResponseCode()));
-                Log.d("responseContent", response.getContent());
                 if(valasz.isError()){
                     hibaText.setText(String.format("%d-as hiba: %s", response.getResponseCode(), valasz.getMessage()));
                 }else {
-                    refreshHirdetesList(valasz.getAdatok(), requestType, parameterek);
-
+                    refreshHirdetesList(valasz.getAdatok(), requestType);
                 }
                 hirdetesAdatok.setAdapter(new HirdetesAdapter());
             }
@@ -142,7 +116,6 @@ public class HirdetesekListazasa extends Fragment {
 
     private class HirdetesAdapter extends ArrayAdapter<Hirdetes> {
 
-
         public HirdetesAdapter() {
             super(HirdetesekListazasa.this.getActivity(), R.layout.hirdetes_list_item, hirdetesLista);
         }
@@ -151,10 +124,10 @@ public class HirdetesekListazasa extends Fragment {
         public View getView(int position,  View convertView, ViewGroup parent) {
             LayoutInflater inflater = getLayoutInflater();
             View listViewItem = inflater.inflate(R.layout.hirdetes_list_item, null);
+
             TextView textViewHirdetesSzovegHirdetesekListazasa = listViewItem.findViewById(R.id.textViewHirdetesSzovegHirdetesekListazasa);
             ImageView ImageViewKategoriakepHirdetesekListazasa = listViewItem.findViewById(R.id.ImageViewKategoriakepHirdetesekListazasa);
             Button buttonTovabbHirdetesekListazasa = listViewItem.findViewById(R.id.buttonTovabbHirdetesekListazasa);
-
 
             Hirdetes hirdetes = hirdetesLista.get(position);
             textViewHirdetesSzovegHirdetesekListazasa.setText(String.format("%s ", hirdetes.getLeiras()));
@@ -199,19 +172,13 @@ public class HirdetesekListazasa extends Fragment {
                     break;
             }
 
-            buttonTovabbHirdetesekListazasa.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    FragmentTransaction fr = getFragmentManager().beginTransaction();
-                    fr.replace(R.id.fragment_container,  KonkretHirdetes.newInstance(hirdetes.getHirdetes_id()));
-                    fr.commit();
-                }
+            buttonTovabbHirdetesekListazasa.setOnClickListener(v -> {
+                FragmentTransaction fr = getFragmentManager().beginTransaction();
+                fr.replace(R.id.fragment_container,  KonkretHirdetes.newInstance(hirdetes.getHirdetes_id()));
+                fr.commit();
             });
-
 
             return listViewItem;
         }
-
-
     }
 }

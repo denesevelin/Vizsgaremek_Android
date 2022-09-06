@@ -27,6 +27,13 @@
             tools:listitem="@layout/hirdetes_list_item"
             android:layout_below="@+id/textViewHirdetesekHirdetesekListazasa"
             android:id="@+id/hirdetesAdatok"/>
-    </RelativeLayout>
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#FF0000"
+            android:textAlignment="center"
+            android:layout_below="@+id/hirdetesAdatok"
+            android:id="@+id/hibaText"/>
+    </RelativeLayout>
 </LinearLayout>

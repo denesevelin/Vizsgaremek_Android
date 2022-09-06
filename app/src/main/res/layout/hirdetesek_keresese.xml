@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -24,58 +22,57 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/textViewHirdetesekKeresese"
             android:text="Kategória szerinti keresés"
             android:layout_marginTop="20dp"
             android:layout_centerHorizontal="true"
+            android:layout_below="@id/textViewHirdetesekKeresese"
             android:id="@+id/textViewKategoriaKeresHirdetesekKeresese"/>
 
         <Spinner
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/textViewKategoriaKeresHirdetesekKeresese"
             android:spinnerMode="dropdown"
+            android:layout_below="@+id/textViewKategoriaKeresHirdetesekKeresese"
             android:id="@+id/SpinnerKategoriaKeresHirdetesekKeresese"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/SpinnerKategoriaKeresHirdetesekKeresese"
             android:text="Település szerinti keresés"
             android:layout_marginTop="20dp"
             android:layout_centerHorizontal="true"
+            android:layout_below="@id/SpinnerKategoriaKeresHirdetesekKeresese"
             android:id="@+id/textViewTelepulesKeresHirdetesekKeresese"/>
 
         <Spinner
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/textViewTelepulesKeresHirdetesekKeresese"
             android:spinnerMode="dropdown"
+            android:layout_below="@+id/textViewTelepulesKeresHirdetesekKeresese"
             android:id="@+id/SpinnerTelepulesKeresHirdetesekKeresese"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/SpinnerTelepulesKeresHirdetesekKeresese"
             android:text="Dátum szerinti keresés"
             android:layout_marginTop="20dp"
             android:layout_centerHorizontal="true"
+            android:layout_below="@id/SpinnerTelepulesKeresHirdetesekKeresese"
             android:id="@+id/textViewDatumKeresHirdetesekKeresese"/>
 
         <CalendarView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/textViewDatumKeresHirdetesekKeresese"
             android:layout_centerHorizontal="true"
+            android:layout_below="@+id/textViewDatumKeresHirdetesekKeresese"
             android:id="@+id/calendarViewDatumKeresHirdetesekKeresese"/>
 
         <Button
             android:layout_width="170dp"
             android:layout_height="wrap_content"
             android:text="Szűrés"
-            android:layout_below="@+id/calendarViewDatumKeresHirdetesekKeresese"
             android:layout_marginTop="20dp"
             android:layout_centerHorizontal="true"
+            android:layout_below="@+id/calendarViewDatumKeresHirdetesekKeresese"
             android:id="@+id/buttonSzuresHirdetesekKeresese"/>
     </RelativeLayout>
-
 </ScrollView>
