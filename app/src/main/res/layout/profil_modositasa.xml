@@ -6,159 +6,240 @@
     android:layout_height="match_parent"
     tools:context=".ProfilModositas">
 
-    <RelativeLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_height="wrap_content"
         android:id="@+id/relativeLayoutProfilModositas">
 
         <TextView
+            android:id="@+id/textViewProfilModositas"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
             android:text="Profil módosítása"
             android:textSize="30sp"
             android:textStyle="bold"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="20dp"
-            android:id="@+id/textViewProfilModositas"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/textViewTelepulesProfilModositas"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
-            android:layout_below="@id/textViewProfilModositas"
+            android:layout_below="@+id/textViewProfilModositas"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
             android:text="Település"
-            android:textStyle="bold" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewProfilModositas"
+            tools:ignore="MissingConstraints" />
 
-        <Spinner
-            android:id="@+id/SpinnerTelepulesProfilModositas"
-            android:layout_width="wrap_content"
+        <EditText
+            android:id="@+id/editTelepulesProfilModositas"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/textViewTelepulesProfilModositas"
-            android:spinnerMode="dropdown" />
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTelepulesProfilModositas"
+            tools:ignore="MissingConstraints" />
 
         <TextView
-            android:id="@+id/textViewCimProfilModositas"
-            android:layout_width="wrap_content"
+            android:id="@+id/editTextCimProfilModositas"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_below="@id/SpinnerTelepulesProfilModositas"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
             android:text="Cím"
-            android:textStyle="bold" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTelepulesProfilModositas"
+            tools:ignore="MissingConstraints" />
 
         <EditText
-            android:layout_width="wrap_content"
+            android:id="@+id/editCimProfilModositas"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Betöltött cím"
-            android:layout_below="@+id/textViewCimProfilModositas"
-            android:id="@+id/editTextCimProfilModositas"/>
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextCimProfilModositas"
+            tools:ignore="MissingConstraints" />
 
         <TextView
-            android:id="@+id/textViewEmailProfilModositas"
-            android:layout_width="wrap_content"
+            android:id="@+id/editTextEmailProfilModositas"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_below="@id/editTextCimProfilModositas"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
             android:text="E-mail cím"
-            android:textStyle="bold" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editCimProfilModositas"
+            tools:ignore="MissingConstraints" />
 
         <EditText
-            android:layout_width="wrap_content"
+            android:id="@+id/editEmailProfilModositas"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Betöltött e-mail cím"
-            android:layout_below="@+id/textViewEmailProfilModositas"
-            android:id="@+id/editTextEmailProfilModositas"/>
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextEmailProfilModositas"
+            tools:ignore="MissingConstraints" />
 
         <TextView
-            android:id="@+id/textViewTelefonszamProfilModositas"
-            android:layout_width="wrap_content"
+            android:id="@+id/editTextTelefonszamProfilModositas"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_below="@id/editTextEmailProfilModositas"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
             android:text="Telefonszám"
-            android:textStyle="bold" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editEmailProfilModositas"
+            tools:ignore="MissingConstraints" />
 
         <EditText
-            android:layout_width="wrap_content"
+            android:id="@+id/editTelszamProfilModositas"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Betöltött e-mail cím"
-            android:layout_below="@+id/textViewTelefonszamProfilModositas"
-            android:id="@+id/editTextTelefonszamProfilModositas"/>
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTelefonszamProfilModositas"
+            tools:ignore="MissingConstraints" />
 
         <Button
+            android:id="@+id/buttonProfilModositasProfilModositas"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Profil módosítás"
-            android:layout_below="@+id/editTextTelefonszamProfilModositas"
-            android:id="@+id/buttonProfilModositasProfilModositas"/>
+            android:layout_marginTop="16dp"
+            android:text="@string/edit_profil"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTelszamProfilModositas"
+            tools:ignore="MissingConstraints" />
+
 
         <TextView
+            android:id="@+id/textViewJelszoModositas"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
             android:text="Jelszó módosítása"
             android:textSize="30sp"
             android:textStyle="bold"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="20dp"
-            android:layout_below="@+id/buttonProfilModositasProfilModositas"
-            android:id="@+id/textViewJelszoModositas"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonProfilModositasProfilModositas" />
 
         <TextView
             android:id="@+id/textViewJelenlegiJelszoProfilModositas"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
             android:layout_below="@id/textViewJelszoModositas"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
             android:text="Jelenlegi jelszó"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewJelszoModositas" />
 
         <EditText
-            android:layout_width="wrap_content"
+            android:id="@+id/editTextJelenlegiJelszoProfilModositas"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/textViewJelenlegiJelszoProfilModositas"
-            android:id="@+id/editTextJelenlegiJelszoProfilModositas"/>
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewJelenlegiJelszoProfilModositas" />
 
         <TextView
             android:id="@+id/textViewUjJelszoProfilModositas"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_below="@id/editTextJelenlegiJelszoProfilModositas"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
             android:text="Új jelszó"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextJelenlegiJelszoProfilModositas" />
 
         <EditText
-            android:layout_width="wrap_content"
+            android:id="@+id/editTextUjJelszoProfilModositas"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/textViewUjJelszoProfilModositas"
-            android:id="@+id/editTextUjJelszoProfilModositas"/>
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewUjJelszoProfilModositas" />
 
         <TextView
             android:id="@+id/textViewUjJelszoUjraProfilModositas"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_below="@id/editTextUjJelszoProfilModositas"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
             android:text="Új jelszó újra"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextUjJelszoProfilModositas" />
 
         <EditText
-            android:layout_width="wrap_content"
+            android:id="@+id/editTextUjJelszoUjraProfilModositas"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/textViewUjJelszoUjraProfilModositas"
-            android:id="@+id/editTextUjJelszoUjraProfilModositas"/>
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewUjJelszoUjraProfilModositas" />
 
         <Button
+            android:id="@+id/buttonJelszoModositasProfilModositas"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Jelszó módosítás"
             android:layout_below="@+id/editTextUjJelszoUjraProfilModositas"
-            android:id="@+id/buttonJelszoModositasProfilModositas"/>
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="Jelszó módosítás"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextUjJelszoUjraProfilModositas" />
 
         <Button
+            android:id="@+id/buttonVisszaProfilModositas"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Vissza a profilra"
             android:layout_below="@+id/buttonJelszoModositasProfilModositas"
             android:layout_centerInParent="true"
-            android:layout_marginTop="20dp"
-            android:id="@+id/buttonVisszaProfilModositas"/>
+            android:layout_marginTop="16dp"
+            android:text="Vissza a profilra"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonJelszoModositasProfilModositas" />
 
-    </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </ScrollView>
