@@ -23,6 +23,12 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".BejelentkezettActivity"
+            android:theme="@style/Theme.Vizsgaremek_Android.NoActionBar"
+            android:exported="true">
+        </activity>
+
     </application>
 
 </manifest>

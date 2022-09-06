@@ -4,24 +4,32 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Vizsgaremek_Android/Vizsgaremek_Android/app/src/main/res/drawable/valami.xml" value="0.21875" />
+        <entry key="..\:/Vizsgaremek_Android/Vizsgaremek_Android/app/src/main/res/layout/activity_bejelentkezett.xml" value="0.20260416666666667" />
         <entry key="..\:/Vizsgaremek_Android/Vizsgaremek_Android/app/src/main/res/layout/activity_main.xml" value="0.1953125" />
         <entry key="..\:/Vizsgaremek_Android/Vizsgaremek_Android/app/src/main/res/layout/bejelentkezes.xml" value="0.1953125" />
         <entry key="..\:/Vizsgaremek_Android/Vizsgaremek_Android/app/src/main/res/layout/fooldal.xml" value="0.1953125" />
         <entry key="..\:/Vizsgaremek_Android/Vizsgaremek_Android/app/src/main/res/layout/hirdetes_feladasa.xml" value="0.1953125" />
+        <entry key="..\:/Vizsgaremek_Android/Vizsgaremek_Android/app/src/main/res/layout/hirdetes_list_item.xml" value="0.3625" />
         <entry key="..\:/Vizsgaremek_Android/Vizsgaremek_Android/app/src/main/res/layout/hirdetesek_keresese.xml" value="0.1953125" />
         <entry key="..\:/Vizsgaremek_Android/Vizsgaremek_Android/app/src/main/res/layout/hirdetesek_listazasa.xml" value="0.2640625" />
         <entry key="..\:/Vizsgaremek_Android/Vizsgaremek_Android/app/src/main/res/layout/kijelentkezes.xml" value="0.1953125" />
         <entry key="..\:/Vizsgaremek_Android/Vizsgaremek_Android/app/src/main/res/layout/konkret_hirdetes.xml" value="0.2640625" />
         <entry key="..\:/Vizsgaremek_Android/Vizsgaremek_Android/app/src/main/res/layout/nav_header.xml" value="0.1953125" />
         <entry key="..\:/Vizsgaremek_Android/Vizsgaremek_Android/app/src/main/res/layout/profil.xml" value="0.1953125" />
+        <entry key="..\:/Vizsgaremek_Android/Vizsgaremek_Android/app/src/main/res/layout/profil_hirdetesek_list_item.xml" value="0.3625" />
         <entry key="..\:/Vizsgaremek_Android/Vizsgaremek_Android/app/src/main/res/layout/profil_modositasa.xml" value="0.2640625" />
+        <entry key="..\:/Vizsgaremek_Android/Vizsgaremek_Android/app/src/main/res/layout/profil_modositasa_list_item.xml" value="0.25364583333333335" />
+        <entry key="..\:/Vizsgaremek_Android/Vizsgaremek_Android/app/src/main/res/layout/profil_user_list_item.xml" value="0.3625" />
         <entry key="..\:/Vizsgaremek_Android/Vizsgaremek_Android/app/src/main/res/layout/ranglista.xml" value="0.1953125" />
-        <entry key="..\:/Vizsgaremek_Android/Vizsgaremek_Android/app/src/main/res/layout/regisztracio.xml" value="0.1953125" />
+        <entry key="..\:/Vizsgaremek_Android/Vizsgaremek_Android/app/src/main/res/layout/regisztracio.xml" value="0.33" />
+        <entry key="..\:/Vizsgaremek_Android/Vizsgaremek_Android/app/src/main/res/layout/statisztika_list_item.xml" value="0.25364583333333335" />
         <entry key="..\:/Vizsgaremek_Android/Vizsgaremek_Android/app/src/main/res/layout/telepules_list_item.xml" value="0.20260416666666667" />
         <entry key="..\:/Vizsgaremek_Android/Vizsgaremek_Android/app/src/main/res/layout/teszt.xml" value="0.31281198003327787" />
+        <entry key="..\:/Vizsgaremek_Android/Vizsgaremek_Android/app/src/main/res/layout/top_ontentesek_list_item.xml" value="0.25" />
         <entry key="..\:/Vizsgaremek_Android/Vizsgaremek_Android/app/src/main/res/layout/user_list_item.xml" value="0.20260416666666667" />
         <entry key="..\:/Vizsgaremek_Android/Vizsgaremek_Android/app/src/main/res/layout/valami.xml" value="0.3625" />
         <entry key="..\:/Vizsgaremek_Android/Vizsgaremek_Android/app/src/main/res/menu/drawer_menu.xml" value="0.1953125" />
+        <entry key="..\:/Vizsgaremek_Android/Vizsgaremek_Android/app/src/main/res/menu/drawer_menu_bejelentkezett.xml" value="0.20260416666666667" />
         <entry key="..\:/Vizsgaremek_Android/Vizsgaremek_Android/app/src/main/res/menu/nav_header.xml" value="0.1953125" />
         <entry key="..\:/Vizsgaremek_Android/Vizsgaremek_Android/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.37864583333333335" />
       </map>

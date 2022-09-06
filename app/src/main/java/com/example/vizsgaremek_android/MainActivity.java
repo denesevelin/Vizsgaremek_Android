@@ -19,8 +19,14 @@ import android.widget.TextView;
 import com.google.android.material.navigation.NavigationView;
 
 import java.io.IOException;
+import java.security.InvalidKeyException;
+import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.List;
+
+import javax.crypto.Cipher;
+import javax.crypto.NoSuchPaddingException;
+import javax.crypto.spec.SecretKeySpec;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
@@ -55,10 +61,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         //Fragmentek közötti mozgás
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-        //fragmentTransaction.add(R.id.fragment_container, new Fooldal());
         fragmentTransaction.commit();
-
-
 
     }
 
@@ -97,9 +100,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 break;
             case R.id.nav_ranglista:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Ranglista()).commit();
-                break;
-            case R.id.nav_kijelentkezes:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Kijelentkezes()).commit();
                 break;
         }
         drawer.closeDrawer(GravityCompat.START);

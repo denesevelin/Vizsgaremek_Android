@@ -17,6 +17,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.google.gson.Gson;
 
@@ -26,7 +27,7 @@ import java.util.List;
 
 public class HirdetesekListazasa extends Fragment {
 
-    private Button buttonTovabbHirdetesekListazasa;
+
 
     private ListView hirdetesAdatok;
     private TextView hibaText;
@@ -38,7 +39,7 @@ public class HirdetesekListazasa extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.hirdetesek_listazasa, container, false);
 
-        //buttonTovabbHirdetesekListazasa = view.findViewById(R.id.buttonTovabbHirdetesekListazasa);
+
 
         hirdetesAdatok = view.findViewById(R.id.hirdetesAdatok);
         hirdetesLista = new ArrayList<>();
@@ -47,14 +48,7 @@ public class HirdetesekListazasa extends Fragment {
 
 
         //Konkrét hirdetésre
-        /*buttonTovabbHirdetesekListazasa.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                FragmentTransaction fr = getFragmentManager().beginTransaction();
-                fr.replace(R.id.fragment_container, new KonkretHirdetes());
-                fr.commit();
-            }
-        });*/
+
 
         hirdetesekListazasa();
 
@@ -159,6 +153,7 @@ public class HirdetesekListazasa extends Fragment {
             View listViewItem = inflater.inflate(R.layout.hirdetes_list_item, null);
             TextView textViewHirdetesSzovegHirdetesekListazasa = listViewItem.findViewById(R.id.textViewHirdetesSzovegHirdetesekListazasa);
             ImageView ImageViewKategoriakepHirdetesekListazasa = listViewItem.findViewById(R.id.ImageViewKategoriakepHirdetesekListazasa);
+            Button buttonTovabbHirdetesekListazasa = listViewItem.findViewById(R.id.buttonTovabbHirdetesekListazasa);
 
 
             Hirdetes hirdetes = hirdetesLista.get(position);
@@ -203,6 +198,15 @@ public class HirdetesekListazasa extends Fragment {
                     ImageViewKategoriakepHirdetesekListazasa.setImageResource(R.drawable.egyeb);
                     break;
             }
+
+            buttonTovabbHirdetesekListazasa.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    FragmentTransaction fr = getFragmentManager().beginTransaction();
+                    fr.replace(R.id.fragment_container,  KonkretHirdetes.newInstance(hirdetes.getHirdetes_id()));
+                    fr.commit();
+                }
+            });
 
 
             return listViewItem;

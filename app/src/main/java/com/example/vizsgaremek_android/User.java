@@ -27,6 +27,16 @@ public class User {
         this.pontszam = pontszam;
     }
 
+    public User(int user_id, int telepules_id, String telszam, String email, String cim) {
+        this.user_id = user_id;
+        this.telepules_id = telepules_id;
+        this.telszam = telszam;
+        this.email = email;
+        this.cim = cim;
+    }
+
+
+
     public User(int user_id, String nev, String felhnev, String szuldatum, int telepules_id, String telszam, String email, String jelszo, String profilkep, String okmanykep, String okmanyszam, String cim) {
         this.user_id = user_id;
         this.nev = nev;
