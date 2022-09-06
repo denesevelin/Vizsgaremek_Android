@@ -7,15 +7,5 @@
             android:title="Regisztráció"/>
         <item android:id="@+id/nav_bejelentkezes"
             android:title="Bejelentkezés"/>
-        <item android:id="@+id/nav_hirdetesekKeresese"
-            android:title="Hirdetések keresése"/>
-        <item android:id="@+id/nav_hirdetesFeladasa"
-            android:title="Hirdetés feladása"/>
-        <item android:id="@+id/nav_profil"
-            android:title="Profil"/>
-        <item android:id="@+id/nav_ranglista"
-            android:title="Ranglista"/>
-        <item android:id="@+id/nav_kijelentkezes"
-            android:title="Kijelentkezés"/>
     </group>
 </menu>
