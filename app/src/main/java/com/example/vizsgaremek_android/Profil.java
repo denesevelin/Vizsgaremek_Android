@@ -1,5 +1,6 @@
 package com.example.vizsgaremek_android;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
@@ -36,7 +37,6 @@ public class Profil extends Fragment {
     private List<User> userLista;
     private String bejelentkezett_id ;
     private final String EgyUser_URL = "http://192.168.0.18/Vizsgaremek_Web/api/user";
-
     private TextView textViewNevProfil, textViewFelhasznalonevProfil, textViewTelefonszamProfil, textViewEmailProfil, textViewTelepulesProfil, textViewCimProfil, textViewKonkretPontszamProfil;
 
     @Nullable
@@ -47,7 +47,7 @@ public class Profil extends Fragment {
         imageViewJelentkeztemProfil = view.findViewById(R.id.imageViewJelentkeztemProfil);
         buttonProfilModositasProfil = view.findViewById(R.id.buttonProfilModositasProfil);
         buttonProfilTorlesProfil = view.findViewById(R.id.buttonProfilTorlesProfil);
-
+        hibaText = view.findViewById(R.id.hibaText);
         textViewNevProfil = view.findViewById(R.id.textViewNevProfil);
         textViewFelhasznalonevProfil = view.findViewById(R.id.textViewFelhasznalonevProfil);
         textViewTelefonszamProfil = view.findViewById(R.id.textViewTelefonszamProfil);
@@ -58,7 +58,6 @@ public class Profil extends Fragment {
         userAdatok = view.findViewById(R.id.userAdatok);
         userLista = new ArrayList<>();
 
-        //Konkrét hirdetés megtekintése
         imageViewJelentkeztemProfil.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -68,7 +67,6 @@ public class Profil extends Fragment {
             }
         });
 
-        //Profil módosítás megnyitása
         buttonProfilModositasProfil.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -139,14 +137,7 @@ public class Profil extends Fragment {
             return response;
         }
 
-        @Override
-        protected void onPreExecute() {
-            super.onPreExecute();
-            //hibaText.setText("");
-        }
-
         @RequiresApi(api = Build.VERSION_CODES.N)
-
 
         @Override
         protected void onPostExecute(Response response) {
@@ -154,24 +145,22 @@ public class Profil extends Fragment {
             if(response != null){
                 Gson jsonConvert = new Gson();
                 UserApiValasz valasz = jsonConvert.fromJson(response.getContent(), UserApiValasz.class);
-                Log.d("responseCode", String.valueOf(response.getResponseCode()));
-                Log.d("responseContent", response.getContent());
                 if(valasz.isError()){
                     hibaText.setText(String.format("%d-as hiba: %s", response.getResponseCode(), valasz.getMessage()));
                 }else {
                     refreshUserList(valasz.getAdatok(), requestType, parameterek);
-
                 }
                 userAdatok.setAdapter(new UserAdapter());
-
+                if (requestType == "DELETE") {
+                    Intent i = new Intent(getActivity(), MainActivity.class);
+                    startActivity(i);
+                }
             }
         }
     }
 
     private class HibaRunnable implements Runnable {
-
         private Exception ex;
-
         public HibaRunnable(Exception ex) {
             this.ex = ex;
         }
@@ -184,7 +173,6 @@ public class Profil extends Fragment {
 
     private class UserAdapter extends ArrayAdapter<User> {
 
-
         public UserAdapter() {
             super(Profil.this.getActivity(), R.layout.profil_user_list_item, userLista);
         }
@@ -194,7 +182,6 @@ public class Profil extends Fragment {
             LayoutInflater inflater = getLayoutInflater();
             View listViewItem = inflater.inflate(R.layout.profil_user_list_item, null);
 
-
             TextView textViewNevProfil = listViewItem.findViewById(R.id.textViewNevProfil);
             TextView textViewFelhasznalonevProfil = listViewItem.findViewById(R.id.textViewFelhasznalonevProfil);
             TextView textViewTelefonszamProfil = listViewItem.findViewById(R.id.textViewTelefonszamProfil);
@@ -202,7 +189,6 @@ public class Profil extends Fragment {
             TextView textViewTelepulesProfil = listViewItem.findViewById(R.id.textViewTelepulesProfil);
             TextView textViewCimProfil = listViewItem.findViewById(R.id.textViewCimProfil);
             TextView textViewKonkretPontszamProfil = listViewItem.findViewById(R.id.textViewKonkretPontszamProfil);
-
 
             User user = userLista.get(position);
             textViewNevProfil.setText(String.format("%s ", user.getNev()));
@@ -216,7 +202,7 @@ public class Profil extends Fragment {
             buttonProfilTorlesProfil.setOnClickListener(view -> {
                 AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
                 builder.setTitle("Megerősítés");
-                builder.setMessage(String.format("Biztos törli a következő usert: %s?",user.getNev()));
+                builder.setMessage(String.format("Biztosan törölni kívánja felhasználói profilját?"));
                 builder.setCancelable(false);
                 builder.setPositiveButton("Igen",(dialog, which) -> userTorlese(user.getUser_id()));
                 builder.setNegativeButton("Nem", (dialog, which) -> {});
@@ -225,7 +211,5 @@ public class Profil extends Fragment {
 
             return listViewItem;
         }
-
-
     }
 }

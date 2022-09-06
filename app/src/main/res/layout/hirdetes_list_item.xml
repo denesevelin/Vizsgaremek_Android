@@ -11,7 +11,7 @@
         android:layout_marginTop="10dp"
         tools:ignore="MissingConstraints"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBaseline_toTopOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         android:id="@+id/ImageViewKategoriakepHirdetesekListazasa"/>
 
     <TextView

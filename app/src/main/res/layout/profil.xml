@@ -30,11 +30,11 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/userAdatok"
             android:layout_marginLeft="10dp"
             android:text="Díjaim: "
             android:textStyle="bold"
             android:layout_marginBottom="10dp"
+            android:layout_below="@+id/userAdatok"
             android:id="@+id/textViewDijProfil"/>
 
         <ImageView
@@ -42,26 +42,27 @@
             android:layout_height="50dp"
             android:src="@drawable/kutyasetaltatas"
             android:layout_marginLeft="10dp"
-            android:id="@+id/imageViewDij"
-            android:layout_below="@+id/textViewDijProfil"/>
+            android:layout_below="@+id/textViewDijProfil"
+            android:id="@+id/imageViewDij"/>
 
         <ImageView
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:src="@drawable/takaritas"
             android:layout_marginLeft="20dp"
-            android:id="@+id/imageViewDij2"
             android:layout_marginRight="5dp"
             android:layout_toEndOf="@+id/imageViewDij"
-            android:layout_below="@+id/textViewDijProfil"/>
+            android:layout_below="@+id/textViewDijProfil"
+            android:id="@+id/imageViewDij2"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/imageViewDij"
-            android:layout_marginLeft="30dp"
             android:text="Hirdetések amikre jelentkeztem: "
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="30dp"
             android:layout_marginBottom="10dp"
+            android:layout_below="@+id/imageViewDij"
             android:id="@+id/textViewJelentkeztemProfil"/>
 
         <ImageView
@@ -86,10 +87,11 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/imageViewJelentkeztemProfil"
             android:layout_marginLeft="30dp"
             android:text="Saját hirdetéseim: "
+            android:layout_marginTop="20dp"
             android:layout_marginBottom="10dp"
+            android:layout_below="@+id/imageViewJelentkeztemProfil"
             android:id="@+id/textViewHirdeteseimProfil"/>
 
         <ImageView
@@ -105,10 +107,9 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:src="@drawable/idosgondozas"
-            android:layout_below="@+id/textViewHirdeteseimProfil"
             android:layout_toEndOf="@+id/imageViewHirdetesemProfil"
+            android:layout_below="@+id/textViewHirdeteseimProfil"
             android:id="@+id/imageView2HirdetesemProfil"/>
-
 
         <Button
             android:layout_width="80dp"
@@ -116,9 +117,8 @@
             android:text="Törlés"
             android:textSize="10dp"
             android:layout_marginLeft="30dp"
-            android:layout_marginBottom="20dp"
-            android:layout_below="@+id/imageViewHirdetesemProfil"
             android:theme="@style/ThemeOverlay.AppCompat.buttonTorles"
+            android:layout_below="@+id/imageViewHirdetesemProfil"
             android:id="@+id/buttonHirdetesTorleseProfil"/>
         <Button
             android:layout_width="80dp"
@@ -134,10 +134,11 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/buttonHirdetesTorleseProfil"
-            android:layout_marginLeft="30dp"
             android:text="Jóváhagyásra váró hirdetéseim: "
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
             android:layout_marginBottom="10dp"
+            android:layout_below="@+id/buttonHirdetesTorleseProfil"
             android:id="@+id/textViewJovahagyasraVaroHirdeteseimProfil"/>
 
         <ImageView
@@ -153,10 +154,10 @@
             android:layout_width="80dp"
             android:textSize="7dp"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/imageViewJovahagyasraVaroHirdeteseimProfil"
             android:text="Elfogadás"
             android:layout_marginLeft="30dp"
             android:theme="@style/ThemeOverlay.AppCompat.buttonElfogadas"
+            android:layout_below="@+id/imageViewJovahagyasraVaroHirdeteseimProfil"
             android:id="@+id/buttonElfogadasProfil"/>
 
         <Button
@@ -164,30 +165,36 @@
             android:layout_height="wrap_content"
             android:textSize="7dp"
             android:layout_marginLeft="30dp"
-            android:layout_below="@+id/buttonElfogadasProfil"
             android:text="Elutasítás"
             android:theme="@style/ThemeOverlay.AppCompat.buttonElutasitas"
+            android:layout_below="@+id/buttonElfogadasProfil"
             android:id="@+id/buttonElutasitasProfil"/>
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/buttonElutasitasProfil"
             android:layout_marginTop="20dp"
             android:layout_marginLeft="10dp"
             android:text="Profil módosítása"
+            android:layout_below="@+id/buttonElutasitasProfil"
             android:id="@+id/buttonProfilModositasProfil"/>
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/buttonElutasitasProfil"
-            android:layout_toEndOf="@+id/buttonProfilModositasProfil"
             android:layout_marginTop="20dp"
             android:layout_marginLeft="20dp"
             android:text="Profil törlése"
+            android:layout_below="@+id/buttonElutasitasProfil"
+            android:layout_toEndOf="@+id/buttonProfilModositasProfil"
             android:id="@+id/buttonProfilTorlesProfil"/>
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#FF0000"
+            android:layout_below="@+id/buttonProfilTorlesProfil"
+            android:textAlignment="center"
+            android:id="@+id/hibaText"/>
     </RelativeLayout>
-
 </ScrollView>
