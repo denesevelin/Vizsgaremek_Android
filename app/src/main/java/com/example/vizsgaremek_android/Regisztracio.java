@@ -48,15 +48,12 @@ import java.util.List;
 public class Regisztracio extends Fragment {
 
     private Button buttonRegisztraciosFeluletRegisztracio;
-
     private EditText editNevRegisztracio, editFelhasznalonevRegisztracio, editSzuletesiDatumRegisztracio, editTelefonszamRegisztracio,
             editEmailRegisztracio, editTelepulesRegisztracio, editCimRegisztracio, editOkmanyszamRegisztracio, editOkmanykepRegisztracio,
             editProfilkepRegisztracio, editJelszoRegisztracio, editJelszoIsmetRegisztracio;
-
     private CheckBox checkBoxNyilatkozatRegisztracio;
     private TextView hibaText;
     private final String BASE_URL = "http://192.168.0.18/Vizsgaremek_Web/api/user";
-    private List<User> userLista;
 
     String regexEmail = "[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-z]{2,}$";
     String regexJelszo = "(?=.*\\d)(?=.*[A-Za-z]).{6,100}";
@@ -82,7 +79,6 @@ public class Regisztracio extends Fragment {
         editJelszoIsmetRegisztracio = view.findViewById(R.id.editJelszoIsmetRegisztracio);
         checkBoxNyilatkozatRegisztracio = view.findViewById(R.id.checkBoxNyilatkozatRegisztracio);
         hibaText = view.findViewById(R.id.hibaText);
-        userLista = new ArrayList<>();
 
         felvesz();
 
@@ -124,13 +120,13 @@ public class Regisztracio extends Fragment {
         if (nev.isEmpty() || felhnev.isEmpty() || szuldatum.isEmpty() || telepules_id.isEmpty() || telszam.isEmpty() || email.isEmpty() || jelszo.isEmpty() || profilkep.isEmpty() || okmanykep.isEmpty() || okmanyszam.isEmpty() || cim.isEmpty()){
             throw  new Exception("Minden mező kitöltése kötelező.");
         }else if (!nev.matches(regexNev)){
-            throw  new Exception("Nem jól adta meg a nevét.");
+            throw  new Exception("Nem jól adta meg a nevét. (Elvárt formátum: Teszt Elek)");
         }else if (felhnev.length() < 6 || felhnev.length() > 100){
             throw  new Exception("A felhasználónév 6 és 100 karakter közötti lehet.");
         }else if (telszam.length() < 7 || telszam.length() > 30) {
             throw  new Exception("A telefonszám 7 és 30 karakter közötti lehet.");
         }else if (!email.matches(regexEmail)) {
-            throw  new Exception("Nem megfelelő az e-mail cím formátuma.");
+            throw  new Exception("Nem megfelelő az e-mail cím formátuma. (Elvárt formátum: example@example.com)");
         }else if (!jelszo.equals(jelszoIsmet)){
             throw  new Exception("Nem ugyanaz a két jelszó.");
         }else if (!jelszo.matches(regexJelszo)){
@@ -143,15 +139,6 @@ public class Regisztracio extends Fragment {
         return new User(0,nev,felhnev,szuldatum,Integer.parseInt(telepules_id), telszam, email, jelszo, profilkep, okmanykep, okmanyszam, cim);
         }
     }
-
-    /*@RequiresApi(api = Build.VERSION_CODES.N)
-    private void refreshUserList(List<User> adatok, String requestType, String parameterek) {
-        switch (requestType){
-            case "POST":
-                userLista.add(0, (User) adatok);
-                break;
-        }
-    }*/
 
     private class RequestTask extends AsyncTask<Void, Void, Response> {
 
@@ -169,44 +156,18 @@ public class Regisztracio extends Fragment {
         protected Response doInBackground(Void... voids) {
             Response response = null;
             try {
-                switch (requestType){
-                    case "POST":
-                        response = RequestHandler.postRequest(url, parameterek);
-                        break;
+                if (requestType == "POST") {
+                    response = RequestHandler.postRequest(url, parameterek);
                 }
             } catch (IOException e) {
                 getActivity().runOnUiThread(new HibaRunnable(e));
             }
             return response;
         }
-
-        /*@Override
-        protected void onPreExecute() {
-            super.onPreExecute();
-            hibaText.setText("");
-        }
-
-        @RequiresApi(api = Build.VERSION_CODES.N)
-
-        @Override
-        protected void onPostExecute(Response response) {
-            super.onPostExecute(response);
-            *//*if(response != null){
-                Gson jsonConvert = new Gson();
-                UserApiValasz valasz = jsonConvert.fromJson(response.getContent(), UserApiValasz.class);
-                if(valasz.isError()){
-                    hibaText.setText(String.format("%d-as hiba: %s", response.getResponseCode(), valasz.getMessage()));
-                }else {
-                    refreshUserList(valasz.getAdatok(), requestType, parameterek);
-                }
-            }*//*
-        }*/
     }
 
     private class HibaRunnable implements Runnable {
-
         private Exception ex;
-
         public HibaRunnable(Exception ex) {
             this.ex = ex;
         }
