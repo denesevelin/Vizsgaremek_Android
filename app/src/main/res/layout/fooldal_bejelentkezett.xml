@@ -17,28 +17,11 @@
             android:src="@drawable/logo2"
             android:id="@+id/imageViewLogoFooldal"/>
 
-        <Button
-            android:layout_width="170dp"
-            android:layout_height="wrap_content"
-            android:text="Bejelentkezés"
-            android:layout_below="@+id/imageViewLogoFooldal"
-            android:layout_marginLeft="30dp"
-            android:id="@+id/buttonBejelentkezésFooldal"/>
-
-        <Button
-            android:layout_width="170dp"
-            android:layout_height="wrap_content"
-            android:text="Regisztráció"
-            android:layout_below="@+id/imageViewLogoFooldal"
-            android:layout_marginLeft="210dp"
-            android:layout_marginRight="20dp"
-            android:id="@+id/buttonRegisztracioFooldal"/>
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Bemutatkozas"
-            android:layout_below="@id/buttonBejelentkezésFooldal"
+            android:layout_below="@id/imageViewLogoFooldal"
             android:textStyle="bold"
             android:layout_marginTop="20dp"
             android:id="@+id/textViewBemutatkozasCimFooldal"/>

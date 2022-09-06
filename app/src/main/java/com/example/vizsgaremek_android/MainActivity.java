@@ -8,34 +8,15 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.FragmentTransaction;
 
-import android.content.Intent;
-import android.os.AsyncTask;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.MenuItem;
-import android.widget.Spinner;
-import android.widget.TextView;
 
 import com.google.android.material.navigation.NavigationView;
 
-import java.io.IOException;
-import java.security.InvalidKeyException;
-import java.security.NoSuchAlgorithmException;
-import java.util.ArrayList;
-import java.util.List;
-
-import javax.crypto.Cipher;
-import javax.crypto.NoSuchPaddingException;
-import javax.crypto.spec.SecretKeySpec;
-
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
-
-    //TODO
-    //Ki- és bejelentkezett állapotban más-más menüpontok látszódjanak
 
     private Toolbar toolbar;
     private DrawerLayout drawer;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,13 +40,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             navigationView.setCheckedItem(R.id.nav_fooldal);
         }
 
-        //Fragmentek közötti mozgás
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.commit();
 
     }
-
-
 
     @Override
     public void onBackPressed() {
@@ -75,7 +53,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             super.onBackPressed();
         }
     }
-
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {

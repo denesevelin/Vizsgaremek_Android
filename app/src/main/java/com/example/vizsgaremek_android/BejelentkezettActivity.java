@@ -1,6 +1,5 @@
 package com.example.vizsgaremek_android;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -40,7 +39,7 @@ public class BejelentkezettActivity extends AppCompatActivity implements Navigat
         toggle.syncState();
 
         if (savedInstanceState == null) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Fooldal()).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new FooldalBejelentkezett()).commit();
             navigationView.setCheckedItem(R.id.nav_fooldal);
         }
 
@@ -49,8 +48,6 @@ public class BejelentkezettActivity extends AppCompatActivity implements Navigat
         fragmentTransaction.commit();
 
     }
-
-
 
     @Override
     public void onBackPressed() {
@@ -61,12 +58,11 @@ public class BejelentkezettActivity extends AppCompatActivity implements Navigat
         }
     }
 
-
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
             case R.id.nav_fooldal:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Fooldal()).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new FooldalBejelentkezett()).commit();
                 break;
             case R.id.nav_bejelentkezes:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Bejelentkezes()).commit();

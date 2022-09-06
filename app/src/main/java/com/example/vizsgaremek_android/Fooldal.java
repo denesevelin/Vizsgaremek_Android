@@ -23,28 +23,16 @@ public class Fooldal extends Fragment {
         buttonBejelentkezésFooldal = view.findViewById(R.id.buttonBejelentkezésFooldal);
         buttonRegisztracioFooldal = view.findViewById(R.id.buttonRegisztracioFooldal);
 
-        //Bejelentkezési felület megnyitása
-        buttonBejelentkezésFooldal.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View v)
-            {
-                FragmentTransaction fr = getFragmentManager().beginTransaction();
-                fr.replace(R.id.fragment_container, new Bejelentkezes());
-                fr.commit();
-            }
+        buttonBejelentkezésFooldal.setOnClickListener(v -> {
+            FragmentTransaction fr = getFragmentManager().beginTransaction();
+            fr.replace(R.id.fragment_container, new Bejelentkezes());
+            fr.commit();
         });
 
-        //Regisztrációs felület megnyitása
-        buttonRegisztracioFooldal.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View v)
-            {
-                FragmentTransaction fr = getFragmentManager().beginTransaction();
-                fr.replace(R.id.fragment_container, new Regisztracio());
-                fr.commit();
-            }
+        buttonRegisztracioFooldal.setOnClickListener(v -> {
+            FragmentTransaction fr = getFragmentManager().beginTransaction();
+            fr.replace(R.id.fragment_container, new Regisztracio());
+            fr.commit();
         });
 
         return view;
