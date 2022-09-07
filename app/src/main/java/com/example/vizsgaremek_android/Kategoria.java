@@ -15,23 +15,11 @@ public class Kategoria {
         return kategoria_id;
     }
 
-    public void setKategoria_id(int kategoria_id) {
-        this.kategoria_id = kategoria_id;
-    }
-
     public String getKategoria_nev() {
         return kategoria_nev;
     }
 
-    public void setKategoria_nev(String kategoria_nev) {
-        this.kategoria_nev = kategoria_nev;
-    }
-
     public String getKategoria_kep() {
         return kategoria_kep;
-    }
-
-    public void setKategoria_kep(String kategoria_kep) {
-        this.kategoria_kep = kategoria_kep;
     }
 }

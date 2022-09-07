@@ -23,9 +23,6 @@ public class User {
         return pontszam;
     }
 
-    public void setPontszam(int pontszam) {
-        this.pontszam = pontszam;
-    }
 
     public User(int user_id, int telepules_id, String telszam, String email, String cim) {
         this.user_id = user_id;
@@ -34,8 +31,6 @@ public class User {
         this.email = email;
         this.cim = cim;
     }
-
-
 
     public User(int user_id, String nev, String felhnev, String szuldatum, int telepules_id, String telszam, String email, String jelszo, String profilkep, String okmanykep, String okmanyszam, String cim) {
         this.user_id = user_id;
@@ -56,32 +51,16 @@ public class User {
         return user_id;
     }
 
-    public void setUser_id(int user_id) {
-        this.user_id = user_id;
-    }
-
     public String getNev() {
         return nev;
-    }
-
-    public void setNev(String nev) {
-        this.nev = nev;
     }
 
     public String getFelhnev() {
         return felhnev;
     }
 
-    public void setFelhnev(String felhnev) {
-        this.felhnev = felhnev;
-    }
-
     public String getSzuldatum() {
         return szuldatum;
-    }
-
-    public void setSzuldatum(String szuldatum) {
-        this.szuldatum = szuldatum;
     }
 
     public int getTelepules_id() {
@@ -112,32 +91,16 @@ public class User {
         return jelszo;
     }
 
-    public void setJelszo(String jelszo) {
-        this.jelszo = jelszo;
-    }
-
     public String getProfilkep() {
         return profilkep;
-    }
-
-    public void setProfilkep(String profilkep) {
-        this.profilkep = profilkep;
     }
 
     public String getOkmanykep() {
         return okmanykep;
     }
 
-    public void setOkmanykep(String okmanykep) {
-        this.okmanykep = okmanykep;
-    }
-
     public String getOkmanyszam() {
         return okmanyszam;
-    }
-
-    public void setOkmanyszam(String okmanyszam) {
-        this.okmanyszam = okmanyszam;
     }
 
     public String getCim() {

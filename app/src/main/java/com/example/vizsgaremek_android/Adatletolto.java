@@ -3,19 +3,10 @@ package com.example.vizsgaremek_android;
 import android.content.Context;
 import android.os.Handler;
 import android.os.Looper;
-import android.util.Log;
 
 import com.google.gson.Gson;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 public class Adatletolto {
 
@@ -51,9 +42,6 @@ public class Adatletolto {
     interface UserListener {
         void OnUserReady(boolean Successful);
     }
-
-
-
 }
 
 
