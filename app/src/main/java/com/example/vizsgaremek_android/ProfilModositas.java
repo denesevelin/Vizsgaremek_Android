@@ -7,11 +7,8 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ListView;
-import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -28,7 +25,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ProfilModositas extends Fragment {
-
 
     private Button buttonVisszaProfilModositas, buttonProfilModositasProfilModositas;
     private TextView hibaText;
@@ -50,18 +46,13 @@ public class ProfilModositas extends Fragment {
         editCimProfilModositas = view.findViewById(R.id.editCimProfilModositas);
         editEmailProfilModositas = view.findViewById(R.id.editEmailProfilModositas);
         editTelszamProfilModositas = view.findViewById(R.id.editTelszamProfilModositas);
+        hibaText = view.findViewById(R.id.hibaText);
         userLista = new ArrayList<>();
 
-
-
-        //Vissza a profilra
-        buttonVisszaProfilModositas.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                FragmentTransaction fr = getFragmentManager().beginTransaction();
-                fr.replace(R.id.fragment_container, new Profil());
-                fr.commit();
-            }
+        buttonVisszaProfilModositas.setOnClickListener(v -> {
+            FragmentTransaction fr = getFragmentManager().beginTransaction();
+            fr.replace(R.id.fragment_container, new Profil());
+            fr.commit();
         });
 
         userekListazasa();
@@ -69,8 +60,6 @@ public class ProfilModositas extends Fragment {
 
         return view;
     }
-
-
 
     private void userekListazasa() {
         bejelentkezett_id = Adattarolo.userIdOlvasas(getContext());
@@ -88,10 +77,9 @@ public class ProfilModositas extends Fragment {
                 task.execute();
 
             } catch (Exception e) {
-                e.printStackTrace();
+                hibaText.setText(e.getMessage());
             }
         });
-
     }
 
     private User validalEsUsertLetrehoz() throws Exception {
@@ -115,7 +103,7 @@ public class ProfilModositas extends Fragment {
 
     @RequiresApi(api = Build.VERSION_CODES.N)
 
-    private void refreshUserList(List<User> adatok, String requestType, String parameterek) {
+    private void refreshUserList(List<User> adatok, String requestType) {
         switch (requestType){
             case "GET":
                 this.userLista.clear();
@@ -177,10 +165,7 @@ public class ProfilModositas extends Fragment {
             return response;
         }
 
-
-
         @RequiresApi(api = Build.VERSION_CODES.N)
-
 
         @Override
         protected void onPostExecute(Response response) {
@@ -193,8 +178,6 @@ public class ProfilModositas extends Fragment {
                 if(valasz.isError()){
                     hibaText.setText(String.format("%d-as hiba: %s", response.getResponseCode(), valasz.getMessage()));
                 }else {
-
-
                     if (requestType != "GET"){
                         Toast.makeText(getActivity(), "Sikeres módosítás!", Toast.LENGTH_SHORT).show();
 
@@ -202,21 +185,15 @@ public class ProfilModositas extends Fragment {
                         fr.replace(R.id.fragment_container, new Profil());
                         fr.commit();
                     }else {
-                        refreshUserList(valasz.getAdatok(), requestType, parameterek);
+                        refreshUserList(valasz.getAdatok(), requestType);
                     }
-
-
                 }
-
-
             }
         }
     }
 
     private class HibaRunnable implements Runnable {
-
         private Exception ex;
-
         public HibaRunnable(Exception ex) {
             this.ex = ex;
         }
@@ -226,5 +203,4 @@ public class ProfilModositas extends Fragment {
             hibaText.setText(ex.toString());
         }
     }
-
 }
