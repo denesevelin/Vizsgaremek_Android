@@ -9,30 +9,31 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginTop="20dp"
-        android:id="@+id/ImageViewKategoriakepRanglista"
+        tools:ignore="MissingConstraints"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBaseline_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/ImageViewKategoriakepRanglista"/>
 
     <TextView
-        android:id="@+id/textViewKategoriaNevRanglista"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="50dp"
         android:text="Kategória neve"
+        tools:ignore="MissingConstraints"
+        android:layout_marginTop="50dp"
         app:layout_constraintStart_toEndOf="@+id/ImageViewKategoriakepRanglista"
-        tools:layout_editor_absoluteY="27dp"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/textViewKategoriaNevRanglista"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toEndOf="@+id/textViewKategoriaNevRanglista"
         android:layout_marginRight="30dp"
-        android:text="56 %"
-        android:id="@+id/textViewSzazalekRanglista"
-        tools:layout_editor_absoluteY="27dp"
+        android:layout_marginTop="50dp"
+        android:text="%"
+        tools:ignore="MissingConstraints"
+        android:layout_toEndOf="@+id/textViewKategoriaNevRanglista"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:ignore="MissingConstraints" />
-
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/textViewSzazalekRanglista"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

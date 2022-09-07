@@ -36,8 +36,8 @@ public class Ranglista extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.ranglista, container, false);
 
-
         statisztikaLista = view.findViewById(R.id.statisztikaLista);
+        hibaText = view.findViewById(R.id.hibaText);
         kategoriaLista = new ArrayList<>();
 
         kategoriakListazasa();
@@ -46,18 +46,16 @@ public class Ranglista extends Fragment {
     }
 
     private void kategoriakListazasa() {
-        RequestTask task = new RequestTask(Kategoria_URL,"GET","");
+        RequestTask task = new RequestTask(Kategoria_URL,"GET");
         task.execute();
     }
 
     @RequiresApi(api = Build.VERSION_CODES.N)
 
-    private void refreshKategoriaList(List<Kategoria> adatok, String requestType, String parameterek) {
-        switch (requestType){
-            case "GET":
-                this.kategoriaLista.clear();
-                kategoriaLista.addAll(adatok);
-                break;
+    private void refreshKategoriaList(List<Kategoria> adatok, String requestType) {
+        if (requestType.equals("GET")) {
+            this.kategoriaLista.clear();
+            kategoriaLista.addAll(adatok);
         }
     }
 
@@ -65,22 +63,18 @@ public class Ranglista extends Fragment {
 
         private String url;
         private String requestType;
-        private String parameterek;
 
-        public RequestTask(String url, String requestType, String parameterek) {
+        public RequestTask(String url, String requestType) {
             this.url = url;
             this.requestType = requestType;
-            this.parameterek = parameterek;
         }
 
         @Override
         protected Response doInBackground(Void... voids) {
             Response response = null;
             try {
-                switch (requestType){
-                    case "GET":
-                        response = RequestHandler.getRequest(url);
-                        break;
+                if (requestType.equals("GET")) {
+                    response = RequestHandler.getRequest(url);
                 }
             } catch (IOException e) {
                 new HibaRunnable(e);
@@ -88,14 +82,7 @@ public class Ranglista extends Fragment {
             return response;
         }
 
-        @Override
-        protected void onPreExecute() {
-            super.onPreExecute();
-            //hibaText.setText("");
-        }
-
         @RequiresApi(api = Build.VERSION_CODES.N)
-
 
         @Override
         protected void onPostExecute(Response response) {
@@ -103,13 +90,10 @@ public class Ranglista extends Fragment {
             if(response != null){
                 Gson jsonConvert = new Gson();
                 KategoriaApiValasz valasz = jsonConvert.fromJson(response.getContent(), KategoriaApiValasz.class);
-                Log.d("responseCode", String.valueOf(response.getResponseCode()));
-                Log.d("responseContent", response.getContent());
                 if(valasz.isError()){
                     hibaText.setText(String.format("%d-as hiba: %s", response.getResponseCode(), valasz.getMessage()));
                 }else {
-                    refreshKategoriaList(valasz.getAdatok(), requestType, parameterek);
-
+                    refreshKategoriaList(valasz.getAdatok(), requestType);
                 }
                 statisztikaLista.setAdapter(new KategoriaAdapter());
             }
@@ -117,9 +101,7 @@ public class Ranglista extends Fragment {
 
     }
     private class HibaRunnable implements Runnable {
-
         private Exception ex;
-
         public HibaRunnable(Exception ex) {
             this.ex = ex;
         }
@@ -132,7 +114,6 @@ public class Ranglista extends Fragment {
 
     private class KategoriaAdapter extends ArrayAdapter<Kategoria> {
 
-
         public KategoriaAdapter() {
             super(Ranglista.this.getActivity(), R.layout.statisztika_list_item, kategoriaLista);
         }
@@ -143,7 +124,6 @@ public class Ranglista extends Fragment {
             View listViewItem = inflater.inflate(R.layout.statisztika_list_item, null);
             TextView textViewKategoriaNevRanglista = listViewItem.findViewById(R.id.textViewKategoriaNevRanglista);
             ImageView ImageViewKategoriakepRanglista = listViewItem.findViewById(R.id.ImageViewKategoriakepRanglista);
-
 
             Kategoria kategoria = kategoriaLista.get(position);
             textViewKategoriaNevRanglista.setText(String.format("%s ", kategoria.getKategoria_nev()));
@@ -187,11 +167,7 @@ public class Ranglista extends Fragment {
                     ImageViewKategoriakepRanglista.setImageResource(R.drawable.egyeb);
                     break;
             }
-
-
             return listViewItem;
         }
-
-
     }
 }

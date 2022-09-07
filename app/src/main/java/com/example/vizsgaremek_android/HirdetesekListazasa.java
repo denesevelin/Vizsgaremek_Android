@@ -101,9 +101,7 @@ public class HirdetesekListazasa extends Fragment {
     }
 
     private class HibaRunnable implements Runnable {
-
         private Exception ex;
-
         public HibaRunnable(Exception ex) {
             this.ex = ex;
         }
