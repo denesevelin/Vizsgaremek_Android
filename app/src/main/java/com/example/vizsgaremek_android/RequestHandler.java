@@ -1,7 +1,5 @@
 package com.example.vizsgaremek_android;
 
-import com.example.vizsgaremek_android.Response;
-
 import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStream;

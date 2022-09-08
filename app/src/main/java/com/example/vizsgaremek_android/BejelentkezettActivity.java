@@ -43,7 +43,6 @@ public class BejelentkezettActivity extends AppCompatActivity implements Navigat
             navigationView.setCheckedItem(R.id.nav_fooldal);
         }
 
-        //Fragmentek közötti mozgás
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.commit();
 

@@ -30,7 +30,6 @@ public class HirdetesekKeresese extends Fragment {
         kategoriakBetoltese();
         telepulesekBetoltese();
 
-        //Hirdetések kilistázása
         buttonSzuresHirdetesekKeresese.setOnClickListener(v -> {
             FragmentTransaction fr = getFragmentManager().beginTransaction();
             fr.replace(R.id.fragment_container, new HirdetesekListazasa());

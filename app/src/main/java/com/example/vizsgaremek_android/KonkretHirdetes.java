@@ -50,12 +50,6 @@ public class KonkretHirdetes extends Fragment {
         textViewLeirasKonkretHirdetes = view.findViewById(R.id.textViewLeirasKonkretHirdetes);
         hirdetesLista = new ArrayList<>();
 
-        buttonJelentkezesKonkretHirdetes.setOnClickListener(v -> {
-            FragmentTransaction fr = getFragmentManager().beginTransaction();
-            fr.replace(R.id.fragment_container, new Profil());
-            fr.commit();
-        });
-
         buttonVisszaKonkretHirdetes.setOnClickListener(v -> {
             FragmentTransaction fr = getFragmentManager().beginTransaction();
             fr.replace(R.id.fragment_container, new HirdetesekListazasa());

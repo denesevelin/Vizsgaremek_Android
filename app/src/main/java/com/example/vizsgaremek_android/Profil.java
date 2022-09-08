@@ -37,7 +37,6 @@ public class Profil extends Fragment {
     private List<User> userLista;
     private String bejelentkezett_id ;
     private final String EgyUser_URL = "http://192.168.0.18/Vizsgaremek_Web/api/user";
-    private TextView textViewNevProfil, textViewFelhasznalonevProfil, textViewTelefonszamProfil, textViewEmailProfil, textViewTelepulesProfil, textViewCimProfil, textViewKonkretPontszamProfil;
 
     @Nullable
     @Override
@@ -48,32 +47,14 @@ public class Profil extends Fragment {
         buttonProfilModositasProfil = view.findViewById(R.id.buttonProfilModositasProfil);
         buttonProfilTorlesProfil = view.findViewById(R.id.buttonProfilTorlesProfil);
         hibaText = view.findViewById(R.id.hibaText);
-        textViewNevProfil = view.findViewById(R.id.textViewNevProfil);
-        textViewFelhasznalonevProfil = view.findViewById(R.id.textViewFelhasznalonevProfil);
-        textViewTelefonszamProfil = view.findViewById(R.id.textViewTelefonszamProfil);
-        textViewEmailProfil = view.findViewById(R.id.textViewEmailProfil);
-        textViewTelepulesProfil = view.findViewById(R.id.textViewTelepulesProfil);
-        textViewCimProfil = view.findViewById(R.id.textViewCimProfil);
-        textViewKonkretPontszamProfil = view.findViewById(R.id.textViewKonkretPontszamProfil);
         userAdatok = view.findViewById(R.id.userAdatok);
         userLista = new ArrayList<>();
 
-        imageViewJelentkeztemProfil.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FragmentTransaction fr = getFragmentManager().beginTransaction();
-                fr.replace(R.id.fragment_container, new KonkretHirdetes());
-                fr.commit();
-            }
-        });
 
-        buttonProfilModositasProfil.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FragmentTransaction fr = getFragmentManager().beginTransaction();
-                fr.replace(R.id.fragment_container, new ProfilModositas());
-                fr.commit();
-            }
+        buttonProfilModositasProfil.setOnClickListener(view1 -> {
+            FragmentTransaction fr = getFragmentManager().beginTransaction();
+            fr.replace(R.id.fragment_container, new ProfilModositas());
+            fr.commit();
         });
 
         userekListazasa();
